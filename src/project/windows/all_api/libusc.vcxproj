@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0DE03141-1D35-4FED-AF8B-242BB0ACBC3B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libusc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;LIBUSC_EXPORTS;USC_NO_BINDING_APPKEY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\libs\libopus\include;..\..\..\libs\libopus\celt;..\..\..\libs\libopus\silk;..\..\..\libs\libopus\silk\fixed;..\..\..\libs\libopus;..\..\..\libs\decode;..\..\..\libs\decodeWrap\inc;..\..\..\libs\libvad;..\..\..\libs\tokenWrap;..\..\..\sdk\asr;..\..\..\sdk\crypt;..\..\..\sdk\define;..\..\..\sdk\function;..\..\..\sdk\JHttpClient;..\..\..\sdk\libclient;..\..\..\sdk\request;..\..\..\sdk\tts;..\..\..\sdk\vpr</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;..\..\..\libs\libvad\car\win32_x86\AsrVad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;LIBUSC_EXPORTS;USC_NO_BINDING_APPKEY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\libs\libopus\include;..\..\..\libs\libopus\celt;..\..\..\libs\libopus\silk;..\..\..\libs\libopus\silk\fixed;..\..\..\libs\libopus;..\..\..\libs\decode;..\..\..\libs\decodeWrap\inc;..\..\..\libs\libvad;..\..\..\libs\tokenWrap;..\..\..\sdk\asr;..\..\..\sdk\crypt;..\..\..\sdk\define;..\..\..\sdk\function;..\..\..\sdk\JHttpClient;..\..\..\sdk\libclient;..\..\..\sdk\request;..\..\..\sdk\tts;..\..\..\sdk\vpr</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;..\..\..\libs\libvad\car\win32_x86\AsrVad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;MAKING_DLL;_WINDOWS;_USRDLL;_ENCODE_ONLY_;_CRT_SECURE_NO_WARNINGS;LIBUSC_EXPORTS;NO_USE_AMR_SPEEX;FIXED_POINT;COMMON_TAILER_CHECK;USE_ALLOCA;HAVE_CONFIG_H;USE_KISS_FFT;LIBUSC_VPR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\libs\libopus\include;..\..\..\libs\libopus\celt;..\..\..\libs\libopus\silk;..\..\..\libs\libopus\silk\fixed;..\..\..\libs\libopus\pc;..\..\..\libs\decodeWrap\inc;..\..\..\libs\libvad;..\..\..\libs\decodeAsr;..\..\..\libs\tokenWrap;..\..\..\sdk\pclib;..\..\..\sdk\asr;..\..\..\sdk\crypt;..\..\..\sdk\define;..\..\..\sdk\function;..\..\..\sdk\JHttpClient;..\..\..\sdk\libclient;..\..\..\sdk\request;..\..\..\sdk\tts;..\..\..\sdk\vpr</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Ws2_32.lib;..\..\..\libs\libvad\car\win32_vs2013\vadsohn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;MAKING_DLL;_WINDOWS;_USRDLL;_ENCODE_ONLY_;_CRT_SECURE_NO_WARNINGS;LIBUSC_EXPORTS;NO_USE_AMR_SPEEX;FIXED_POINT;COMMON_TAILER_CHECK;USE_ALLOCA;HAVE_CONFIG_H;USE_KISS_FFT;LIBUSC_VPR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\libs\libopus\include;..\..\..\libs\libopus\celt;..\..\..\libs\libopus\silk;..\..\..\libs\libopus\silk\fixed;..\..\..\libs\libopus\pc;..\..\..\libs\decodeWrap\inc;..\..\..\libs\libvad;..\..\..\libs\decodeAsr;..\..\..\libs\tokenWrap;..\..\..\sdk\pclib;..\..\..\sdk\asr;..\..\..\sdk\crypt;..\..\..\sdk\define;..\..\..\sdk\function;..\..\..\sdk\JHttpClient;..\..\..\sdk\libclient;..\..\..\sdk\request;..\..\..\sdk\tts;..\..\..\sdk\vpr</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Ws2_32.lib;..\..\..\libs\libvad\car\win64_vs2013\vadsohn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\jni4java\vpr_jni.cpp" />
+    <ClCompile Include="..\..\..\libs\decodeAsr\Opuswrapper.cpp" />
+    <ClCompile Include="..\..\..\libs\decodeWrap\src\cache.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\genToken.cpp" />
+    <ClCompile Include="..\..\..\sdk\asr\asr_client.cpp" />
+    <ClCompile Include="..\..\..\sdk\asr\asr_service.cpp" />
+    <ClCompile Include="..\..\..\sdk\crypt\crypt.cpp" />
+    <ClCompile Include="..\..\..\sdk\crypt\md5.cpp" />
+    <ClCompile Include="..\..\..\sdk\crypt\sdk_crypt.cpp" />
+    <ClCompile Include="..\..\..\sdk\define\log.cpp" />
+    <ClCompile Include="..\..\..\sdk\function\function.cpp" />
+    <ClCompile Include="..\..\..\sdk\function\url_code.cpp" />
+    <ClCompile Include="..\..\..\sdk\JHttpClient\JHttpClient.cpp" />
+    <ClCompile Include="..\..\..\sdk\JHttpClient\utils.cpp" />
+    <ClCompile Include="..\..\..\sdk\pclib\AsrServiceControlBlock.cpp" />
+    <ClCompile Include="..\..\..\sdk\pclib\BufferQueue.cpp" />
+    <ClCompile Include="..\..\..\sdk\pclib\function_pc.cpp" />
+    <ClCompile Include="..\..\..\sdk\pclib\libusc.cpp" />
+    <ClCompile Include="..\..\..\sdk\pclib\tts_sdk.cpp" />
+    <ClCompile Include="..\..\..\sdk\request\sdk_req.cpp" />
+    <ClCompile Include="..\..\..\sdk\request\service.cpp" />
+    <ClCompile Include="..\..\..\sdk\tts\tts_client.cpp" />
+    <ClCompile Include="..\..\..\sdk\tts\tts_service.cpp" />
+    <ClCompile Include="..\..\..\sdk\vpr\libusc_vpr.cpp" />
+    <ClCompile Include="..\..\..\libs\decodeWrap\src\uni_opus_decoder.cpp" />
+    <ClCompile Include="..\..\..\libs\libvad\LibVad.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\AES.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\cBase64.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\checkTokenValid.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\getTime.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\tokenTools.cpp" />
+    <ClCompile Include="..\..\..\libs\tokenWrap\tokenWrap.cpp" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\bands.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\celt.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\celt_decoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\celt_encoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\celt_lpc.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\cwrs.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\entcode.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\entdec.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\entenc.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\kiss_fft.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\laplace.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\mathops.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\mdct.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\modes.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\pitch.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\quant_bands.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\rate.c" />
+    <ClCompile Include="..\..\..\libs\libopus\celt\vq.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\A2NLSF.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\ana_filt_bank_1.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\biquad_alt.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\bwexpander.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\bwexpander_32.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\check_control_input.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\CNG.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\code_signs.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\control_audio_bandwidth.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\control_codec.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\control_SNR.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decoder_set_fs.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decode_core.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decode_frame.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decode_indices.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decode_parameters.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decode_pitch.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\decode_pulses.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\dec_API.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\encode_indices.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\encode_pulses.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\enc_API.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\apply_sine_window_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\autocorr_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\burg_modified_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\corrMatrix_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\encode_frame_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\find_LPC_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\find_LTP_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\find_pitch_lags_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\find_pred_coefs_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\k2a_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\k2a_Q16_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\LTP_analysis_filter_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\LTP_scale_ctrl_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\noise_shape_analysis_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\pitch_analysis_core_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\prefilter_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\process_gains_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\regularize_correlations_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\residual_energy16_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\residual_energy_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\schur64_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\schur_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\solve_LS_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\vector_ops_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\fixed\warped_autocorrelation_FIX.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\gain_quant.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\HP_variable_cutoff.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\init_decoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\init_encoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\inner_prod_aligned.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\interpolate.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\lin2log.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\log2lin.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\LPC_analysis_filter.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\LPC_inv_pred_gain.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\LP_variable_cutoff.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF2A.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_decode.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_del_dec_quant.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_encode.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_stabilize.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_unpack.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_VQ.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NLSF_VQ_weights_laroia.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NSQ.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\NSQ_del_dec.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\pitch_est_tables.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\PLC.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\process_NLSFs.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\quant_LTP_gains.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_down2.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_down2_3.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_private_AR2.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_private_down_FIR.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_private_IIR_FIR.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_private_up2_HQ.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\resampler_rom.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\shell_coder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\sigm_Q15.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\sort.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\stereo_decode_pred.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\stereo_encode_pred.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\stereo_find_predictor.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\stereo_LR_to_MS.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\stereo_MS_to_LR.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\stereo_quant_pred.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\sum_sqr_shift.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_gain.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_LTP.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_NLSF_CB_NB_MB.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_NLSF_CB_WB.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_other.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_pitch_lag.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\tables_pulses_per_block.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\table_LSF_cos.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\VAD.c" />
+    <ClCompile Include="..\..\..\libs\libopus\silk\VQ_WMat_EC.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\analysis.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\mlp.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\mlp_data.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus_compare.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus_decoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus_encoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus_multistream.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus_multistream_decoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\opus_multistream_encoder.c" />
+    <ClCompile Include="..\..\..\libs\libopus\src\repacketizer.c" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\jni4java\vpr_jni.h" />
+    <ClInclude Include="..\..\..\libs\decodeAsr\Opuswrapper.h" />
+    <ClInclude Include="..\..\..\libs\decodeWrap\inc\cache.h" />
+    <ClInclude Include="..\..\..\libs\decodeWrap\inc\uni_opus_decoder.h" />
+    <ClInclude Include="..\..\..\sdk\asr\asr_client.h" />
+    <ClInclude Include="..\..\..\sdk\asr\asr_service.h" />
+    <ClInclude Include="..\..\..\sdk\crypt\crypt.h" />
+    <ClInclude Include="..\..\..\sdk\crypt\md5.h" />
+    <ClInclude Include="..\..\..\sdk\crypt\sdk_crypt.h" />
+    <ClInclude Include="..\..\..\sdk\define\log.h" />
+    <ClInclude Include="..\..\..\sdk\function\url_code.h" />
+    <ClInclude Include="..\..\..\sdk\function\function.h" />
+    <ClInclude Include="..\..\..\sdk\JHttpClient\HttpRequestInfo.h" />
+    <ClInclude Include="..\..\..\sdk\JHttpClient\JHttpClient.h" />
+    <ClInclude Include="..\..\..\sdk\JHttpClient\utils.h" />
+    <ClInclude Include="..\..\..\sdk\define\errorNo.h" />
+    <ClInclude Include="..\..\..\sdk\define\http_def.h" />
+    <ClInclude Include="..\..\..\sdk\define\set_option_key.h" />
+    <ClInclude Include="..\..\..\sdk\define\Version.h" />
+    <ClInclude Include="..\..\..\sdk\pclib\AsrServiceControlBlock.h" />
+    <ClInclude Include="..\..\..\sdk\pclib\BufferQueue.h" />
+    <ClInclude Include="..\..\..\sdk\pclib\function_pc.h" />
+    <ClInclude Include="..\..\..\sdk\pclib\libusc.h" />
+    <ClInclude Include="..\..\..\sdk\pclib\tts_sdk.h" />
+    <ClInclude Include="..\..\..\sdk\request\sdk_req.h" />
+    <ClInclude Include="..\..\..\sdk\request\service.h" />
+    <ClInclude Include="..\..\..\sdk\tts\tts_client.h" />
+    <ClInclude Include="..\..\..\sdk\tts\tts_service.h" />
+    <ClInclude Include="..\..\..\sdk\vpr\libusc_vpr.h" />
+    <ClInclude Include="..\..\..\libs\libvad\AsrVad.h" />
+    <ClInclude Include="..\..\..\libs\libvad\LibVad.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\AES.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\cBase64.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\checkTokenValid.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\genToken.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\getTime.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\tokenTools.h" />
+    <ClInclude Include="..\..\..\libs\tokenWrap\tokenWrap.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\arch.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\bands.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\celt.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\celt_lpc.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\cpu_support.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\cwrs.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\ecintrin.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\entcode.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\entdec.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\entenc.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\fixed_debug.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\fixed_generic.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\float_cast.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\kiss_fft.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\laplace.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\mathops.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\mdct.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\mfrngcod.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\modes.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\os_support.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\pitch.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\quant_bands.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\rate.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\stack_alloc.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\static_modes_fixed.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\static_modes_float.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\vq.h" />
+    <ClInclude Include="..\..\..\libs\libopus\celt\_kiss_fft_guts.h" />
+    <ClInclude Include="..\..\..\libs\libopus\silk\fixed\main_FIX.h" />
+    <ClInclude Include="..\..\..\libs\libopus\silk\fixed\structs_FIX.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,21 @@
+/* !!!!!!!!!!!!!!!!!!!!!!! CONFIDENTIAL !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#ifndef __KEY__KEY__
+#define __KEY__KEY__
+
+const int KEY_LEN = 24;
+const int IV_LEN  = 16;
+const int MGC_LEN = 4;
+
+// key   = 192bits = 24bytes
+const unsigned char KEY[] = "\x7e\x83\xc0\x17\xda\x0e\x64\x52\xc8\x10\xf3\x2b"
+                            "\x80\x9e\x79\xe5\x63\xf8\xea\xd2\x52\x2c\x6c\x7d";
+
+// iv    = 16bytes
+const unsigned char IV[]  = "\x17\x01\x23\x0f\x04\x7c\x06\x0e\x01\x09\x9b\x22\x14\x0d\xfa\x79";
+
+// magic = 4bytes
+const unsigned char MAGIC[] = "M@nG";
+
+#endif
+
