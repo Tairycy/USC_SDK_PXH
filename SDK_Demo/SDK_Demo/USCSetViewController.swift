@@ -9,16 +9,34 @@
 import UIKit
 
 class USCSetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+    var selectedSample : String? = "16000"
+
+
+    var selectedEngine : String? = "poi"
+
+
+    var selectedLanguage : String? = "chinese"
+
+
+
+    
     @IBOutlet weak var pickerView: UIPickerView!
     let sampleArray = ["16K","8K","自动"]
     let engineArray = ["地名","通用","歌名","医药","影视","多领域"]
-    let langungeArray = ["普通话"]
+    let langungeArray = ["普通话","英语","粤语"]
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+//        initData()
         self.setPickerView()
     }
+//    func initData(){
+//        self.selectedSample = "16000"
+//        self.selectedEngine = "poi"
+//        self.selectedLanguage = "chinese"
+//    }
     func setPickerView(){
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
@@ -47,6 +65,43 @@ class USCSetViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     }
     //MARK: - pickerView delegate
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        switch component {
+        case 0:
+            let newValue : String = self.sampleArray[row]
+            if newValue == "16k"  {
+                self.selectedSample = "16000"
+            }else if newValue == "8k"{
+                self.selectedSample = "8000"
+            }else{
+                self.selectedSample = "0"
+            }
+        case 1:
+            let newValue : String = self.engineArray[row]
+            if newValue == "影视"{
+                self.selectedEngine = "movietv"
+            }else if newValue == "地名"{
+                self.selectedEngine = "poi"
+            }else if newValue == "歌名"{
+                self.selectedEngine = "song"
+            }else if newValue == "多领域"{
+                self.selectedEngine = "poi,song"
+            }else if newValue == "医药"{
+                self.selectedEngine = "medical"
+            }else{
+                self.selectedEngine = "general"
+            }
+        case 2:
+            let newValue : String = self.langungeArray[row]
+            if newValue == "英语"{
+                self.selectedLanguage = "english"
+            }else if newValue == "粤语"{
+                self.selectedLanguage = "cantoness"
+            }else{
+                self.selectedLanguage = "chinese"
+            }
+        default:
+            break
+        }
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
         switch component {
