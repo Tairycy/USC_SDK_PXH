@@ -23,6 +23,62 @@
             </objects>
             <point key="canvasLocation" x="-812" y="37"/>
         </scene>
+        <!--Set View Controller-->
+        <scene sceneID="x7u-UC-ZtH">
+            <objects>
+                <viewController id="G7L-rR-Aig" customClass="USCSetViewController" customModule="SDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bbE-p5-d0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="qDh-y5-qT9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hf1-lz-Wch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZD-Tc-Yb1"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnS-4i-nRY">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="采样率" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLa-Xg-1bT">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="识别领域" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQM-rO-u6t">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="识别语言" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-hX-06P">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BQM-rO-u6t" firstAttribute="width" secondItem="dLa-Xg-1bT" secondAttribute="width" id="5p7-Wf-EXL"/>
+                                    <constraint firstItem="U4l-hX-06P" firstAttribute="width" secondItem="dLa-Xg-1bT" secondAttribute="width" id="tJb-ry-UJz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dnS-4i-nRY" firstAttribute="top" secondItem="bbE-p5-d0N" secondAttribute="bottom" constant="50" id="304-JO-yxh"/>
+                            <constraint firstItem="dnS-4i-nRY" firstAttribute="leading" secondItem="hf1-lz-Wch" secondAttribute="leading" id="8D7-9U-O0h"/>
+                            <constraint firstItem="bZD-Tc-Yb1" firstAttribute="top" secondItem="dnS-4i-nRY" secondAttribute="bottom" constant="40" id="Oyu-RX-Dxj"/>
+                            <constraint firstItem="bZD-Tc-Yb1" firstAttribute="leading" secondItem="hf1-lz-Wch" secondAttribute="leading" id="Tfc-Z0-q0C"/>
+                            <constraint firstAttribute="trailing" secondItem="bZD-Tc-Yb1" secondAttribute="trailing" id="hoF-TD-mI8"/>
+                            <constraint firstAttribute="trailing" secondItem="dnS-4i-nRY" secondAttribute="trailing" id="wJR-DN-pQf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y07-0n-y6K"/>
+                    <connections>
+                        <outlet property="pickerView" destination="bZD-Tc-Yb1" id="aMh-LL-34d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYc-db-Eb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="36.431784107946029"/>
+        </scene>
         <!--Asr View Controller-->
         <scene sceneID="arq-M1-3fc">
             <objects>
@@ -50,7 +106,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqn-qv-NVL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqn-qv-NVL">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +141,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6a2-pE-fev">
-                        <barButtonItem key="rightBarButtonItem" title="设置" id="8n4-Pp-N5S"/>
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="8n4-Pp-N5S">
+                            <connections>
+                                <segue destination="G7L-rR-Aig" kind="push" id="4jS-ZZ-S3s"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
             </objects>

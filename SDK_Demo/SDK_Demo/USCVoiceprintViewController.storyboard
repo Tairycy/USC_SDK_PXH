@@ -1,7 +1,77 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLJ-V7-tCC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Voiceprint View Controller-->
+        <scene sceneID="ZuC-LH-HqJ">
+            <objects>
+                <viewController storyboardIdentifier="USCVoiceprintViewController" id="dLJ-V7-tCC" customClass="USCVoiceprintViewController" customModule="SDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JLo-zp-4hX"/>
+                        <viewControllerLayoutGuide type="bottom" id="qhD-n2-lAm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AEu-Ve-DYY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZtP-ev-tGc">
+                                <segments>
+                                    <segment title="注册"/>
+                                    <segment title="登录"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tBI-b2-k2t">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY1-Yn-xbh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-db-QHP"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW1-Tv-Jff">
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="下载"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-se-f1Z">
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZtP-ev-tGc" firstAttribute="top" secondItem="JLo-zp-4hX" secondAttribute="bottom" constant="10" id="3bM-Dp-t4j"/>
+                            <constraint firstItem="qhD-n2-lAm" firstAttribute="top" secondItem="tBI-b2-k2t" secondAttribute="bottom" constant="120" id="5D2-er-NfV"/>
+                            <constraint firstAttribute="trailing" secondItem="tBI-b2-k2t" secondAttribute="trailing" constant="10" id="B8C-LD-iUY"/>
+                            <constraint firstAttribute="trailing" secondItem="ZtP-ev-tGc" secondAttribute="trailing" constant="10" id="EPk-p8-ju9"/>
+                            <constraint firstItem="qhD-n2-lAm" firstAttribute="top" secondItem="MW1-Tv-Jff" secondAttribute="bottom" constant="10" id="F1Y-uQ-2wN"/>
+                            <constraint firstItem="MW1-Tv-Jff" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="70" id="Htw-kf-XWD"/>
+                            <constraint firstItem="qpY-se-f1Z" firstAttribute="top" secondItem="oBf-db-QHP" secondAttribute="bottom" constant="15" id="IR2-M3-UWI"/>
+                            <constraint firstAttribute="trailing" secondItem="oBf-db-QHP" secondAttribute="trailing" constant="10" id="KYh-T7-uOj"/>
+                            <constraint firstItem="tBI-b2-k2t" firstAttribute="top" secondItem="ZtP-ev-tGc" secondAttribute="bottom" constant="10" id="OCD-KX-4Xh"/>
+                            <constraint firstItem="tBI-b2-k2t" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="10" id="VXo-5d-K6e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qpY-se-f1Z" secondAttribute="trailing" constant="70" id="fK0-Fj-PMz"/>
+                            <constraint firstItem="hY1-Yn-xbh" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="10" id="fVZ-ny-PZz"/>
+                            <constraint firstItem="hY1-Yn-xbh" firstAttribute="top" secondItem="tBI-b2-k2t" secondAttribute="bottom" constant="20" id="fpc-be-VEs"/>
+                            <constraint firstItem="oBf-db-QHP" firstAttribute="centerY" secondItem="hY1-Yn-xbh" secondAttribute="centerY" id="gk8-eN-k7m"/>
+                            <constraint firstItem="oBf-db-QHP" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="60" id="gsj-OH-ExV"/>
+                            <constraint firstItem="ZtP-ev-tGc" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="10" id="oRD-uK-9gv"/>
+                            <constraint firstItem="qhD-n2-lAm" firstAttribute="top" secondItem="qpY-se-f1Z" secondAttribute="bottom" constant="10" id="pgH-Xg-nCS"/>
+                            <constraint firstItem="MW1-Tv-Jff" firstAttribute="top" secondItem="hY1-Yn-xbh" secondAttribute="bottom" constant="15" id="uVj-9Q-zQg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVF-PM-idg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="210"/>
+        </scene>
+    </scenes>
 </document>

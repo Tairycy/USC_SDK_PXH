@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				F161C4A61DAF295000D5D972 /* USCAsrViewController.swift */,
-				F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */,
 				F161C4AE1DAF29AB00D5D972 /* USCSetViewController.swift */,
+				F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */,
 			);
 			name = asr;
 			sourceTree = "<group>";

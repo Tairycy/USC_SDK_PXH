@@ -51,7 +51,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             self.navigationController?.pushViewController(asrStoryBoard.instantiateViewController(withIdentifier: "USCAsrViewController"), animated: true)
         case 1:
             let vprStoryBoard = UIStoryboard.init(name: "USCVoiceprintViewController", bundle: Bundle.main)
-            self.navigationController?.pushViewController(vprStoryBoard.instantiateViewController(withIdentifier: ""), animated: true)
+            self.navigationController?.pushViewController(vprStoryBoard.instantiateViewController(withIdentifier: "USCVoiceprintViewController"), animated: true)
         default: break
         }
     }
