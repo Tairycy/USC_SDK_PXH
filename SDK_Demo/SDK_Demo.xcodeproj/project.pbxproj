@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F161C4A71DAF295000D5D972 /* USCAsrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C4A61DAF295000D5D972 /* USCAsrViewController.swift */; };
+		F161C4A91DAF296000D5D972 /* USCAsrViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */; };
+		F161C4AB1DAF298300D5D972 /* USCVoiceprintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C4AA1DAF298300D5D972 /* USCVoiceprintViewController.swift */; };
+		F161C4AD1DAF299100D5D972 /* USCVoiceprintViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F161C4AC1DAF299100D5D972 /* USCVoiceprintViewController.storyboard */; };
+		F161C4AF1DAF29AB00D5D972 /* USCSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C4AE1DAF29AB00D5D972 /* USCSetViewController.swift */; };
 		F187F7D81DAE263C00CFAEAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7D71DAE263C00CFAEAB /* SystemConfiguration.framework */; };
 		F187F7DA1DAE264500CFAEAB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7D91DAE264500CFAEAB /* AVFoundation.framework */; };
 		F187F7DC1DAE264B00CFAEAB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7DB1DAE264B00CFAEAB /* AudioToolbox.framework */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F161C4A61DAF295000D5D972 /* USCAsrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCAsrViewController.swift; sourceTree = "<group>"; };
+		F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = USCAsrViewController.storyboard; sourceTree = "<group>"; };
+		F161C4AA1DAF298300D5D972 /* USCVoiceprintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCVoiceprintViewController.swift; sourceTree = "<group>"; };
+		F161C4AC1DAF299100D5D972 /* USCVoiceprintViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = USCVoiceprintViewController.storyboard; sourceTree = "<group>"; };
+		F161C4AE1DAF29AB00D5D972 /* USCSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCSetViewController.swift; sourceTree = "<group>"; };
 		F187F7CB1DAE21A200CFAEAB /* USCVoiceprintParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USCVoiceprintParams.h; path = "../sourcecode(occode)/Voiceprint/USCVoiceprintParams.h"; sourceTree = "<group>"; };
 		F187F7CC1DAE21A200CFAEAB /* USCVoiceprintRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USCVoiceprintRecognizer.h; path = "../sourcecode(occode)/Voiceprint/USCVoiceprintRecognizer.h"; sourceTree = "<group>"; };
 		F187F7CD1DAE21A200CFAEAB /* USCVoiceprintResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USCVoiceprintResult.h; path = "../sourcecode(occode)/Voiceprint/USCVoiceprintResult.h"; sourceTree = "<group>"; };
@@ -108,6 +118,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F161C4A41DAF290200D5D972 /* asr */ = {
+			isa = PBXGroup;
+			children = (
+				F161C4A61DAF295000D5D972 /* USCAsrViewController.swift */,
+				F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */,
+				F161C4AE1DAF29AB00D5D972 /* USCSetViewController.swift */,
+			);
+			name = asr;
+			sourceTree = "<group>";
+		};
+		F161C4A51DAF291500D5D972 /* vpr */ = {
+			isa = PBXGroup;
+			children = (
+				F161C4AA1DAF298300D5D972 /* USCVoiceprintViewController.swift */,
+				F161C4AC1DAF299100D5D972 /* USCVoiceprintViewController.storyboard */,
+			);
+			name = vpr;
+			sourceTree = "<group>";
+		};
 		F187F7D61DAE262800CFAEAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +176,8 @@
 		F1A58C0B1DAE07A700174475 /* SDK_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F161C4A51DAF291500D5D972 /* vpr */,
+				F161C4A41DAF290200D5D972 /* asr */,
 				F1BE552E1DAE3EBE0058D84F /* main */,
 				F1A58C0C1DAE07A700174475 /* AppDelegate.swift */,
 				F1A58C131DAE07A700174475 /* Assets.xcassets */,
@@ -314,7 +345,9 @@
 			files = (
 				F1A58C171DAE07A700174475 /* LaunchScreen.storyboard in Resources */,
 				F1A58C141DAE07A700174475 /* Assets.xcassets in Resources */,
+				F161C4A91DAF296000D5D972 /* USCAsrViewController.storyboard in Resources */,
 				F1A58C121DAE07A700174475 /* Main.storyboard in Resources */,
+				F161C4AD1DAF299100D5D972 /* USCVoiceprintViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +372,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F161C4A71DAF295000D5D972 /* USCAsrViewController.swift in Sources */,
+				F161C4AF1DAF29AB00D5D972 /* USCSetViewController.swift in Sources */,
 				F1A58C0F1DAE07A700174475 /* ViewController.swift in Sources */,
 				F1A58C0D1DAE07A700174475 /* AppDelegate.swift in Sources */,
+				F161C4AB1DAF298300D5D972 /* USCVoiceprintViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

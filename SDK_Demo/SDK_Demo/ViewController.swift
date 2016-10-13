@@ -17,6 +17,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        USC_SDK.logTest()
+        let uscsdk = USC_SDK()
+        uscsdk.logTestTwo()
         self.resetData()
         self.setNavigation()
         self.addMainTableView()
@@ -42,7 +45,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-    
+        switch indexPath.row {
+        case 0:
+            let asrStoryBoard = UIStoryboard.init(name: "USCAsrViewController", bundle: Bundle.main)
+            self.navigationController?.pushViewController(asrStoryBoard.instantiateViewController(withIdentifier: "USCAsrViewController"), animated: true)
+        case 1:
+            let vprStoryBoard = UIStoryboard.init(name: "USCVoiceprintViewController", bundle: Bundle.main)
+            self.navigationController?.pushViewController(vprStoryBoard.instantiateViewController(withIdentifier: ""), animated: true)
+        default: break
+        }
     }
     //Mark : UITableviewDataSourse
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

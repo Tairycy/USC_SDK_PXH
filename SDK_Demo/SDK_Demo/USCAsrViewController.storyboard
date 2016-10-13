@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ayg-GB-Jqf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oiE-Gq-Qd5">
+            <objects>
+                <navigationController id="Ayg-GB-Jqf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="054-7S-XJY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6vu-VY-fEQ" kind="relationship" relationship="rootViewController" id="Lce-bK-oFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Qd-nT-hms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="37"/>
+        </scene>
+        <!--Asr View Controller-->
+        <scene sceneID="arq-M1-3fc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfE-4g-ceu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="USCAsrViewController" id="6vu-VY-fEQ" customClass="USCAsrViewController" customModule="SDK_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Hh-Xo-mP1"/>
+                        <viewControllerLayoutGuide type="bottom" id="BiO-K4-7Qp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lDS-rf-6zE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8m2-2a-qG8">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqn-qv-NVL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wEq-tO-HGj"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7j-GP-MgZ">
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAO-Tz-zm6">
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始上传"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nqn-qv-NVL" firstAttribute="leading" secondItem="lDS-rf-6zE" secondAttribute="leading" constant="10" id="2DC-Zw-eCj"/>
+                            <constraint firstItem="8m2-2a-qG8" firstAttribute="leading" secondItem="lDS-rf-6zE" secondAttribute="leading" constant="10" id="4AD-eu-d0H"/>
+                            <constraint firstItem="BiO-K4-7Qp" firstAttribute="top" secondItem="8m2-2a-qG8" secondAttribute="bottom" constant="120" id="8Ib-Eh-TCB"/>
+                            <constraint firstItem="wEq-tO-HGj" firstAttribute="centerY" secondItem="nqn-qv-NVL" secondAttribute="centerY" id="EgZ-F7-Cnf"/>
+                            <constraint firstItem="BiO-K4-7Qp" firstAttribute="top" secondItem="F7j-GP-MgZ" secondAttribute="bottom" constant="10" id="FNd-OX-ODa"/>
+                            <constraint firstItem="8m2-2a-qG8" firstAttribute="top" secondItem="7Hh-Xo-mP1" secondAttribute="bottom" constant="10" id="HzX-pk-iUG"/>
+                            <constraint firstItem="F7j-GP-MgZ" firstAttribute="leading" secondItem="lDS-rf-6zE" secondAttribute="leading" constant="70" id="KQs-nG-pye"/>
+                            <constraint firstAttribute="trailing" secondItem="8m2-2a-qG8" secondAttribute="trailing" constant="10" id="Mqk-NN-FQ6"/>
+                            <constraint firstItem="nqn-qv-NVL" firstAttribute="top" secondItem="8m2-2a-qG8" secondAttribute="bottom" constant="20" id="UPF-E7-sRQ"/>
+                            <constraint firstItem="F7j-GP-MgZ" firstAttribute="top" secondItem="wEq-tO-HGj" secondAttribute="bottom" constant="15" id="aeX-fB-Rcn"/>
+                            <constraint firstItem="wEq-tO-HGj" firstAttribute="leading" secondItem="lDS-rf-6zE" secondAttribute="leading" constant="60" id="hoO-Ws-GkI"/>
+                            <constraint firstItem="xAO-Tz-zm6" firstAttribute="top" secondItem="wEq-tO-HGj" secondAttribute="bottom" constant="15" id="hyO-XT-2uJ"/>
+                            <constraint firstAttribute="trailing" secondItem="wEq-tO-HGj" secondAttribute="trailing" constant="10" id="izS-1z-yhM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xAO-Tz-zm6" secondAttribute="trailing" constant="70" id="jyd-El-pTH"/>
+                            <constraint firstItem="BiO-K4-7Qp" firstAttribute="top" secondItem="xAO-Tz-zm6" secondAttribute="bottom" constant="10" id="qXi-Wu-fQo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6a2-pE-fev">
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="8n4-Pp-N5S"/>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
