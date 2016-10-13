@@ -12,6 +12,12 @@
 
 +(void)logTest{
     NSLog(@"log test");
+    NSLog(@"log test 1");
+    NSLog(@"log test 2");
+}
+
+-(void)logTestTwo{
+    NSLog(@"log test 22222");
 }
 
 @end

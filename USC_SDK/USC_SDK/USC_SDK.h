@@ -12,5 +12,6 @@
 
 +(void)logTest;
 
+-(void)logTestTwo;
 
 @end
