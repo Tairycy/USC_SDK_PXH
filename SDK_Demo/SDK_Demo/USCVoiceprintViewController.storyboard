@@ -3,7 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
                                     <segment title="登录"/>
                                 </segments>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tBI-b2-k2t">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBI-b2-k2t">
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,14 +36,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-db-QHP"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-db-QHP"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW1-Tv-Jff">
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MW1-Tv-Jff" secondAttribute="height" multiplier="1.2:1" id="CjN-4x-0ev"/>
+                                </constraints>
                                 <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="downLoad:" destination="dLJ-V7-tCC" eventType="touchUpInside" id="jVx-uc-dcD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-se-f1Z">
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qpY-se-f1Z" secondAttribute="height" multiplier="1.2:1" id="GzK-Oh-pox"/>
+                                </constraints>
                                 <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startAction:" destination="dLJ-V7-tCC" eventType="touchUpInside" id="MDl-ZN-xcU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,21 +65,28 @@
                             <constraint firstAttribute="trailing" secondItem="tBI-b2-k2t" secondAttribute="trailing" constant="10" id="B8C-LD-iUY"/>
                             <constraint firstAttribute="trailing" secondItem="ZtP-ev-tGc" secondAttribute="trailing" constant="10" id="EPk-p8-ju9"/>
                             <constraint firstItem="qhD-n2-lAm" firstAttribute="top" secondItem="MW1-Tv-Jff" secondAttribute="bottom" constant="10" id="F1Y-uQ-2wN"/>
-                            <constraint firstItem="MW1-Tv-Jff" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="70" id="Htw-kf-XWD"/>
+                            <constraint firstItem="MW1-Tv-Jff" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="50" id="Htw-kf-XWD"/>
                             <constraint firstItem="qpY-se-f1Z" firstAttribute="top" secondItem="oBf-db-QHP" secondAttribute="bottom" constant="15" id="IR2-M3-UWI"/>
                             <constraint firstAttribute="trailing" secondItem="oBf-db-QHP" secondAttribute="trailing" constant="10" id="KYh-T7-uOj"/>
                             <constraint firstItem="tBI-b2-k2t" firstAttribute="top" secondItem="ZtP-ev-tGc" secondAttribute="bottom" constant="10" id="OCD-KX-4Xh"/>
+                            <constraint firstAttribute="trailing" secondItem="qpY-se-f1Z" secondAttribute="trailing" constant="50" id="TYb-Kb-XSW"/>
                             <constraint firstItem="tBI-b2-k2t" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="10" id="VXo-5d-K6e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qpY-se-f1Z" secondAttribute="trailing" constant="70" id="fK0-Fj-PMz"/>
+                            <constraint firstItem="MW1-Tv-Jff" firstAttribute="top" secondItem="oBf-db-QHP" secondAttribute="bottom" constant="15" id="aUR-wf-agm"/>
                             <constraint firstItem="hY1-Yn-xbh" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="10" id="fVZ-ny-PZz"/>
                             <constraint firstItem="hY1-Yn-xbh" firstAttribute="top" secondItem="tBI-b2-k2t" secondAttribute="bottom" constant="20" id="fpc-be-VEs"/>
                             <constraint firstItem="oBf-db-QHP" firstAttribute="centerY" secondItem="hY1-Yn-xbh" secondAttribute="centerY" id="gk8-eN-k7m"/>
                             <constraint firstItem="oBf-db-QHP" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="60" id="gsj-OH-ExV"/>
                             <constraint firstItem="ZtP-ev-tGc" firstAttribute="leading" secondItem="AEu-Ve-DYY" secondAttribute="leading" constant="10" id="oRD-uK-9gv"/>
                             <constraint firstItem="qhD-n2-lAm" firstAttribute="top" secondItem="qpY-se-f1Z" secondAttribute="bottom" constant="10" id="pgH-Xg-nCS"/>
-                            <constraint firstItem="MW1-Tv-Jff" firstAttribute="top" secondItem="hY1-Yn-xbh" secondAttribute="bottom" constant="15" id="uVj-9Q-zQg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downLoad" destination="MW1-Tv-Jff" id="d51-xK-cuy"/>
+                        <outlet property="progress" destination="oBf-db-QHP" id="3d5-e0-0wW"/>
+                        <outlet property="segmentedControl" destination="ZtP-ev-tGc" id="3v7-ae-7xB"/>
+                        <outlet property="startBtn" destination="qpY-se-f1Z" id="RKp-5g-KXi"/>
+                        <outlet property="textView" destination="tBI-b2-k2t" id="alK-Qg-E4k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVF-PM-idg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

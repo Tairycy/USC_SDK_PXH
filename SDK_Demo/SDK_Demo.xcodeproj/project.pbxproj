@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F114EBCB1DB07F21006B08E7 /* USCPlayThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F114EBC81DB07F21006B08E7 /* USCPlayThread.mm */; };
+		F114EBCC1DB07F21006B08E7 /* USCRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = F114EBCA1DB07F21006B08E7 /* USCRecorder.mm */; };
 		F161C4A71DAF295000D5D972 /* USCAsrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C4A61DAF295000D5D972 /* USCAsrViewController.swift */; };
 		F161C4A91DAF296000D5D972 /* USCAsrViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */; };
 		F161C4AB1DAF298300D5D972 /* USCVoiceprintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C4AA1DAF298300D5D972 /* USCVoiceprintViewController.swift */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F114EBC71DB07F21006B08E7 /* USCPlayThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPlayThread.h; sourceTree = "<group>"; };
+		F114EBC81DB07F21006B08E7 /* USCPlayThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCPlayThread.mm; sourceTree = "<group>"; };
+		F114EBC91DB07F21006B08E7 /* USCRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecorder.h; sourceTree = "<group>"; };
+		F114EBCA1DB07F21006B08E7 /* USCRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecorder.mm; sourceTree = "<group>"; };
 		F161C4A61DAF295000D5D972 /* USCAsrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCAsrViewController.swift; sourceTree = "<group>"; };
 		F161C4A81DAF296000D5D972 /* USCAsrViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = USCAsrViewController.storyboard; sourceTree = "<group>"; };
 		F161C4AA1DAF298300D5D972 /* USCVoiceprintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCVoiceprintViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,17 @@
 			name = vpr;
 			sourceTree = "<group>";
 		};
+		F161C5191DAF983300D5D972 /* AudioSource */ = {
+			isa = PBXGroup;
+			children = (
+				F114EBC71DB07F21006B08E7 /* USCPlayThread.h */,
+				F114EBC81DB07F21006B08E7 /* USCPlayThread.mm */,
+				F114EBC91DB07F21006B08E7 /* USCRecorder.h */,
+				F114EBCA1DB07F21006B08E7 /* USCRecorder.mm */,
+			);
+			name = AudioSource;
+			sourceTree = "<group>";
+		};
 		F187F7D61DAE262800CFAEAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +193,7 @@
 		F1A58C0B1DAE07A700174475 /* SDK_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F161C5191DAF983300D5D972 /* AudioSource */,
 				F161C4A51DAF291500D5D972 /* vpr */,
 				F161C4A41DAF290200D5D972 /* asr */,
 				F1BE552E1DAE3EBE0058D84F /* main */,
@@ -373,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F161C4A71DAF295000D5D972 /* USCAsrViewController.swift in Sources */,
+				F114EBCC1DB07F21006B08E7 /* USCRecorder.mm in Sources */,
+				F114EBCB1DB07F21006B08E7 /* USCPlayThread.mm in Sources */,
 				F161C4AF1DAF29AB00D5D972 /* USCSetViewController.swift in Sources */,
 				F1A58C0F1DAE07A700174475 /* ViewController.swift in Sources */,
 				F1A58C0D1DAE07A700174475 /* AppDelegate.swift in Sources */,
@@ -534,7 +554,7 @@
 				INFOPLIST_FILE = SDK_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yunzhisheng.SDK-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDK_Demo-Bridging-Header.h";
@@ -553,7 +573,7 @@
 				INFOPLIST_FILE = SDK_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yunzhisheng.SDK-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDK_Demo-Bridging-Header.h";

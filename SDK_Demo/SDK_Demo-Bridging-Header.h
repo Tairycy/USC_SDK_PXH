@@ -14,3 +14,7 @@
 #import "USCSpeechSynthesizer.h"
 #import "USCVoiceprintRecognizer.h"
 #import "USCConfigure.h"
+
+
+#import "USCPlayThread.h"
+#import "USCRecorder.h"
