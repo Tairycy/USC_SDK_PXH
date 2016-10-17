@@ -96,7 +96,7 @@
     if (self = [super init]) {
 
         // 1.创建asr对象
-        recognizer = [[USCRecognizer alloc] initWithAppKey:appKey secret:nil];
+        recognizer = [[USCRecognizer alloc] initWithAppKey:appKey];
         recognizer.delegate = self;
 
         // 2.

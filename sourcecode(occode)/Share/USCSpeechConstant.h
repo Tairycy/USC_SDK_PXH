@@ -603,15 +603,10 @@
     static    const int USC_ASR_NLU_ERROR_OPERATETOOFAST = 1311;
 
     /**
-     * USC_ASR onResult type 识别在线结果返回，返回的是没有经过解析的JSON
+     * USC_ASR onResult type 识别在线返回
      */
       static    const int USC_ASR_RESULT_NET = 1201;
-
-    /**
-     * USC_ASR onResult type 只返回在线识别结果的文本
-     */
-    static const int  USC_ASR_RESULT_NET_ONLY = 1203;
-
+    
     /**
      * USC_ASR onResult type 识别离线理解返回
      */

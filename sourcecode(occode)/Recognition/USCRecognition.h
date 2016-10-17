@@ -12,19 +12,6 @@
 #import "USCParams.h"
 #import "USCVoiceprintParams.h"
 
-#ifdef DEBUG
-#define ZYLog(...) NSLog(__VA_ARGS__)
-#else
-#define ZYLog(...)
-#endif
-
-#ifdef DEMO
-#define ZYLog(...) NSLog(__VA_ARGS__)
-#else
-#define ZYLog(...)
-#endif
-
-
 @class USCRecoginizerParam,USCVoiceprintParams,USCRecognitionParam;
 
 // @class - 识别类的代理
@@ -43,8 +30,9 @@
  *  @param isLast 是否是最终结果
  */
 - (void)onRecognitionResult:(NSString *)result isLast:(BOOL)isLast;
+// 返回语音语义
 /**
- *  只返回语义结果
+ *  返回语义结果
  *
  *  @param jsonResult JSON  解析成的字典
  */
@@ -73,9 +61,6 @@
  *  音频数据超过限定时长
  */
 - (void)onMaxSpeechTimeout;
-
-// 只返回识别的结果
-- (void)asrResult:(NSString *)result last:(BOOL)last;
 @end
 
 // @class - 识别类

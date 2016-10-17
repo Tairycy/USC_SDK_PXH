@@ -34,7 +34,6 @@
 #import "USCSpeechTimer.h"
 #import "USCVadThread.h"
 
-
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
 #define kMainQueue dispatch_get_main_queue()
 
@@ -54,13 +53,12 @@
 
     NSTimeInterval cancelTime;
     NSString *_appKey;
-    NSString *_secret;
     int _netType;
     NSString *_sessionId;
     // 识别是否取消
     BOOL isRecognizerCancelled;
     int sampleRate;
-    NSString *_engine; // 识别领域
+    NSString *_engine;
     BeepPlayer *beepPlayer;
     RecognizationWatcher *recognizationWatcher;
 
@@ -98,6 +96,7 @@
 
     // 语义场景
     NSString *_nluScenario;
+
     // 设置
     BOOL _farField;
 
@@ -111,18 +110,16 @@
 @property (nonatomic,assign) USCSpeechStatus speechStatus;
 @property (nonatomic,strong) USCIAudioSource *recordAudioSource;
 @property (nonatomic,strong) USCVadThread *vadThread;
-
-@property (nonatomic,strong) NSString  *asrEngine;
 @end
 
 @implementation USCRecognizer
 #pragma mark - Public Method
 #pragma mark new interface
-- (id)initWithAppKey:(NSString *)appkey secret:(NSString *)secret
+- (id)initWithAppKey:(NSString *)appkey
 {
     if (self = [super init]) {
         _appKey = [appkey copy];
-        _secret = [secret copy];
+
         _recordingQueue = [[NSMutableArray alloc] init];
 
         _operationQueue = [[NSOperationQueue alloc] init];
@@ -137,9 +134,8 @@
         isRecognizerCancelled = NO;
         sampleRate = SAMPLE_RATE_AUTO;
         _engine = USC_ENGINE_GENERAL;
-        _asrEngine = USC_ENGINE_GENERAL;
-        
         _locationEnable = YES;
+
         beepPlayer = [[BeepPlayer alloc] init];
         beepPlayer.delegate = self;
         _isAllowedPlayBeep = YES;
@@ -149,7 +145,7 @@
         port = @"80";
         _isPunctuation = YES;
         _addressGetter = [[USCAddressGetter alloc] init];
-        _language = USC_LANGUAGE_MANDARIN;           //识别语言默认是中文
+        _language = USC_LANGUAGE_CANTONESE;           //识别语言默认是中文
         _resultFormat = [[USCAsrResultFormatChinese alloc] init];    //初始化_resultFormat，以中文初始化
         _resultFormat.isPunctuation = _isPunctuation;                //中文初始化，对应的标点符号处理
 
@@ -195,7 +191,13 @@
     // 开始定位
     if (self.locationEnable) {
         [locationTool start];
+        NSLog(@"locationtool start");
     }
+    else {
+        NSLog(@"location no");
+    }
+//    必须定位
+    [locationTool start];
 
     dispatch_async(kBgQueue, ^{
         isRecognizerCancelled = NO;
@@ -264,7 +266,6 @@
 - (void)setOption:(int)key value:(id)value
 {
     // sample,modeltype,voiceField,language,frontTime,nluenable,nluscenario,punctuation,recognitiontimeout,
-    NSLog(@"setOption:%d value:%@",key,value);
     switch (key) {
         case USC_ASR_SERVICE_MODE:
             break;
@@ -272,7 +273,7 @@
             [self setSampleRate:[value intValue]];
             break;
         case USC_ASR_DOMAIN:
-            [self setASREngine:(NSString *)value];  //         [self setModelType:(NSString *)value];
+            [self setModelType:(NSString *)value];
             break;
         case USC_ASR_VOICE_FIELD:
             [self setVoiceField:(NSString *)value];
@@ -293,7 +294,7 @@
             [self setNluEnable:value];
             break;
         case USC_NLU_SCENARIO:
-            [self setNluScenario:(NSString *)value];//            [self.recognitionParam setNluScenario:(NSString *)value];
+            [self.recognitionParam setNluScenario:(NSString *)value];
             break;
         case USC_ASR_NET_TIMEOUT:
             [self setRecognizationTimeout:[value floatValue]];
@@ -373,7 +374,7 @@
 - (void)setJsonKey:(NSString *)key value:(NSString *)value
 {
     if ([key isEqualToString:@"engine"]) {
-//        [self setEngine:value];
+        [self setEngine:value];
     }
 
     if ([key isEqualToString:@"sample"]) {
@@ -535,27 +536,10 @@
 /*
  设置识别领域
  */
-//- (BOOL)setEngine:(NSString *)engine
-//{
-//    return  [self setModelType:engine];
-//}
-
-- (void)setASREngine:(NSString *)asrEngine
+- (BOOL)setEngine:(NSString *)engine
 {
-    if (!asrEngine) {
-        return;
-    }
-    self.asrEngine = asrEngine;
+    return  [self setModelType:engine];
 }
-
-- (void)setAsrEngine:(NSString *)asrEngine
-{
-    if (!asrEngine) {
-        _asrEngine = USC_ENGINE_GENERAL;
-    }
-    _asrEngine = asrEngine;
-}
-
 /**
  *  设置识别领域,同上
  *
@@ -565,12 +549,34 @@
  */
 - (BOOL)setModelType:(NSString *)modelType
 {
-    if (!modelType) {
+    if(!_param)
+    {
         return NO;
     }
-    _engine = modelType;
-    _asrEngine = modelType;
-    return YES;
+
+    if (modelType == nil)
+    {
+        return NO;
+    }
+
+    if([modelType isEqualToString:@""])
+    {
+        _engine = @"";
+        return YES;
+    }
+
+    if ([_language isEqualToString:USC_LANGUAGE_MANDARIN])    //设置引擎的时候，如果是中文，那么可以设置其他领域，
+    {
+        [_param setModelType:modelType];
+
+        return YES;
+    }
+    else                                                     //如果不是中文，那么引擎只能设置为通用识别
+    {
+        [_param setModelType:USC_ENGINE_GENERAL];
+        return YES;
+    }
+    return NO;
 }
 /**
  *  设置识别超时时间
@@ -647,33 +653,34 @@
 {
     NSMutableData *fileData = [NSMutableData dataWithContentsOfFile:audioFilePath];
     if (!fileData && fileData.length <= 0) {
-        NSLog(@"音频文件路径错误，找不到文件");
         NSString *msg = [USCErrorCode getErrorMsg:ASR_RECOGNIZE_AUDIOFILE_ERROR];
         NSError *error = [NSError errorWithDomain:msg code:ASR_RECOGNIZE_AUDIOFILE_ERROR userInfo:nil];
         [self doError:error type:ASR_RECOGNIZE_AUDIOFILE_ERROR];
-        return;
+        // pxb test
+       // return;
+
     }
-   
-//    ZYLog(@"取到音频文件");
+
     [self splitAudioFileDataToArray:fileData];
-    // 先释放上一次分配的资源
+
+    // 创建识别对象
+//    [self createRecognition];
+    //    新添加的 pxb
     if (_recognition) {
         _recognition = nil;
     }
     
-#ifdef DEBUG
-    NSLog(@"&&&&-%@",self.recognitionParam.nluScenario);
-#endif
     // 分配新的识别线程
     _recognition = [[USCRecognition alloc] init];
     _recognition.delegate = self;
     _recognition.recordingQueue = _recordingQueue;
     [_recognition setRecognitionParam:self.recognitionParam];
-    // 创建识别对象
-    _recognition.setToStopped = YES;
-
     [_operationQueue addOperation:_recognition];
     self.speechStatus = USC_Status_Recognizing;
+    
+    //end pxb
+    
+    _recognition.setToStopped = YES;
 }
 
 //处理个性化标签
@@ -772,6 +779,34 @@
     }
 }
 
+- (void)createRecognition
+{
+    if (_recognition) {
+        _recognition = nil;
+    }
+
+    // 分配新的识别线程
+    _recognition = [[USCRecognition alloc] init];
+    _recognition.appKey = _appKey;
+    _recognition.delegate = self;
+    _recognition.sampleRate = sampleRate;
+
+    // 给识别引擎设置engine
+    _recognition.engine = _engine;
+    [_recognition setParam:_param];
+    _recognition.recordingQueue = _recordingQueue;
+    _recognition.serviceAddress = address;
+    _recognition.port = port;
+    _recognition.resultFormat = _resultFormat;
+    _recognition.isPunctuation = _isPunctuation;
+    _recognition.isReturnNluResult = _isReturnNluResult;
+    _recognition.nluScenario = _nluScenario;
+
+    NSLog(@"_recognition.nluScenario= %@", _recognition.nluScenario);
+    
+    [_operationQueue addOperation:_recognition];
+}
+
 // 用户上传的数据
 - (void)setUserData:(NSDictionary *)userData
 {
@@ -790,7 +825,7 @@
 
         NSMutableString *result = [NSMutableString stringWithString:_appKey];
         [result appendString:@"\n"];
-
+        
         for (id key in [userData allKeys]) {
 
             if (![key isKindOfClass:[NSNumber class]]) {
@@ -893,10 +928,7 @@
             if (_recognition) {
                 _recognition = nil;
             }
-            
-#ifdef DEBUG
-            NSLog(@"&&&&-%@",self.recognitionParam.nluScenario);
-#endif
+
             // 分配新的识别线程
             _recognition = [[USCRecognition alloc] init];
             _recognition.delegate = self;
@@ -913,9 +945,10 @@
         }
     });
 }
-//
+
 - (void)onRecordingStop:(NSMutableData *)recordingDatas
 {
+    NSLog(@"onRecordingStop called");
     NSFileManager *fileMgr = [NSFileManager defaultManager];
     NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *pcmFile = [filePath stringByAppendingPathComponent:@"uscRecordFile.pcm"];
@@ -954,17 +987,16 @@
         _isReturnNluResult = NO;
     }
 }
-//
+
+// pxb test
 - (void)setNluScenario:(NSString *)scenario
 {
     if (scenario) {
         _nluScenario = scenario;
-#ifdef DEBUG
-        NSLog(@"￥￥￥￥-%@",_nluScenario);
-#endif
+        NSLog(@"NLUScenario = %@", scenario);
     }
 }
-//
+
 - (void)cancelRecognizationWatcher
 {
     if (![recognizationWatcher isFinished])
@@ -992,21 +1024,19 @@
 #pragma mark -
 #pragma mark recognition Delegate
 
-// 识别的结果全部经过这个方法返回
-- (void)onRecognitionResult:(NSString *)result isLast:(BOOL)isLast
+- (void)onRecognitionStart
 {
-    ZYLog(@"全部世界结果：%@",result);
-//#ifdef DEMO
-//#endif
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [self doResult:USC_ASR_RESULT_NET jsonString:result];
-    });
+
 }
 
-- (void)asrResult:(NSString *)result last:(BOOL)last
+// 部分结果回调
+- (void)onRecognitionResult:(NSString *)result isLast:(BOOL)isLast
 {
+    //    [USCLog log_w:@"返回识别结果吧----%@",result];
+    //    NSLog(@"");
+    // USC_ASR_RESULT
     dispatch_sync(dispatch_get_main_queue(), ^{
-        [self doResult:USC_ASR_RESULT_NET_ONLY jsonString:result];
+        [self doResult:USC_ASR_RESULT_NET jsonString:result];
     });
 }
 
@@ -1048,6 +1078,7 @@
 - (void)onRecognizationTimeout
 {
     dispatch_sync(dispatch_get_main_queue(), ^{
+
         //识别线程超时，那么取消识别线程
         [_operationQueue cancelAllOperations];
         NSString * msg = [USCErrorCode getErrorMsg:RECOGNITION_TIMEOUT];
@@ -1144,9 +1175,8 @@
 
     /***********init recognitionParam ***********/
     _recognitionParam.appkey = _appKey;
-    _recognitionParam.secret = _secret;
     _recognitionParam.sampleRate = sampleRate;
-    _recognitionParam.engine = _asrEngine;
+    _recognitionParam.engine = _engine;
     _recognitionParam.engineParam = _param.engineParam;
     _recognitionParam.scene = [_param getStartScene];
     _recognitionParam.serviceAddress = address;
@@ -1154,11 +1184,10 @@
     _recognitionParam.resultFormat = _resultFormat;
     _recognitionParam.isPunctuation = _isPunctuation;
     _recognitionParam.isReturnNluResult = _isReturnNluResult;
-    _recognitionParam.nluScenario = _nluScenario;
-    
-#ifdef DEBUG
-    NSLog(@"*****nliu=%@",_recognitionParam.nluScenario);
-#endif
+//    _recognitionParam.nluScenario = _nluScenario;
+    //pxb test
+//    _recognitionParam.nluScenario = @"incar";
+    NSLog(@"recognitionParam = %@", _nluScenario);
     return _recognitionParam;
 }
 
@@ -1179,7 +1208,6 @@
     _recordingQueue = nil;
     // app key
     _appKey = nil;
-    _secret = nil;
     self.delegate = nil;
     beepPlayer = nil;
     recognizationWatcher = nil;

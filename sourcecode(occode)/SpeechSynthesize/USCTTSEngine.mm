@@ -341,9 +341,6 @@ static const NSString *USCSyntheszieParam_Vcn = @"vcn";
 
     /***********1.2设置合成参数***********/
     [USCLog log_usc:@"%s vol=%@,spd=%@,vcn=%@",__func__,_vol,_spd,_vcn];
-#ifdef DEBUG
-    NSLog(@"%s vol=%@,spd=%@,vcn=%@",__func__,_vol,_spd,_vcn);
-#endif
     status = tts_set_option(handler, [USCSyntheszieParam_Vol UTF8String], [_vol UTF8String]);
     status = tts_set_option(handler, [USCSyntheszieParam_Spd UTF8String], [_spd UTF8String]);
     status = tts_set_option(handler, [USCSyntheszieParam_Vcn UTF8String], [_vcn UTF8String]);

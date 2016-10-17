@@ -54,11 +54,11 @@ typedef enum {
 }USCSpeechRecognizeLanguage;
 
 // 识别领域
-static NSString * const USC_ENGINE_GENERAL = @"general";
-static NSString * const USC_ENGINE_POI = @"poi";
-static NSString * const USC_ENGINE_SONG = @"song";
-static NSString * const USC_ENGINE_MOVIETV = @"movietv";
-static NSString * const USC_ENGINE_MEDICAL = @"medical";
+NSString * const USC_ENGINE_GENERAL = @"general";
+NSString * const USC_ENGINE_POI = @"poi";
+NSString * const USC_ENGINE_SONG = @"song";
+NSString * const USC_ENGINE_MOVIETV = @"movietv";
+NSString * const USC_ENGINE_MEDICAL = @"medical";
 
 //// 识别语言
 //NSString * const USC_LANGUAGE_CHINESE = @"chinese";

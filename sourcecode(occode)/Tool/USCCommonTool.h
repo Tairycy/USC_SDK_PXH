@@ -13,8 +13,4 @@
 + (NSString *)getUdid;
 
 + (NSString *)getTime;
-
-+ (BOOL)detectResultJSONCount:(NSString *)resultStr;
-+ (NSString *)separateJSONString:(NSString *)string;
-+ (NSString *)asrTextResultWith:(NSString *)asrJson;
 @end

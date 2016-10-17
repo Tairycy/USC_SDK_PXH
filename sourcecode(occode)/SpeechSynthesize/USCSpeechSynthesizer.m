@@ -262,12 +262,8 @@ typedef enum{
 {
     // 1.先停止上一次任务
     [self stop];
-    
-    NSString *trimmedString = [text stringByTrimmingCharactersInSet:
-                               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
     NSString *msg = @"";
-    if (!trimmedString || trimmedString.length == 0) {
+    if (!text || text.length == 0) {
         [self doType:USC_TTS_ERROR Error:[NSError errorWithDomain:@"没有要合成的内容" code:ERROR_SYNRHESISTEXT userInfo:nil]];
         return;
     }
@@ -291,7 +287,7 @@ typedef enum{
     }
 
     _engine.delegate = self;
-    [_engine start:trimmedString];
+    [_engine start:text];
 }
 
 - (void)pauseSpeaking

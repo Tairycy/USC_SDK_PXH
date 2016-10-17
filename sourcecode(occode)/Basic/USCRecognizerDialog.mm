@@ -41,7 +41,7 @@
         recognizerView.delegate = self;
         [self addSubview:recognizerView];
         
-        recognizer = [[USCRecognizer alloc] initWithAppKey:appkey secret:nil];
+        recognizer = [[USCRecognizer alloc] initWithAppKey:appkey];
         recognizer.delegate = self;
         
         lastResult = [[NSMutableString alloc] init];

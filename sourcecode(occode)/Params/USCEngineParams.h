@@ -54,6 +54,8 @@
 
 - (BOOL)isEnabled;
 
+- (NSString *)addNewAction;
+
 @property (nonatomic,assign) BOOL farVoiceField;
 
 @end

@@ -51,10 +51,8 @@
     int _frontTime,_backTime;
 }
 @property (nonatomic,strong) NSMutableString *asrResultString;
-@property (nonatomic,strong) USCIAudioSource *recordAudioSource;
 
-@property (nonatomic,copy) USCResultBlock  resultBlock;
-@property (nonatomic,copy) USCCompleteBlock  completeBlock;
+@property (nonatomic,strong) USCIAudioSource *recordAudioSource;
 
 @end
 
@@ -74,12 +72,14 @@
 
         [_sceneMgr setParams:_param];
 
-        _recognizer = [[USCRecognizer alloc] initWithAppKey:appKey secret:secret];
+        _recognizer = [[USCRecognizer alloc]initWithAppKey:appKey];
         _recognizer.delegate = self;
 
         /***********给识别对象设置识别参数 15-1-13 ***********/
 //        [_recognizer setParam:_param];
         [_recognizer setOption:USC_ASR_RECOGNIZER_PARAM value:_param];
+        
+        [_recognizer start];
 
         _nluParser = [[USCNLUParser alloc]initWithAppkey:appKey secret:secret];
         _nluParser.delegate = self;
@@ -106,7 +106,7 @@
     // 判断在开始识别前是否已经设置engine
     if (!_isSetEngine) {
 //        [_recognizer setEngine:@""];
-//        [_recognizer setOption:USC_ASR_DOMAIN value:];
+        [_recognizer setOption:USC_ASR_DOMAIN value:@""];
     }
     [_recognizer start];
 }
@@ -132,6 +132,7 @@
 
 - (void)setOption:(int)key value:(id)value
 {
+    NSLog(@"setOption:%d value:%@",key,value);
     if (_recognizer) {
         [_recognizer setOption:key value:value];
     }
@@ -184,16 +185,6 @@
     return -1;
 }
 
-- (void)recognizeAudioFile:(NSString *)filePath result:(USCResultBlock)result complete:(USCCompleteBlock)complete
-{
-    self.resultBlock = result;
-    self.completeBlock = complete;
-    
-    if (_recognizer) {
-        [_recognizer recognizeAudioFile:filePath];
-    }
-}
-
 #pragma mark -
 #pragma mark Private Method
 - (NSDictionary *)dictWithJsonString:(NSString *)jsonStr
@@ -219,12 +210,15 @@
 
 #pragma mark -
 #pragma mark  Other Method
-//- (void)recognizeAudioFile:(NSString *)audioFilePath
-//{
-//    if (_recognizer) {
-//        [_recognizer recognizeAudioFile:audioFilePath];
-//    }
-//}
+- (void)recognizeAudioFile:(NSString *)audioFilePath
+{
+
+    if (_recognizer) {
+        [_recognizer recognizeAudioFile:audioFilePath];
+    }
+}
+
+
 //
 //- (void)setPlayingBeep:(BOOL)isAllowed
 //{
@@ -310,10 +304,6 @@
 
 - (void)onError:(int)type error:(NSError *)error
 {
-    if (self.completeBlock) {
-        self.completeBlock(type,error);
-    }
-    
     if (_delegate && [_delegate respondsToSelector:@selector(onError:error:)]) {
         [_delegate onError:type error:error];
     }
@@ -321,14 +311,15 @@
 
 - (void)onResult:(int)type jsonString:(NSString *)jsonString
 {
-    if (self.resultBlock) {
-        self.resultBlock(type,jsonString);
-    }
-    
     if (_delegate && [_delegate respondsToSelector:@selector(onResult:jsonString:)]) {
         [_delegate onResult:type jsonString:jsonString];
     }
 }
+
+-(NSString *)addActionPxb {
+    return @"are u ok";
+}
+
 
 #pragma  mark - Nlu Delegate
 - (void)onNLUEnd:(NSError *)error

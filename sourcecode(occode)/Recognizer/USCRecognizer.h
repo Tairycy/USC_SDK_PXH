@@ -38,6 +38,7 @@
  */
 - (void)onResult:(int)type jsonString:(NSString *)jsonString;
 
+
 @end
 
 #pragma mark -
@@ -51,8 +52,8 @@
 /*
  初始化, 请到开发者网站http://dev.hivoice.cn申请appKey
  */
-//- (id)initWithAppKey:(NSString *)appkey;
-- (id)initWithAppKey:(NSString *)appkey secret:(NSString *)secret;
+- (id)initWithAppKey:(NSString *)appkey;
+
 /**
  *   设置audiosource
  *
@@ -128,9 +129,6 @@
  */
 - (void)uploadUserData:(NSDictionary *)userData;
 
-//
-- (void)recognizeAudioFile:(NSString *)audioFilePath;
-
 #pragma mark -
 #pragma mark old interface
 ///**
@@ -138,8 +136,9 @@
 // *
 // *  @param param 参数
 // */
-//- (void)setParam:(USCRecoginizerParam *)param;
-//
+- (void)setParam:(USCRecoginizerParam *)param;
+
+
 ///*!
 // *
 // *  @brief  每次请求不再返回语义理解结果
@@ -254,7 +253,7 @@
 // *
 // *  @param audioFilePath 音频文件的路径
 // */
-//- (void)recognizeAudioFile:(NSString *)audioFilePath;
+- (void)recognizeAudioFile:(NSString *)audioFilePath;
 //
 ///**
 // *

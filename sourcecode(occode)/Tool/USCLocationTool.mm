@@ -30,6 +30,8 @@
     if (self = [super init]) {
         [[NSUserDefaults standardUserDefaults] setObject:@"北京市" forKey:@"currentcity"];
         [[NSUserDefaults standardUserDefaults] setObject:@" 39.97768,116.35999" forKey:@"currentgps"];
+//        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"currentgps"];
+//        NSLog(@"USCLocation init currentcity 上海");
     }
     return self;
 }
@@ -39,12 +41,17 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 )
     {
         if([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedAlways)
-           [self.mgr requestAlwaysAuthorization];
+           
+            [self.mgr requestAlwaysAuthorization];
+            [self.mgr startUpdatingLocation];
+       
     }
     else
     {
         [self.mgr startUpdatingLocation]; //Will update location immediately
     }
+    
+    
 }
 
 
@@ -82,5 +89,19 @@
         }
     }];
 }
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    NSString *errorType = (error.code == kCLErrorDenied) ?
+    @"Access Denied" : @"Unknown Error";
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Error getting Location"
+                          message:errorType
+                          delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end

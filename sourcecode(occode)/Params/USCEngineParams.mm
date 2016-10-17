@@ -81,6 +81,10 @@ typedef enum
 
 #pragma mark - public method
 
+- (NSString*)addNewAction {
+    return @"Are u ok";
+}
+
 /**
  * 设置语言 目前没有使用，待服务器支持 2015-01-27
  * @param language
@@ -129,7 +133,9 @@ typedef enum
 - (BOOL)setModelType:(NSString *)value
 {
     [_mParams setValue:value forKey:MODEL_TYPE];
+
     [self setChanged];
+
     return TRUE;
 }
 - (void)setSampleRate8k

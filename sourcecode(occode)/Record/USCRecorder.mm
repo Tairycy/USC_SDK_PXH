@@ -7,7 +7,6 @@
 //
 #import "USCRecorder.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import <AVFoundation/AVFoundation.h>
 
 static const int bufferByteSize = 3200;
 static  int sampeleRate = 16000;
@@ -164,10 +163,21 @@ static const int bitsPerChannel = 16;
 void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer, const AudioTimeStamp *inStartTime,
                         UInt32 inNumPackets, const AudioStreamPacketDescription *inPacketDesc)
 {
+
+//    printf("%s",__func__);
+
     USCRecorder *recorder = (__bridge USCRecorder *)inUserData;
     if (recorder == nil){
         return;
     }
+//    
+//    if (!(recorder.isRecording)){
+//        if ([recorder.delegate isAllowedPlayBeep]){
+//            recorder.asrVad->flush();
+//            [recorder recordingEnd];
+//        }
+//        return;
+//    }
 
     if ((inNumPackets > 0) && (recorder.isRecording))
     {
@@ -182,6 +192,7 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
         // 把数据保存文件
         [recorder appendRecordData:data];
 
+//        [self.recordOriginalData];
         // get volume
         AudioQueueLevelMeterState meters[1];
         UInt32 dlen = sizeof(meters);
@@ -193,11 +204,7 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
 - (void)appendRecordData:(NSData *)data
 {
     [self.recordOriginalData appendData:data];
-    
-    
-#ifdef DEBUG
     [self.recordOriginalData writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"recordroriginaldata.pcm"] atomically:YES];
-#endif
 }
 
 - (int)numOfArray
@@ -215,7 +222,26 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
     
     [_recordingDatas setLength:0];
     
+    // vad reset
+//    if (_asrVad) {
+//        _asrVad->reset();
+//    }
+//
+//    /***********create new asrvad every time***********/
+//    if (_asrVad != NULL) {
+//        delete _asrVad;
+//        _asrVad = NULL;
+//    }
+//
+//    _asrVad = new ASRVadBeepWapper();
+//    _asrVad->delegate = self;
+//    _asrVad->init();
+//    _asrVad->vadParams = _vadParam;
+//    _asrVad->setVADParams();
+//    _asrVad->setVadTimeout(_frontTimeout, _backTimeout);
+
     OSStatus error;
+
     // set session
     error = AudioSessionSetActive(true);
     if (error) {
@@ -229,9 +255,6 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
     ///------------
     UInt32 category = kAudioSessionCategory_PlayAndRecord;
     error = AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(category), &category);
-    
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionAllowBluetooth error:nil];
-    
     if (error)
     {
 //        [_delegate onRecordingStart:RECORDING_CATEGORY_ERROR];
@@ -335,6 +358,17 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
     }
 }
 
+// 获取系统音量
+//- (void)getSystemVolume
+//{
+//    AudioQueueLevelMeterState levelMeter;
+//    UInt32 levelMeterSize = sizeof(AudioQueueLevelMeterState);
+//    AudioQueueGetProperty(_audioQueue, kAudioQueueProperty_CurrentLevelMeterDB, &levelMeter, &levelMeterSize);
+//    if (_delegate) {
+//        [_delegate onUpdateVolume:levelMeter.mAveragePower];
+//    }
+//}
+
 -(BOOL)isAllowedPlayBeep
 {
     return [self.delegate isAllowedPlayBeep];
@@ -354,10 +388,32 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
         return -1;
     }
 
+//    @synchronized(self.originalRecordData)
+//    {
+//        NSData *partData = nil;
+//        int fetchLen = 0;
+//        if (self.originalRecordData.length - self.readedDataLen > size) {
+//            partData = [self.originalRecordData subdataWithRange:NSMakeRange(self.readedDataLen, size)];
+//            self.readedDataLen += size;
+//            fetchLen = partData.length;
+//        }
+//        else if(self.originalRecordData.length - self.readedDataLen == 0 ){
+//            return 0;
+//        }
+//        else{
+//            partData = [self.originalRecordData subdataWithRange:NSMakeRange(self.readedDataLen, self.originalRecordData.length - self.readedDataLen - size)];
+//            fetchLen = partData.length;
+//        }
+//
+//        [buffer appendData:partData];
+//        [self.testMData appendData:partData];
+//        [self.testMData writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"addrecordfile.pcm"] atomically:YES];
+//        return (int)fetchLen;
+//    }
     // 这里每次录音buffer 最大返回3200,每次vadthread 读取3200 
     @synchronized(_originalRecordDataArray){
         if ( 0 == self.originalRecordDataArray.count && NO == _isRecording) {
-            return -1;// 表示录音结束
+            return -2;// 表示录音结束
         }
 
         if (self.originalRecordDataArray.count > 0) {

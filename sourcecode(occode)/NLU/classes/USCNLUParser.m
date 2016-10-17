@@ -676,7 +676,7 @@ static double currentTime;
 {
     _url = [[NSURL alloc] initWithString:_sendUrlStr];
 //    _nluParam;
-//    NSLog(@"发送的网络请求url= %@",_url);
+    NSLog(@"发送的网络请求url= %@",_url);
 
 
     _request = [[NSMutableURLRequest alloc] initWithURL:_url];

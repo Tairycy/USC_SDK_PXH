@@ -93,13 +93,6 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
     }
 }
 
-- (void)p_asrResult:(NSString *)result last:(BOOL)isLast
-{
-    if (_delegate && [_delegate respondsToSelector:@selector(asrResult:last:)]) {
-        [_delegate asrResult:result last:isLast];
-    }
-}
-
 - (void)doRecognitionResult:(NSString *)result isLast:(BOOL)isLast
 {
 
@@ -146,47 +139,32 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
 // set asr parameter
 - (void)setASRParam
 {
-    NSMutableString *paramString = [NSMutableString string];
-    [paramString appendFormat:@"****ASR*****\n"];
     _asrClient.setValueInt(205, 1);// set md5
-    _asrClient.setValueString(OPT_SECRET,[self.recognitionParam.secret UTF8String]);
-    [paramString appendFormat:@"Secret:%@\n",self.recognitionParam.secret];
+    _asrClient.setValueString(204,[self.secret UTF8String]);
 
     // 2.engineParams,设置识别参数
-    if([engineParams isEnabled]){
+    if([engineParams isEnabled])
         _asrClient.setValueString(OPT_ENGINE_PARAMETER, [[self.recognitionParam.engineParam toString] UTF8String]);
-        [paramString appendFormat:@"engineParam:%@\n",[self.recognitionParam.engineParam toString]];
-    }
 
     _asrClient.setValueInt(ASR_PCM_COMPRESS_ID, 8);
     _asrClient.setValueInt(ASR_WAITING_RESULT_TIMEOUT_ID, 20);
     _asrClient.setValueString(ASR_RESULT_FORMAT_ID, "json");
 
     // 5.设置场景
-    if ([_scene isEnabled]){
+    if ([_scene isEnabled])
         _asrClient.setValueInt(ASR_SCENE_CONTEXTID, [_scene getSceneID]);
-        [paramString appendFormat:@"scene:%d\n",[_scene getSceneID]];
-    }
 
     // 6.设置引擎
-    if(1){
-        _asrClient.setValueString(ASR_MODLE_TYPE, [self.recognitionParam.engine UTF8String]);
-        [paramString appendFormat:@"ModeType:%@\n",self.recognitionParam.engine];
-    }
+    if([engineParams isEnabled])
+        _asrClient.setValueString(ASR_MODLE_TYPE, [_engine UTF8String]);
 
     // mac addr
     NSString *mac_addr = [USCUtil getLocalMacAddress];
 
-    if (self.isPunctuation){
+    if (self.isPunctuation)
         _asrClient.setValueString(ASR_PUNCTUATION_ENABLE, "true");
-       [paramString appendFormat:@"Punctuation:%@\n",@"YES"];
-    }
-    else{
+    else
         _asrClient.setValueString(ASR_PUNCTUATION_ENABLE, "false");
-       [paramString appendFormat:@"Punctuation:%@\n",@"NO"];
-    }
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"USCParameter" object:paramString];
 
     const char * imei = NULL;
     if (mac_addr)
@@ -209,13 +187,9 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
 - (void)setNLUParam
 {
     // get city
-    NSString *str = [NSString stringWithFormat:@"***NLU******\nfilterName=%@;returnType=%@;city=%@;gps=%@;udid=%@;history=%@;scenario=%@;screen=%@;dpi=%@;time=%@;",@"search",@"json",[[NSUserDefaults standardUserDefaults] objectForKey:@"currentcity"],[[NSUserDefaults standardUserDefaults] objectForKey:@"currentgps"],[[NSUserDefaults standardUserDefaults] objectForKey:@"udid"],@"",self.recognitionParam.nluScenario,@"",@"",[USCCommonTool getTime]];
-#ifdef DEBUG
-    NSLog(@"*****NLU-PAR****=%@",str);
-#endif
+    NSString *str = [NSString stringWithFormat:@"filterName=%@;returnType=%@;city=%@;gps=%@;udid=%@;history=%@;scenario=%@;screen=%@;dpi=%@;time=%@;",@"search",@"json",[[NSUserDefaults standardUserDefaults] objectForKey:@"currentcity"],[[NSUserDefaults standardUserDefaults] objectForKey:@"currentgps"],[[NSUserDefaults standardUserDefaults] objectForKey:@"udid"],@"",self.recognitionParam.nluScenario,@"",@"",[USCCommonTool getTime]];
     _asrClient.setValueString(USC_NLU_PARAMETER, [str UTF8String]);
-
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"USCParameter" object:str];
+//    [USCLog log_d:@"%s nluparam=%@",__func__,str];
 }
 
 // set vpr parameter
@@ -239,13 +213,10 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
             break;
     }
     
-    NSString *paraStr = [NSString stringWithFormat:@"****VPR*****\nfilterName=vpr;userName=%@;type=%@;returnType=json;",self.recognitionParam.userName,type];
-#ifdef DEBUG
-    NSLog(@"vpr 参数：%@",paraStr);
-#endif
+    NSString *paraStr = [NSString stringWithFormat:@"filterName=vpr;userName=%@;type=%@;returnType=json;",self.recognitionParam.userName,type];
+//    NSLog(@"vpr 参数：%@",paraStr);
     // 设置声纹参数
     _asrClient.setValueString(201, [paraStr UTF8String]);
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"USCParameter" object:paraStr];
     [USCLog log_d:@"%s-- vprParameter:%@",__func__,paraStr];
 }
 
@@ -336,16 +307,18 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
                     [USCLog log_d:@"%s-part result=%s",__func__,result];
 //                    NSLog(@"part result=%s",result);
                     NSString *partResult = [NSString stringWithUTF8String:result];
+
                     [self doRecognitionResult:partResult isLast:NO];
-                    NSData *data = [partResult dataUsingEncoding:NSUTF8StringEncoding];
-                    NSError *error = nil;
-                    NSDictionary *resObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-                    if (resObj) {
-                        NSString *part = [resObj objectForKey:ASRKEY];
-                            if (part){
-                            [self p_asrResult:part last:NO];
-                        }
-                    }
+
+//                    NSData *data = [partResult dataUsingEncoding:NSUTF8StringEncoding];
+//
+//                    NSError *error = nil;
+//                    NSDictionary *resObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+//                    if (resObj) {
+//                        NSString *part = [resObj objectForKey:ASRKEY];
+//                        if (part)
+//                            [self doRecognitionResult:part isLast:NO];
+//                    }
                 }
                 else if (recognizeCode < 0)
                 {
@@ -379,22 +352,23 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
         else
         {
             result = _asrClient.getResult(); // asr
+
         }
-        [USCLog log_usc:@"last result:%s",result];
-        NSString *resultString = [NSString stringWithUTF8String:result];
+//         NSLog(@"last result=%s",result);
         
+//        pxb log
+        [USCLog log_usc:@"last result:%s",result];
+
+        NSString *resultString = [NSString stringWithUTF8String:result];
         /***********universal***********/
         if (!resultString && resultString.length == 0) {
             [self doRecognitionStop:[NSError errorWithDomain:@"最后一次结果出错" code:-1 userInfo:nil]];
         }
         [self doRecognitionResult:resultString isLast:YES];
+
+//        pxb log
         
-        // ---------------------------------------//
-        if (![USCCommonTool detectResultJSONCount:resultString]) {
-            [self p_asrResult:[USCCommonTool asrTextResultWith:resultString] last:YES];
-        }else{
-            [self p_asrResult:[USCCommonTool separateJSONString:resultString] last:YES];
-        }
+        
         
         
         
@@ -413,7 +387,6 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
 //        [USCLog log_usc:@"lastMutableDict=%@",lastMutableDict];
 //
 //        NSError *stopError = nil;
-//        // if is vpr recognize
 //        if(self.recognitionParam.recognitionType == 3) {// vpr
 //            if (!lastMutableDict)
 //            {
@@ -425,108 +398,40 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
 //                if ([lastMutableDict objectForKey:@"errorMsg"]) {
 //                    stopError  = [NSError errorWithDomain:[lastMutableDict objectForKey:@"errorMsg"] code:[[lastMutableDict objectForKey:@"status"] intValue] userInfo:nil];
 //                }
-//                else{
+//                else
+//                {
 //                    [self.delegate onVPRResult:lastMutableDict];
 //                }
 //            }
 //        }
-//        else// if is asr
+//        else// asr
 //        {
-//            if (!lastMutableDict){
-//                [self p_asrResult:@"" last:YES];
+//            if (!lastMutableDict)
+//            {
+//                [self doRecognitionResult:@"" isLast:YES];
 //            }
 //
 //            if ([lastMutableDict objectForKey:ASRKEY] != nil) {
-//                    NSLog(@"解析识别的最后结果：%@",[lastMutableDict objectForKey:ASRKEY]);
-//                [self p_asrResult:[lastMutableDict objectForKey:ASRKEY] last:YES];
+//                [self doRecognitionResult:[lastMutableDict objectForKey:ASRKEY] isLast:YES];
 //            }
 //            else{
-//                [self p_asrResult:@"" last:YES];
+//                [self doRecognitionResult:@"" isLast:YES];
 //            }
-//            
+//
 //            [lastMutableDict removeObjectForKey:ASRKEY];
 //            // if have nlu result ,return
-////            if (lastMutableDict && lastMutableDict.count > 0)
-////                if (_delegate && [_delegate respondsToSelector:@selector(onUnderstanderResult:)])
-////                    [_delegate onUnderstanderResult:lastMutableDict];
+//            if (lastMutableDict && lastMutableDict.count > 0)
+//                if (_delegate && [_delegate respondsToSelector:@selector(onUnderstanderResult:)])
+//                    [_delegate onUnderstanderResult:lastMutableDict];
 //        }
-        
         [self doRecognitionStop:nil];
     }
+
     [USCLog log_usc:@"recognition---stop"];
+
 }
 
-
-- (NSString *)separateJSONString:(NSString *)string
-{
-    NSMutableString *allJsonResultStr = [NSMutableString string];// server all json result
-    NSString *parten =@"\\}\\{";
-    NSError* error = NULL;
-    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:parten options:NULL error:&error];
-    NSArray* match = [reg matchesInString:string options:NSMatchingCompleted range:NSMakeRange(0, [string length])];// all json in match array
-    if (match.count == 0) {
-        return nil;
-    }
-    
-    NSMutableArray *locationArray = [NSMutableArray array];
-    // 计算每块json的location
-    for (NSTextCheckingResult *checkResult in match) {
-        [locationArray addObject:[NSNumber numberWithInt:(int)checkResult.range.location]];
-    }
-    
-    NSInteger processLen =0;
-    NSMutableArray *jsonArray = [NSMutableArray array];
-    // 计算出每段json
-    for (int i = 0; i <locationArray.count; i++) {
-        NSString *jsonString;
-        if (i == 0) {
-            NSRange range = NSMakeRange(0, ([locationArray[i] intValue] + 1));
-            jsonString = [string substringWithRange:range];
-            processLen = range.location + range.length;
-        }
-        else{
-            int len = [locationArray[i] intValue] - [locationArray[i - 1] intValue];
-            NSRange range = NSMakeRange([locationArray[i-1] intValue] + 1, len);
-            jsonString = [string substringWithRange:range];
-            processLen = range.location + range.length;
-        }
-        [jsonArray addObject:jsonString];
-        
-        if ([self asrTextResultWith:jsonString]) {
-            [allJsonResultStr appendString:[self asrTextResultWith:jsonString]];
-        }
-        //
-        //        NSData *tempData =  [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-        //        NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:tempData options:NSJSONReadingAllowFragments error:&error];
-        //
-        //        if ([tempDict objectForKey:@"asr_recongize"]) {
-        //
-        //        }
-    }// for
-    
-    if (processLen < string.length) {
-        NSString *str = [string substringFromIndex:processLen];
-        if ([self asrTextResultWith:str]) {
-            [allJsonResultStr appendString:[self asrTextResultWith:str]];
-        }
-    }
-    return allJsonResultStr;
-}
-
-// 根据一个asr json返回asr text
-- (NSString *)asrTextResultWith:(NSString *)asrJson
-{
-    NSError *error;
-    NSData *tempData =  [asrJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:tempData options:NSJSONReadingAllowFragments error:&error];
-    if ([tempDict objectForKey:@"asr_recongize"]) {
-        return (NSString *)[tempDict objectForKey:@"asr_recongize"];
-    }
-    return nil;
-}
-
-
-//// detect last result json count
+// detect last result json count
 - (BOOL)detectResultJSONCount:(NSString *)resultStr
 {
     NSString *parten =@"\\}\\{";
@@ -539,58 +444,58 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
     }
     return NO;
 }
-//
-//- (NSMutableDictionary *)separateJSONString:(NSString *)string
-//{
-//    [USCLog log_usc:@"separate json string---------"];
-//    NSMutableString *allJsonResultStr = [NSMutableString string];// server all json result
-//    NSMutableDictionary *resultMDict;// return this dict
-//    //    NSString *parten =@"\\{[^{]*:[^}]*\\}";
-//    NSString *parten =@"\\}\\{";
-//    NSError* error = NULL;
-//    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:parten options:NULL error:&error];
-//    NSArray* match = [reg matchesInString:string options:NSMatchingCompleted range:NSMakeRange(0, [string length])];// all json in match array
-//    if (match.count == 0) {
-//        return nil;
-//    }
-//
-//    NSMutableArray *locationArray = [NSMutableArray array];
-//    // 计算每块json的location
-//    for (NSTextCheckingResult *checkResult in match) {
-//        [locationArray addObject:[NSNumber numberWithInt:checkResult.range.location]];
-//    }
-//
-//    NSMutableArray *jsonArray = [NSMutableArray array];
-//    // 计算出每段json
-//    for (int i = 0; i < locationArray.count; i++) {
-//        NSString *jsonString;
-//        if (i == 0) {
-//            NSRange range = NSMakeRange(0, ([locationArray[i] intValue] + 1));
-//            jsonString = [string substringWithRange:range];
-//        }
-//        else{
-//            int len = [locationArray[i] intValue] - [locationArray[i - 1] intValue];
-//            NSRange range = NSMakeRange([locationArray[i-1] intValue] + 1, len);
-//            jsonString = [string substringWithRange:range];
-//        }
-//        [jsonArray addObject:jsonString];
-//        NSData *tempData =  [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-//        NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:tempData options:NSJSONReadingAllowFragments error:&error];
-//
-//        if ([tempDict objectForKey:ASRKEY]) {
-//            [self doRecognitionResult:[tempDict objectForKey:ASRKEY] isLast:NO];
-//        }
-//    }// for
-//
-//    // 处理最后这个json 可能是nlu或者asr的
-//    [jsonArray addObject:[string substringFromIndex:[[locationArray lastObject] intValue] + 1]];
-//
-//    [USCLog log_usc:@"separated json string array= %@",jsonArray];
-//
-//    NSData *tempData =  [[jsonArray lastObject] dataUsingEncoding:NSUTF8StringEncoding];
-//    NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:tempData options:NSJSONReadingAllowFragments error:&error];
-//    return [NSMutableDictionary dictionaryWithDictionary:tempDict];
-//}
+
+- (NSMutableDictionary *)separateJSONString:(NSString *)string
+{
+    [USCLog log_usc:@"separate json string---------"];
+    NSMutableString *allJsonResultStr = [NSMutableString string];// server all json result
+    NSMutableDictionary *resultMDict;// return this dict
+    //    NSString *parten =@"\\{[^{]*:[^}]*\\}";
+    NSString *parten =@"\\}\\{";
+    NSError* error = NULL;
+    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:parten options:NULL error:&error];
+    NSArray* match = [reg matchesInString:string options:NSMatchingCompleted range:NSMakeRange(0, [string length])];// all json in match array
+    if (match.count == 0) {
+        return nil;
+    }
+
+    NSMutableArray *locationArray = [NSMutableArray array];
+    // 计算每块json的location
+    for (NSTextCheckingResult *checkResult in match) {
+        [locationArray addObject:[NSNumber numberWithInt:checkResult.range.location]];
+    }
+
+    NSMutableArray *jsonArray = [NSMutableArray array];
+    // 计算出每段json
+    for (int i = 0; i < locationArray.count; i++) {
+        NSString *jsonString;
+        if (i == 0) {
+            NSRange range = NSMakeRange(0, ([locationArray[i] intValue] + 1));
+            jsonString = [string substringWithRange:range];
+        }
+        else{
+            int len = [locationArray[i] intValue] - [locationArray[i - 1] intValue];
+            NSRange range = NSMakeRange([locationArray[i-1] intValue] + 1, len);
+            jsonString = [string substringWithRange:range];
+        }
+        [jsonArray addObject:jsonString];
+        NSData *tempData =  [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:tempData options:NSJSONReadingAllowFragments error:&error];
+
+        if ([tempDict objectForKey:ASRKEY]) {
+            [self doRecognitionResult:[tempDict objectForKey:ASRKEY] isLast:NO];
+        }
+    }// for
+
+    // 处理最后这个json 可能是nlu或者asr的
+    [jsonArray addObject:[string substringFromIndex:[[locationArray lastObject] intValue] + 1]];
+
+    [USCLog log_usc:@"separated json string array= %@",jsonArray];
+
+    NSData *tempData =  [[jsonArray lastObject] dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *tempDict = [NSJSONSerialization JSONObjectWithData:tempData options:NSJSONReadingAllowFragments error:&error];
+    return [NSMutableDictionary dictionaryWithDictionary:tempDict];
+}
 
 #pragma mark - get client inforamtion
 
@@ -655,6 +560,10 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
  */
 - (NSString *)getDomain:(NSString *)address
 {
+    if (!self.serviceAddress) {
+        self.serviceAddress = @"tr.hivoice.cn";
+    }
+    NSLog(@"self.serviceAddress = %@", self.serviceAddress);
     struct hostent *phost = gethostbyname([self.serviceAddress UTF8String]);
     char *server = NULL;
     if (phost != NULL){
@@ -671,4 +580,7 @@ const  char *ASR_USRDATA_FLAG_CLOSE = "close";
 {
     self.delegate = nil;
 }
+
+// new methad
+
 @end
