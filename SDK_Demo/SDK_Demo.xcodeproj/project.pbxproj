@@ -20,6 +20,8 @@
 		F187F7DE1DAE265100CFAEAB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7DD1DAE265100CFAEAB /* CoreTelephony.framework */; };
 		F187F7E01DAE265700CFAEAB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7DF1DAE265700CFAEAB /* CoreLocation.framework */; };
 		F187F7E61DAE297B00CFAEAB /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7E51DAE297B00CFAEAB /* libc++.1.tbd */; };
+		F19440301DB4CC8200FAE1E9 /* new1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F194402F1DB4CC8200FAE1E9 /* new1.m4a */; };
+		F19440331DB4D08C00FAE1E9 /* 16k.wav in Resources */ = {isa = PBXBuildFile; fileRef = F19440321DB4D08C00FAE1E9 /* 16k.wav */; };
 		F1A58C0D1DAE07A700174475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A58C0C1DAE07A700174475 /* AppDelegate.swift */; };
 		F1A58C0F1DAE07A700174475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A58C0E1DAE07A700174475 /* ViewController.swift */; };
 		F1A58C121DAE07A700174475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A58C101DAE07A700174475 /* Main.storyboard */; };
@@ -74,6 +76,8 @@
 		F187F7DD1DAE265100CFAEAB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F187F7DF1DAE265700CFAEAB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F187F7E51DAE297B00CFAEAB /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		F194402F1DB4CC8200FAE1E9 /* new1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = new1.m4a; sourceTree = "<group>"; };
+		F19440321DB4D08C00FAE1E9 /* 16k.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 16k.wav; sourceTree = "<group>"; };
 		F1A58C091DAE07A700174475 /* SDK_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDK_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A58C0C1DAE07A700174475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1A58C0E1DAE07A700174475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F19440311DB4CC8600FAE1E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1A58C0C1DAE07A700174475 /* AppDelegate.swift */,
+				F1A58C131DAE07A700174475 /* Assets.xcassets */,
+				F1A58C151DAE07A700174475 /* LaunchScreen.storyboard */,
+				F1A58C181DAE07A700174475 /* Info.plist */,
+				F19440321DB4D08C00FAE1E9 /* 16k.wav */,
+				F194402F1DB4CC8200FAE1E9 /* new1.m4a */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F1A58C001DAE07A700174475 = {
 			isa = PBXGroup;
 			children = (
@@ -193,14 +210,11 @@
 		F1A58C0B1DAE07A700174475 /* SDK_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F19440311DB4CC8600FAE1E9 /* Supporting Files */,
 				F161C5191DAF983300D5D972 /* AudioSource */,
 				F161C4A51DAF291500D5D972 /* vpr */,
 				F161C4A41DAF290200D5D972 /* asr */,
 				F1BE552E1DAE3EBE0058D84F /* main */,
-				F1A58C0C1DAE07A700174475 /* AppDelegate.swift */,
-				F1A58C131DAE07A700174475 /* Assets.xcassets */,
-				F1A58C151DAE07A700174475 /* LaunchScreen.storyboard */,
-				F1A58C181DAE07A700174475 /* Info.plist */,
 			);
 			path = SDK_Demo;
 			sourceTree = "<group>";
@@ -362,10 +376,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A58C171DAE07A700174475 /* LaunchScreen.storyboard in Resources */,
+				F19440301DB4CC8200FAE1E9 /* new1.m4a in Resources */,
 				F1A58C141DAE07A700174475 /* Assets.xcassets in Resources */,
 				F161C4A91DAF296000D5D972 /* USCAsrViewController.storyboard in Resources */,
 				F1A58C121DAE07A700174475 /* Main.storyboard in Resources */,
 				F161C4AD1DAF299100D5D972 /* USCVoiceprintViewController.storyboard in Resources */,
+				F19440331DB4D08C00FAE1E9 /* 16k.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

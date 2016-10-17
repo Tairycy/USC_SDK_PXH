@@ -23,8 +23,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
     var speechUnderstander : USCSpeechUnderstander?
     var speechSynthesizer : USCSpeechSynthesizer?
     var speechResult : USCSpeechResult?
-//    var record : USCRecorder?
-//    var player : USCPlayThread?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +43,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         self.jsonResult = NSMutableString.init()
     }
     func uploadAudio(_ sender : AnyObject){
-        let glassPath = Bundle.main.path(forResource: "new1", ofType: "m4a")
+        let glassPath = Bundle.main.path(forResource: "16k", ofType: "wav")
         self.speechUnderstander?.recognizeAudioFile(glassPath)
         let city = UserDefaults.standard.object(forKey: "currentcity")
         print(city)
@@ -137,11 +136,11 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
     func onResult(_ type: Int32, jsonString: String!) {
         NSLog("type = %d json = %@",type, jsonString)
         /*注意这个方法会调用多次，注意根据type判断，得到想要的结果*/
-        if (USC_ASR_RESULT_NET_ONLY == type) {
-            self.asrResult?.append(jsonString)
-        }else if(USC_ASR_RESULT_NET == type){
-            self.jsonResult?.append(jsonString)
-        }
+//        if (USC_ASR_RESULT_NET_ONLY == type) {
+//            self.asrResult?.append(jsonString)
+//        }else if(USC_ASR_RESULT_NET == type){
+//            self.jsonResult?.append(jsonString)
+//        }
         self.textView.text = self.jsonResult! as String
     }
     //MARK:-  USCSpeechSynthesizerDelegate
