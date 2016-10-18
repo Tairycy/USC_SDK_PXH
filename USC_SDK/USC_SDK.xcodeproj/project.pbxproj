@@ -162,69 +162,69 @@
 		F187F6EA1DAE143B00CFAEAB /* service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F187F6D81DAE143B00CFAEAB /* service.cpp */; };
 		F187F6EB1DAE143B00CFAEAB /* tts_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F187F6DB1DAE143B00CFAEAB /* tts_client.cpp */; };
 		F187F6EC1DAE143B00CFAEAB /* tts_service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F187F6DD1DAE143B00CFAEAB /* tts_service.cpp */; };
-		F1943FF01DB4C96200FAE1E9 /* ASRClientWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1943F531DB4C96200FAE1E9 /* ASRClientWrapper.cpp */; };
-		F1943FF11DB4C96200FAE1E9 /* USCIAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F571DB4C96200FAE1E9 /* USCIAudioSource.m */; };
-		F1943FF21DB4C96200FAE1E9 /* UIView+USCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F5B1DB4C96200FAE1E9 /* UIView+USCExtension.m */; };
-		F1943FF31DB4C96200FAE1E9 /* USCRecognizeDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F5D1DB4C96200FAE1E9 /* USCRecognizeDialog.m */; };
-		F1943FF41DB4C96200FAE1E9 /* USCRecognizerDialog.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F5F1DB4C96200FAE1E9 /* USCRecognizerDialog.mm */; };
-		F1943FF51DB4C96200FAE1E9 /* USCRecognizerView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F611DB4C96200FAE1E9 /* USCRecognizerView.mm */; };
-		F1943FF61DB4C96200FAE1E9 /* BeepPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F641DB4C96200FAE1E9 /* BeepPlayer.mm */; };
-		F1943FF71DB4C96200FAE1E9 /* NetWatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F671DB4C96200FAE1E9 /* NetWatcher.mm */; };
-		F1943FF81DB4C96200FAE1E9 /* USCOpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F6A1DB4C96200FAE1E9 /* USCOpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F1943FF91DB4C96200FAE1E9 /* RecognizationWatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F6C1DB4C96200FAE1E9 /* RecognizationWatcher.mm */; };
-		F1943FFA1DB4C96200FAE1E9 /* USCAddress.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F6E1DB4C96200FAE1E9 /* USCAddress.mm */; };
-		F1943FFB1DB4C96200FAE1E9 /* USCAddressGetter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F701DB4C96200FAE1E9 /* USCAddressGetter.mm */; };
-		F1943FFC1DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F721DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.mm */; };
-		F1943FFD1DB4C96200FAE1E9 /* USCAsrResultFormatChinese.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F741DB4C96200FAE1E9 /* USCAsrResultFormatChinese.mm */; };
-		F1943FFE1DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F761DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.mm */; };
-		F1943FFF1DB4C96200FAE1E9 /* USCErrorCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F781DB4C96200FAE1E9 /* USCErrorCode.mm */; };
-		F19440001DB4C96200FAE1E9 /* USCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F7A1DB4C96200FAE1E9 /* USCLog.m */; };
-		F19440011DB4C96200FAE1E9 /* USCPunctuationRestorer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F7D1DB4C96200FAE1E9 /* USCPunctuationRestorer.mm */; };
-		F19440021DB4C96200FAE1E9 /* USCSpeechTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F7F1DB4C96200FAE1E9 /* USCSpeechTimer.m */; };
-		F19440031DB4C96200FAE1E9 /* USCUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F811DB4C96200FAE1E9 /* USCUtil.mm */; };
-		F19440041DB4C96200FAE1E9 /* WaveHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1943F831DB4C96200FAE1E9 /* WaveHeader.cpp */; };
-		F19440051DB4C96200FAE1E9 /* USCNLUError.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F881DB4C96200FAE1E9 /* USCNLUError.m */; };
-		F19440061DB4C96200FAE1E9 /* USCNLULog.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F8A1DB4C96200FAE1E9 /* USCNLULog.m */; };
-		F19440071DB4C96200FAE1E9 /* USCNLUParam.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F8C1DB4C96200FAE1E9 /* USCNLUParam.m */; };
-		F19440081DB4C96200FAE1E9 /* USCNLUParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F8E1DB4C96200FAE1E9 /* USCNLUParsedResult.m */; };
-		F19440091DB4C96200FAE1E9 /* USCNLUParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F901DB4C96200FAE1E9 /* USCNLUParser.m */; };
-		F194400A1DB4C96200FAE1E9 /* USCNLURequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F921DB4C96200FAE1E9 /* USCNLURequest.m */; };
-		F194400B1DB4C96200FAE1E9 /* USCNLUScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F941DB4C96200FAE1E9 /* USCNLUScene.m */; };
-		F194400C1DB4C96200FAE1E9 /* USCNLUSetOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F961DB4C96200FAE1E9 /* USCNLUSetOptions.m */; };
-		F194400D1DB4C96200FAE1E9 /* USCReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943F9A1DB4C96200FAE1E9 /* USCReachability.m */; };
-		F194400E1DB4C96200FAE1E9 /* USCEngineParams.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F9D1DB4C96200FAE1E9 /* USCEngineParams.mm */; };
-		F194400F1DB4C96200FAE1E9 /* USCRecoginizerParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943F9F1DB4C96200FAE1E9 /* USCRecoginizerParam.mm */; };
-		F19440101DB4C96200FAE1E9 /* USCVADParam.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943FA11DB4C96200FAE1E9 /* USCVADParam.m */; };
-		F19440111DB4C96200FAE1E9 /* USCVADParamValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943FA31DB4C96200FAE1E9 /* USCVADParamValue.m */; };
-		F19440121DB4C96200FAE1E9 /* USCRecognition.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FA61DB4C96200FAE1E9 /* USCRecognition.mm */; };
-		F19440131DB4C96200FAE1E9 /* USCRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FA91DB4C96200FAE1E9 /* USCRecognizer.mm */; };
-		F19440141DB4C96200FAE1E9 /* USCVadThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FAB1DB4C96200FAE1E9 /* USCVadThread.mm */; };
-		F19440151DB4C96200FAE1E9 /* USCRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FAF1DB4C96200FAE1E9 /* USCRecorder.mm */; };
-		F19440161DB4C96200FAE1E9 /* USCScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FB21DB4C96200FAE1E9 /* USCScene.mm */; };
-		F19440171DB4C96200FAE1E9 /* USCSceneManage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FB41DB4C96200FAE1E9 /* USCSceneManage.mm */; };
-		F19440181DB4C96200FAE1E9 /* USCUploadSceneTask.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FB61DB4C96200FAE1E9 /* USCUploadSceneTask.mm */; };
-		F19440191DB4C96200FAE1E9 /* USCParams.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FBB1DB4C96200FAE1E9 /* USCParams.mm */; };
-		F194401A1DB4C96200FAE1E9 /* USCRecognitionParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FBE1DB4C96200FAE1E9 /* USCRecognitionParam.mm */; };
-		F194401B1DB4C96200FAE1E9 /* USCSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943FC01DB4C96200FAE1E9 /* USCSetting.m */; };
-		F194401C1DB4C96200FAE1E9 /* libyzstts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1943FC41DB4C96200FAE1E9 /* libyzstts.a */; };
-		F194401D1DB4C96200FAE1E9 /* USCOfflineEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FC71DB4C96200FAE1E9 /* USCOfflineEngine.mm */; };
-		F194401E1DB4C96200FAE1E9 /* USCOfflineTTS.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FC91DB4C96200FAE1E9 /* USCOfflineTTS.mm */; };
-		F194401F1DB4C96200FAE1E9 /* USCSynthesisThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FCC1DB4C96200FAE1E9 /* USCSynthesisThread.mm */; };
-		F19440201DB4C96200FAE1E9 /* USCPlayThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FCF1DB4C96200FAE1E9 /* USCPlayThread.mm */; };
-		F19440211DB4C96200FAE1E9 /* USCSpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943FD11DB4C96200FAE1E9 /* USCSpeechSynthesizer.m */; };
-		F19440221DB4C96200FAE1E9 /* USCTTSEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FD41DB4C96200FAE1E9 /* USCTTSEngine.mm */; };
-		F19440231DB4C96200FAE1E9 /* USCTtsEngineParam.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943FD61DB4C96200FAE1E9 /* USCTtsEngineParam.m */; };
-		F19440241DB4C96200FAE1E9 /* USCTTSErrorCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FD81DB4C96200FAE1E9 /* USCTTSErrorCode.mm */; };
-		F19440251DB4C96200FAE1E9 /* USCSpeechResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FDB1DB4C96200FAE1E9 /* USCSpeechResult.mm */; };
-		F19440261DB4C96200FAE1E9 /* USCSpeechUnderstander.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FDD1DB4C96200FAE1E9 /* USCSpeechUnderstander.mm */; };
-		F19440271DB4C96200FAE1E9 /* USCCommonTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FE01DB4C96200FAE1E9 /* USCCommonTool.mm */; };
-		F19440281DB4C96200FAE1E9 /* USCLocationTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FE21DB4C96200FAE1E9 /* USCLocationTool.mm */; };
-		F19440291DB4C96200FAE1E9 /* ASRVadBeepWapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FE51DB4C96200FAE1E9 /* ASRVadBeepWapper.mm */; };
-		F194402A1DB4C96200FAE1E9 /* ASRVadWapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1943FE61DB4C96200FAE1E9 /* ASRVadWapper.cpp */; };
-		F194402B1DB4C96200FAE1E9 /* libasrvad2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1943FE81DB4C96200FAE1E9 /* libasrvad2.a */; };
-		F194402C1DB4C96200FAE1E9 /* USCVoiceprintParams.m in Sources */ = {isa = PBXBuildFile; fileRef = F1943FEB1DB4C96200FAE1E9 /* USCVoiceprintParams.m */; };
-		F194402D1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FED1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.mm */; };
-		F194402E1DB4C96200FAE1E9 /* USCVoiceprintResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1943FEF1DB4C96200FAE1E9 /* USCVoiceprintResult.mm */; };
+		F187F78C1DAE198900CFAEAB /* ASRClientWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F187F6EF1DAE198900CFAEAB /* ASRClientWrapper.cpp */; };
+		F187F78D1DAE198900CFAEAB /* USCIAudioSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F6F31DAE198900CFAEAB /* USCIAudioSource.m */; };
+		F187F78E1DAE198900CFAEAB /* UIView+USCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F6F71DAE198900CFAEAB /* UIView+USCExtension.m */; };
+		F187F78F1DAE198900CFAEAB /* USCRecognizeDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F6F91DAE198900CFAEAB /* USCRecognizeDialog.m */; };
+		F187F7901DAE198900CFAEAB /* USCRecognizerDialog.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F6FB1DAE198900CFAEAB /* USCRecognizerDialog.mm */; };
+		F187F7911DAE198900CFAEAB /* USCRecognizerView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F6FD1DAE198900CFAEAB /* USCRecognizerView.mm */; };
+		F187F7921DAE198900CFAEAB /* BeepPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7001DAE198900CFAEAB /* BeepPlayer.mm */; };
+		F187F7931DAE198900CFAEAB /* NetWatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7031DAE198900CFAEAB /* NetWatcher.mm */; };
+		F187F7941DAE198900CFAEAB /* USCOpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7061DAE198900CFAEAB /* USCOpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F187F7951DAE198900CFAEAB /* RecognizationWatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7081DAE198900CFAEAB /* RecognizationWatcher.mm */; };
+		F187F7961DAE198900CFAEAB /* USCAddress.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F70A1DAE198900CFAEAB /* USCAddress.mm */; };
+		F187F7971DAE198900CFAEAB /* USCAddressGetter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F70C1DAE198900CFAEAB /* USCAddressGetter.mm */; };
+		F187F7981DAE198900CFAEAB /* USCAsrResultFormatCantonese.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F70E1DAE198900CFAEAB /* USCAsrResultFormatCantonese.mm */; };
+		F187F7991DAE198900CFAEAB /* USCAsrResultFormatChinese.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7101DAE198900CFAEAB /* USCAsrResultFormatChinese.mm */; };
+		F187F79A1DAE198900CFAEAB /* USCAsrResultFormatEnglish.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7121DAE198900CFAEAB /* USCAsrResultFormatEnglish.mm */; };
+		F187F79B1DAE198900CFAEAB /* USCErrorCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7141DAE198900CFAEAB /* USCErrorCode.mm */; };
+		F187F79C1DAE198900CFAEAB /* USCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7161DAE198900CFAEAB /* USCLog.m */; };
+		F187F79D1DAE198900CFAEAB /* USCPunctuationRestorer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7191DAE198900CFAEAB /* USCPunctuationRestorer.mm */; };
+		F187F79E1DAE198900CFAEAB /* USCSpeechTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F71B1DAE198900CFAEAB /* USCSpeechTimer.m */; };
+		F187F79F1DAE198900CFAEAB /* USCUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F71D1DAE198900CFAEAB /* USCUtil.mm */; };
+		F187F7A01DAE198900CFAEAB /* WaveHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F187F71F1DAE198900CFAEAB /* WaveHeader.cpp */; };
+		F187F7A11DAE198900CFAEAB /* USCNLUError.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7241DAE198900CFAEAB /* USCNLUError.m */; };
+		F187F7A21DAE198900CFAEAB /* USCNLULog.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7261DAE198900CFAEAB /* USCNLULog.m */; };
+		F187F7A31DAE198900CFAEAB /* USCNLUParam.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7281DAE198900CFAEAB /* USCNLUParam.m */; };
+		F187F7A41DAE198900CFAEAB /* USCNLUParsedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F72A1DAE198900CFAEAB /* USCNLUParsedResult.m */; };
+		F187F7A51DAE198900CFAEAB /* USCNLUParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F72C1DAE198900CFAEAB /* USCNLUParser.m */; };
+		F187F7A61DAE198900CFAEAB /* USCNLURequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F72E1DAE198900CFAEAB /* USCNLURequest.m */; };
+		F187F7A71DAE198900CFAEAB /* USCNLUScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7301DAE198900CFAEAB /* USCNLUScene.m */; };
+		F187F7A81DAE198900CFAEAB /* USCNLUSetOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7321DAE198900CFAEAB /* USCNLUSetOptions.m */; };
+		F187F7A91DAE198900CFAEAB /* USCReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7361DAE198900CFAEAB /* USCReachability.m */; };
+		F187F7AA1DAE198900CFAEAB /* USCEngineParams.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7391DAE198900CFAEAB /* USCEngineParams.mm */; };
+		F187F7AB1DAE198900CFAEAB /* USCRecoginizerParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F73B1DAE198900CFAEAB /* USCRecoginizerParam.mm */; };
+		F187F7AC1DAE198900CFAEAB /* USCVADParam.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F73D1DAE198900CFAEAB /* USCVADParam.m */; };
+		F187F7AD1DAE198900CFAEAB /* USCVADParamValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F73F1DAE198900CFAEAB /* USCVADParamValue.m */; };
+		F187F7AE1DAE198900CFAEAB /* USCRecognition.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7421DAE198900CFAEAB /* USCRecognition.mm */; };
+		F187F7AF1DAE198900CFAEAB /* USCRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7451DAE198900CFAEAB /* USCRecognizer.mm */; };
+		F187F7B01DAE198900CFAEAB /* USCVadThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7471DAE198900CFAEAB /* USCVadThread.mm */; };
+		F187F7B11DAE198900CFAEAB /* USCRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F74B1DAE198900CFAEAB /* USCRecorder.mm */; };
+		F187F7B21DAE198900CFAEAB /* USCScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F74E1DAE198900CFAEAB /* USCScene.mm */; };
+		F187F7B31DAE198900CFAEAB /* USCSceneManage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7501DAE198900CFAEAB /* USCSceneManage.mm */; };
+		F187F7B41DAE198900CFAEAB /* USCUploadSceneTask.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7521DAE198900CFAEAB /* USCUploadSceneTask.mm */; };
+		F187F7B51DAE198900CFAEAB /* USCParams.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7571DAE198900CFAEAB /* USCParams.mm */; };
+		F187F7B61DAE198900CFAEAB /* USCRecognitionParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F75A1DAE198900CFAEAB /* USCRecognitionParam.mm */; };
+		F187F7B71DAE198900CFAEAB /* USCSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F75C1DAE198900CFAEAB /* USCSetting.m */; };
+		F187F7B81DAE198900CFAEAB /* libyzstts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7601DAE198900CFAEAB /* libyzstts.a */; };
+		F187F7B91DAE198900CFAEAB /* USCOfflineEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7631DAE198900CFAEAB /* USCOfflineEngine.mm */; };
+		F187F7BA1DAE198900CFAEAB /* USCOfflineTTS.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7651DAE198900CFAEAB /* USCOfflineTTS.mm */; };
+		F187F7BB1DAE198900CFAEAB /* USCSynthesisThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7681DAE198900CFAEAB /* USCSynthesisThread.mm */; };
+		F187F7BC1DAE198900CFAEAB /* USCPlayThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F76B1DAE198900CFAEAB /* USCPlayThread.mm */; };
+		F187F7BD1DAE198900CFAEAB /* USCSpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F76D1DAE198900CFAEAB /* USCSpeechSynthesizer.m */; };
+		F187F7BE1DAE198900CFAEAB /* USCTTSEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7701DAE198900CFAEAB /* USCTTSEngine.mm */; };
+		F187F7BF1DAE198900CFAEAB /* USCTtsEngineParam.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7721DAE198900CFAEAB /* USCTtsEngineParam.m */; };
+		F187F7C01DAE198900CFAEAB /* USCTTSErrorCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7741DAE198900CFAEAB /* USCTTSErrorCode.mm */; };
+		F187F7C11DAE198900CFAEAB /* USCSpeechResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7771DAE198900CFAEAB /* USCSpeechResult.mm */; };
+		F187F7C21DAE198900CFAEAB /* USCSpeechUnderstander.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7791DAE198900CFAEAB /* USCSpeechUnderstander.mm */; };
+		F187F7C31DAE198900CFAEAB /* USCCommonTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F77C1DAE198900CFAEAB /* USCCommonTool.mm */; };
+		F187F7C41DAE198900CFAEAB /* USCLocationTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F77E1DAE198900CFAEAB /* USCLocationTool.mm */; };
+		F187F7C51DAE198900CFAEAB /* ASRVadBeepWapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7811DAE198900CFAEAB /* ASRVadBeepWapper.mm */; };
+		F187F7C61DAE198900CFAEAB /* ASRVadWapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F187F7821DAE198900CFAEAB /* ASRVadWapper.cpp */; };
+		F187F7C71DAE198900CFAEAB /* libasrvad2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F187F7841DAE198900CFAEAB /* libasrvad2.a */; };
+		F187F7C81DAE198900CFAEAB /* USCVoiceprintParams.m in Sources */ = {isa = PBXBuildFile; fileRef = F187F7871DAE198900CFAEAB /* USCVoiceprintParams.m */; };
+		F187F7C91DAE198900CFAEAB /* USCVoiceprintRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7891DAE198900CFAEAB /* USCVoiceprintRecognizer.mm */; };
+		F187F7CA1DAE198900CFAEAB /* USCVoiceprintResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F78B1DAE198900CFAEAB /* USCVoiceprintResult.mm */; };
 		F1A58C481DAE07B900174475 /* USC_SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A58C471DAE07B900174475 /* USC_SDK.m */; };
 		F1A58C491DAE07B900174475 /* USC_SDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1A58C461DAE07B900174475 /* USC_SDK.h */; };
 /* End PBXBuildFile section */
@@ -243,7 +243,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F1269C3F1DB61CB20038F31A /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F187F5281DAE141100CFAEAB /* Opuswrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Opuswrapper.cpp; sourceTree = "<group>"; };
 		F187F5291DAE141100CFAEAB /* Opuswrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opuswrapper.h; sourceTree = "<group>"; };
 		F187F52C1DAE141100CFAEAB /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
@@ -496,144 +495,144 @@
 		F187F6DC1DAE143B00CFAEAB /* tts_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tts_client.h; sourceTree = "<group>"; };
 		F187F6DD1DAE143B00CFAEAB /* tts_service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tts_service.cpp; sourceTree = "<group>"; };
 		F187F6DE1DAE143B00CFAEAB /* tts_service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tts_service.h; sourceTree = "<group>"; };
-		F1943F531DB4C96200FAE1E9 /* ASRClientWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASRClientWrapper.cpp; sourceTree = "<group>"; };
-		F1943F541DB4C96200FAE1E9 /* ASRClientWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASRClientWrapper.h; sourceTree = "<group>"; };
-		F1943F561DB4C96200FAE1E9 /* USCIAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCIAudioSource.h; sourceTree = "<group>"; };
-		F1943F571DB4C96200FAE1E9 /* USCIAudioSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCIAudioSource.m; sourceTree = "<group>"; };
-		F1943F591DB4C96200FAE1E9 /* Dialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Dialog.xib; sourceTree = "<group>"; };
-		F1943F5A1DB4C96200FAE1E9 /* UIView+USCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+USCExtension.h"; sourceTree = "<group>"; };
-		F1943F5B1DB4C96200FAE1E9 /* UIView+USCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+USCExtension.m"; sourceTree = "<group>"; };
-		F1943F5C1DB4C96200FAE1E9 /* USCRecognizeDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizeDialog.h; sourceTree = "<group>"; };
-		F1943F5D1DB4C96200FAE1E9 /* USCRecognizeDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCRecognizeDialog.m; sourceTree = "<group>"; };
-		F1943F5E1DB4C96200FAE1E9 /* USCRecognizerDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizerDialog.h; sourceTree = "<group>"; };
-		F1943F5F1DB4C96200FAE1E9 /* USCRecognizerDialog.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizerDialog.mm; sourceTree = "<group>"; };
-		F1943F601DB4C96200FAE1E9 /* USCRecognizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizerView.h; sourceTree = "<group>"; };
-		F1943F611DB4C96200FAE1E9 /* USCRecognizerView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizerView.mm; sourceTree = "<group>"; };
-		F1943F631DB4C96200FAE1E9 /* BeepPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeepPlayer.h; sourceTree = "<group>"; };
-		F1943F641DB4C96200FAE1E9 /* BeepPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BeepPlayer.mm; sourceTree = "<group>"; };
-		F1943F651DB4C96200FAE1E9 /* Encrypter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encrypter.h; sourceTree = "<group>"; };
-		F1943F661DB4C96200FAE1E9 /* NetWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWatcher.h; sourceTree = "<group>"; };
-		F1943F671DB4C96200FAE1E9 /* NetWatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetWatcher.mm; sourceTree = "<group>"; };
-		F1943F691DB4C96200FAE1E9 /* USCOpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOpenUDID.h; sourceTree = "<group>"; };
-		F1943F6A1DB4C96200FAE1E9 /* USCOpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCOpenUDID.m; sourceTree = "<group>"; };
-		F1943F6B1DB4C96200FAE1E9 /* RecognizationWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizationWatcher.h; sourceTree = "<group>"; };
-		F1943F6C1DB4C96200FAE1E9 /* RecognizationWatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognizationWatcher.mm; sourceTree = "<group>"; };
-		F1943F6D1DB4C96200FAE1E9 /* USCAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAddress.h; sourceTree = "<group>"; };
-		F1943F6E1DB4C96200FAE1E9 /* USCAddress.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAddress.mm; sourceTree = "<group>"; };
-		F1943F6F1DB4C96200FAE1E9 /* USCAddressGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAddressGetter.h; sourceTree = "<group>"; };
-		F1943F701DB4C96200FAE1E9 /* USCAddressGetter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAddressGetter.mm; sourceTree = "<group>"; };
-		F1943F711DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAsrResultFormatCantonese.h; sourceTree = "<group>"; };
-		F1943F721DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAsrResultFormatCantonese.mm; sourceTree = "<group>"; };
-		F1943F731DB4C96200FAE1E9 /* USCAsrResultFormatChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAsrResultFormatChinese.h; sourceTree = "<group>"; };
-		F1943F741DB4C96200FAE1E9 /* USCAsrResultFormatChinese.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAsrResultFormatChinese.mm; sourceTree = "<group>"; };
-		F1943F751DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAsrResultFormatEnglish.h; sourceTree = "<group>"; };
-		F1943F761DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAsrResultFormatEnglish.mm; sourceTree = "<group>"; };
-		F1943F771DB4C96200FAE1E9 /* USCErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCErrorCode.h; sourceTree = "<group>"; };
-		F1943F781DB4C96200FAE1E9 /* USCErrorCode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCErrorCode.mm; sourceTree = "<group>"; };
-		F1943F791DB4C96200FAE1E9 /* USCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCLog.h; sourceTree = "<group>"; };
-		F1943F7A1DB4C96200FAE1E9 /* USCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCLog.m; sourceTree = "<group>"; };
-		F1943F7B1DB4C96200FAE1E9 /* USCMarcos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCMarcos.h; sourceTree = "<group>"; };
-		F1943F7C1DB4C96200FAE1E9 /* USCPunctuationRestorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPunctuationRestorer.h; sourceTree = "<group>"; };
-		F1943F7D1DB4C96200FAE1E9 /* USCPunctuationRestorer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCPunctuationRestorer.mm; sourceTree = "<group>"; };
-		F1943F7E1DB4C96200FAE1E9 /* USCSpeechTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechTimer.h; sourceTree = "<group>"; };
-		F1943F7F1DB4C96200FAE1E9 /* USCSpeechTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCSpeechTimer.m; sourceTree = "<group>"; };
-		F1943F801DB4C96200FAE1E9 /* USCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCUtil.h; sourceTree = "<group>"; };
-		F1943F811DB4C96200FAE1E9 /* USCUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCUtil.mm; sourceTree = "<group>"; };
-		F1943F821DB4C96200FAE1E9 /* USCVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVersion.h; sourceTree = "<group>"; };
-		F1943F831DB4C96200FAE1E9 /* WaveHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WaveHeader.cpp; sourceTree = "<group>"; };
-		F1943F841DB4C96200FAE1E9 /* WaveHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveHeader.h; sourceTree = "<group>"; };
-		F1943F871DB4C96200FAE1E9 /* USCNLUError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUError.h; sourceTree = "<group>"; };
-		F1943F881DB4C96200FAE1E9 /* USCNLUError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUError.m; sourceTree = "<group>"; };
-		F1943F891DB4C96200FAE1E9 /* USCNLULog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLULog.h; sourceTree = "<group>"; };
-		F1943F8A1DB4C96200FAE1E9 /* USCNLULog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLULog.m; sourceTree = "<group>"; };
-		F1943F8B1DB4C96200FAE1E9 /* USCNLUParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUParam.h; sourceTree = "<group>"; };
-		F1943F8C1DB4C96200FAE1E9 /* USCNLUParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUParam.m; sourceTree = "<group>"; };
-		F1943F8D1DB4C96200FAE1E9 /* USCNLUParsedResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUParsedResult.h; sourceTree = "<group>"; };
-		F1943F8E1DB4C96200FAE1E9 /* USCNLUParsedResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUParsedResult.m; sourceTree = "<group>"; };
-		F1943F8F1DB4C96200FAE1E9 /* USCNLUParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUParser.h; sourceTree = "<group>"; };
-		F1943F901DB4C96200FAE1E9 /* USCNLUParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUParser.m; sourceTree = "<group>"; };
-		F1943F911DB4C96200FAE1E9 /* USCNLURequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLURequest.h; sourceTree = "<group>"; };
-		F1943F921DB4C96200FAE1E9 /* USCNLURequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLURequest.m; sourceTree = "<group>"; };
-		F1943F931DB4C96200FAE1E9 /* USCNLUScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUScene.h; sourceTree = "<group>"; };
-		F1943F941DB4C96200FAE1E9 /* USCNLUScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUScene.m; sourceTree = "<group>"; };
-		F1943F951DB4C96200FAE1E9 /* USCNLUSetOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUSetOptions.h; sourceTree = "<group>"; };
-		F1943F961DB4C96200FAE1E9 /* USCNLUSetOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUSetOptions.m; sourceTree = "<group>"; };
-		F1943F971DB4C96200FAE1E9 /* USCNLUVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUVersion.h; sourceTree = "<group>"; };
-		F1943F991DB4C96200FAE1E9 /* USCReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCReachability.h; sourceTree = "<group>"; };
-		F1943F9A1DB4C96200FAE1E9 /* USCReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCReachability.m; sourceTree = "<group>"; };
-		F1943F9C1DB4C96200FAE1E9 /* USCEngineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCEngineParams.h; sourceTree = "<group>"; };
-		F1943F9D1DB4C96200FAE1E9 /* USCEngineParams.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCEngineParams.mm; sourceTree = "<group>"; };
-		F1943F9E1DB4C96200FAE1E9 /* USCRecoginizerParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecoginizerParam.h; sourceTree = "<group>"; };
-		F1943F9F1DB4C96200FAE1E9 /* USCRecoginizerParam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecoginizerParam.mm; sourceTree = "<group>"; };
-		F1943FA01DB4C96200FAE1E9 /* USCVADParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVADParam.h; sourceTree = "<group>"; };
-		F1943FA11DB4C96200FAE1E9 /* USCVADParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCVADParam.m; sourceTree = "<group>"; };
-		F1943FA21DB4C96200FAE1E9 /* USCVADParamValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVADParamValue.h; sourceTree = "<group>"; };
-		F1943FA31DB4C96200FAE1E9 /* USCVADParamValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCVADParamValue.m; sourceTree = "<group>"; };
-		F1943FA51DB4C96200FAE1E9 /* USCRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognition.h; sourceTree = "<group>"; };
-		F1943FA61DB4C96200FAE1E9 /* USCRecognition.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognition.mm; sourceTree = "<group>"; };
-		F1943FA81DB4C96200FAE1E9 /* USCRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizer.h; sourceTree = "<group>"; };
-		F1943FA91DB4C96200FAE1E9 /* USCRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizer.mm; sourceTree = "<group>"; };
-		F1943FAA1DB4C96200FAE1E9 /* USCVadThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVadThread.h; sourceTree = "<group>"; };
-		F1943FAB1DB4C96200FAE1E9 /* USCVadThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVadThread.mm; sourceTree = "<group>"; };
-		F1943FAD1DB4C96200FAE1E9 /* 01.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01.pcm; sourceTree = "<group>"; };
-		F1943FAE1DB4C96200FAE1E9 /* USCRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecorder.h; sourceTree = "<group>"; };
-		F1943FAF1DB4C96200FAE1E9 /* USCRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecorder.mm; sourceTree = "<group>"; };
-		F1943FB11DB4C96200FAE1E9 /* USCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCScene.h; sourceTree = "<group>"; };
-		F1943FB21DB4C96200FAE1E9 /* USCScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCScene.mm; sourceTree = "<group>"; };
-		F1943FB31DB4C96200FAE1E9 /* USCSceneManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSceneManage.h; sourceTree = "<group>"; };
-		F1943FB41DB4C96200FAE1E9 /* USCSceneManage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSceneManage.mm; sourceTree = "<group>"; };
-		F1943FB51DB4C96200FAE1E9 /* USCUploadSceneTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCUploadSceneTask.h; sourceTree = "<group>"; };
-		F1943FB61DB4C96200FAE1E9 /* USCUploadSceneTask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCUploadSceneTask.mm; sourceTree = "<group>"; };
-		F1943FB81DB4C96200FAE1E9 /* result.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = result.txt; sourceTree = "<group>"; };
-		F1943FB91DB4C96200FAE1E9 /* USCConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCConstant.h; sourceTree = "<group>"; };
-		F1943FBA1DB4C96200FAE1E9 /* USCParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCParams.h; sourceTree = "<group>"; };
-		F1943FBB1DB4C96200FAE1E9 /* USCParams.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCParams.mm; sourceTree = "<group>"; };
-		F1943FBC1DB4C96200FAE1E9 /* USCPrivateConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPrivateConstant.h; sourceTree = "<group>"; };
-		F1943FBD1DB4C96200FAE1E9 /* USCRecognitionParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognitionParam.h; sourceTree = "<group>"; };
-		F1943FBE1DB4C96200FAE1E9 /* USCRecognitionParam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognitionParam.mm; sourceTree = "<group>"; };
-		F1943FBF1DB4C96200FAE1E9 /* USCSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSetting.h; sourceTree = "<group>"; };
-		F1943FC01DB4C96200FAE1E9 /* USCSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCSetting.m; sourceTree = "<group>"; };
-		F1943FC11DB4C96200FAE1E9 /* USCSpeechConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechConstant.h; sourceTree = "<group>"; };
-		F1943FC41DB4C96200FAE1E9 /* libyzstts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libyzstts.a; sourceTree = "<group>"; };
-		F1943FC51DB4C96200FAE1E9 /* tts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = tts.bundle; sourceTree = "<group>"; };
-		F1943FC61DB4C96200FAE1E9 /* USCOfflineEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOfflineEngine.h; sourceTree = "<group>"; };
-		F1943FC71DB4C96200FAE1E9 /* USCOfflineEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCOfflineEngine.mm; sourceTree = "<group>"; };
-		F1943FC81DB4C96200FAE1E9 /* USCOfflineTTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOfflineTTS.h; sourceTree = "<group>"; };
-		F1943FC91DB4C96200FAE1E9 /* USCOfflineTTS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCOfflineTTS.mm; sourceTree = "<group>"; };
-		F1943FCA1DB4C96200FAE1E9 /* USCOfflineTTSCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOfflineTTSCommon.h; sourceTree = "<group>"; };
-		F1943FCB1DB4C96200FAE1E9 /* USCSynthesisThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSynthesisThread.h; sourceTree = "<group>"; };
-		F1943FCC1DB4C96200FAE1E9 /* USCSynthesisThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSynthesisThread.mm; sourceTree = "<group>"; };
-		F1943FCD1DB4C96200FAE1E9 /* yzsttshandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yzsttshandle.h; sourceTree = "<group>"; };
-		F1943FCE1DB4C96200FAE1E9 /* USCPlayThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPlayThread.h; sourceTree = "<group>"; };
-		F1943FCF1DB4C96200FAE1E9 /* USCPlayThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCPlayThread.mm; sourceTree = "<group>"; };
-		F1943FD01DB4C96200FAE1E9 /* USCSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechSynthesizer.h; sourceTree = "<group>"; };
-		F1943FD11DB4C96200FAE1E9 /* USCSpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCSpeechSynthesizer.m; sourceTree = "<group>"; };
-		F1943FD21DB4C96200FAE1E9 /* USCTTSCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTTSCommon.h; sourceTree = "<group>"; };
-		F1943FD31DB4C96200FAE1E9 /* USCTTSEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTTSEngine.h; sourceTree = "<group>"; };
-		F1943FD41DB4C96200FAE1E9 /* USCTTSEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCTTSEngine.mm; sourceTree = "<group>"; };
-		F1943FD51DB4C96200FAE1E9 /* USCTtsEngineParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTtsEngineParam.h; sourceTree = "<group>"; };
-		F1943FD61DB4C96200FAE1E9 /* USCTtsEngineParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCTtsEngineParam.m; sourceTree = "<group>"; };
-		F1943FD71DB4C96200FAE1E9 /* USCTTSErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTTSErrorCode.h; sourceTree = "<group>"; };
-		F1943FD81DB4C96200FAE1E9 /* USCTTSErrorCode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCTTSErrorCode.mm; sourceTree = "<group>"; };
-		F1943FDA1DB4C96200FAE1E9 /* USCSpeechResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechResult.h; sourceTree = "<group>"; };
-		F1943FDB1DB4C96200FAE1E9 /* USCSpeechResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSpeechResult.mm; sourceTree = "<group>"; };
-		F1943FDC1DB4C96200FAE1E9 /* USCSpeechUnderstander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechUnderstander.h; sourceTree = "<group>"; };
-		F1943FDD1DB4C96200FAE1E9 /* USCSpeechUnderstander.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSpeechUnderstander.mm; sourceTree = "<group>"; };
-		F1943FDF1DB4C96200FAE1E9 /* USCCommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCCommonTool.h; sourceTree = "<group>"; };
-		F1943FE01DB4C96200FAE1E9 /* USCCommonTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCCommonTool.mm; sourceTree = "<group>"; };
-		F1943FE11DB4C96200FAE1E9 /* USCLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCLocationTool.h; sourceTree = "<group>"; };
-		F1943FE21DB4C96200FAE1E9 /* USCLocationTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCLocationTool.mm; sourceTree = "<group>"; };
-		F1943FE41DB4C96200FAE1E9 /* ASRVadBeepWapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASRVadBeepWapper.h; sourceTree = "<group>"; };
-		F1943FE51DB4C96200FAE1E9 /* ASRVadBeepWapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASRVadBeepWapper.mm; sourceTree = "<group>"; };
-		F1943FE61DB4C96200FAE1E9 /* ASRVadWapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASRVadWapper.cpp; sourceTree = "<group>"; };
-		F1943FE71DB4C96200FAE1E9 /* ASRVadWapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASRVadWapper.h; sourceTree = "<group>"; };
-		F1943FE81DB4C96200FAE1E9 /* libasrvad2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libasrvad2.a; sourceTree = "<group>"; };
-		F1943FEA1DB4C96200FAE1E9 /* USCVoiceprintParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVoiceprintParams.h; sourceTree = "<group>"; };
-		F1943FEB1DB4C96200FAE1E9 /* USCVoiceprintParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCVoiceprintParams.m; sourceTree = "<group>"; };
-		F1943FEC1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVoiceprintRecognizer.h; sourceTree = "<group>"; };
-		F1943FED1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVoiceprintRecognizer.mm; sourceTree = "<group>"; };
-		F1943FEE1DB4C96200FAE1E9 /* USCVoiceprintResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVoiceprintResult.h; sourceTree = "<group>"; };
-		F1943FEF1DB4C96200FAE1E9 /* USCVoiceprintResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVoiceprintResult.mm; sourceTree = "<group>"; };
+		F187F6EF1DAE198900CFAEAB /* ASRClientWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASRClientWrapper.cpp; sourceTree = "<group>"; };
+		F187F6F01DAE198900CFAEAB /* ASRClientWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASRClientWrapper.h; sourceTree = "<group>"; };
+		F187F6F21DAE198900CFAEAB /* USCIAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCIAudioSource.h; sourceTree = "<group>"; };
+		F187F6F31DAE198900CFAEAB /* USCIAudioSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCIAudioSource.m; sourceTree = "<group>"; };
+		F187F6F51DAE198900CFAEAB /* Dialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Dialog.xib; sourceTree = "<group>"; };
+		F187F6F61DAE198900CFAEAB /* UIView+USCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+USCExtension.h"; sourceTree = "<group>"; };
+		F187F6F71DAE198900CFAEAB /* UIView+USCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+USCExtension.m"; sourceTree = "<group>"; };
+		F187F6F81DAE198900CFAEAB /* USCRecognizeDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizeDialog.h; sourceTree = "<group>"; };
+		F187F6F91DAE198900CFAEAB /* USCRecognizeDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCRecognizeDialog.m; sourceTree = "<group>"; };
+		F187F6FA1DAE198900CFAEAB /* USCRecognizerDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizerDialog.h; sourceTree = "<group>"; };
+		F187F6FB1DAE198900CFAEAB /* USCRecognizerDialog.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizerDialog.mm; sourceTree = "<group>"; };
+		F187F6FC1DAE198900CFAEAB /* USCRecognizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizerView.h; sourceTree = "<group>"; };
+		F187F6FD1DAE198900CFAEAB /* USCRecognizerView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizerView.mm; sourceTree = "<group>"; };
+		F187F6FF1DAE198900CFAEAB /* BeepPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeepPlayer.h; sourceTree = "<group>"; };
+		F187F7001DAE198900CFAEAB /* BeepPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BeepPlayer.mm; sourceTree = "<group>"; };
+		F187F7011DAE198900CFAEAB /* Encrypter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encrypter.h; sourceTree = "<group>"; };
+		F187F7021DAE198900CFAEAB /* NetWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWatcher.h; sourceTree = "<group>"; };
+		F187F7031DAE198900CFAEAB /* NetWatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetWatcher.mm; sourceTree = "<group>"; };
+		F187F7051DAE198900CFAEAB /* USCOpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOpenUDID.h; sourceTree = "<group>"; };
+		F187F7061DAE198900CFAEAB /* USCOpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCOpenUDID.m; sourceTree = "<group>"; };
+		F187F7071DAE198900CFAEAB /* RecognizationWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizationWatcher.h; sourceTree = "<group>"; };
+		F187F7081DAE198900CFAEAB /* RecognizationWatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognizationWatcher.mm; sourceTree = "<group>"; };
+		F187F7091DAE198900CFAEAB /* USCAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAddress.h; sourceTree = "<group>"; };
+		F187F70A1DAE198900CFAEAB /* USCAddress.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAddress.mm; sourceTree = "<group>"; };
+		F187F70B1DAE198900CFAEAB /* USCAddressGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAddressGetter.h; sourceTree = "<group>"; };
+		F187F70C1DAE198900CFAEAB /* USCAddressGetter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAddressGetter.mm; sourceTree = "<group>"; };
+		F187F70D1DAE198900CFAEAB /* USCAsrResultFormatCantonese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAsrResultFormatCantonese.h; sourceTree = "<group>"; };
+		F187F70E1DAE198900CFAEAB /* USCAsrResultFormatCantonese.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAsrResultFormatCantonese.mm; sourceTree = "<group>"; };
+		F187F70F1DAE198900CFAEAB /* USCAsrResultFormatChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAsrResultFormatChinese.h; sourceTree = "<group>"; };
+		F187F7101DAE198900CFAEAB /* USCAsrResultFormatChinese.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAsrResultFormatChinese.mm; sourceTree = "<group>"; };
+		F187F7111DAE198900CFAEAB /* USCAsrResultFormatEnglish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCAsrResultFormatEnglish.h; sourceTree = "<group>"; };
+		F187F7121DAE198900CFAEAB /* USCAsrResultFormatEnglish.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCAsrResultFormatEnglish.mm; sourceTree = "<group>"; };
+		F187F7131DAE198900CFAEAB /* USCErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCErrorCode.h; sourceTree = "<group>"; };
+		F187F7141DAE198900CFAEAB /* USCErrorCode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCErrorCode.mm; sourceTree = "<group>"; };
+		F187F7151DAE198900CFAEAB /* USCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCLog.h; sourceTree = "<group>"; };
+		F187F7161DAE198900CFAEAB /* USCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCLog.m; sourceTree = "<group>"; };
+		F187F7171DAE198900CFAEAB /* USCMarcos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCMarcos.h; sourceTree = "<group>"; };
+		F187F7181DAE198900CFAEAB /* USCPunctuationRestorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPunctuationRestorer.h; sourceTree = "<group>"; };
+		F187F7191DAE198900CFAEAB /* USCPunctuationRestorer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCPunctuationRestorer.mm; sourceTree = "<group>"; };
+		F187F71A1DAE198900CFAEAB /* USCSpeechTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechTimer.h; sourceTree = "<group>"; };
+		F187F71B1DAE198900CFAEAB /* USCSpeechTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCSpeechTimer.m; sourceTree = "<group>"; };
+		F187F71C1DAE198900CFAEAB /* USCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCUtil.h; sourceTree = "<group>"; };
+		F187F71D1DAE198900CFAEAB /* USCUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCUtil.mm; sourceTree = "<group>"; };
+		F187F71E1DAE198900CFAEAB /* USCVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVersion.h; sourceTree = "<group>"; };
+		F187F71F1DAE198900CFAEAB /* WaveHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WaveHeader.cpp; sourceTree = "<group>"; };
+		F187F7201DAE198900CFAEAB /* WaveHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveHeader.h; sourceTree = "<group>"; };
+		F187F7231DAE198900CFAEAB /* USCNLUError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUError.h; sourceTree = "<group>"; };
+		F187F7241DAE198900CFAEAB /* USCNLUError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUError.m; sourceTree = "<group>"; };
+		F187F7251DAE198900CFAEAB /* USCNLULog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLULog.h; sourceTree = "<group>"; };
+		F187F7261DAE198900CFAEAB /* USCNLULog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLULog.m; sourceTree = "<group>"; };
+		F187F7271DAE198900CFAEAB /* USCNLUParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUParam.h; sourceTree = "<group>"; };
+		F187F7281DAE198900CFAEAB /* USCNLUParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUParam.m; sourceTree = "<group>"; };
+		F187F7291DAE198900CFAEAB /* USCNLUParsedResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUParsedResult.h; sourceTree = "<group>"; };
+		F187F72A1DAE198900CFAEAB /* USCNLUParsedResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUParsedResult.m; sourceTree = "<group>"; };
+		F187F72B1DAE198900CFAEAB /* USCNLUParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUParser.h; sourceTree = "<group>"; };
+		F187F72C1DAE198900CFAEAB /* USCNLUParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUParser.m; sourceTree = "<group>"; };
+		F187F72D1DAE198900CFAEAB /* USCNLURequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLURequest.h; sourceTree = "<group>"; };
+		F187F72E1DAE198900CFAEAB /* USCNLURequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLURequest.m; sourceTree = "<group>"; };
+		F187F72F1DAE198900CFAEAB /* USCNLUScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUScene.h; sourceTree = "<group>"; };
+		F187F7301DAE198900CFAEAB /* USCNLUScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUScene.m; sourceTree = "<group>"; };
+		F187F7311DAE198900CFAEAB /* USCNLUSetOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUSetOptions.h; sourceTree = "<group>"; };
+		F187F7321DAE198900CFAEAB /* USCNLUSetOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCNLUSetOptions.m; sourceTree = "<group>"; };
+		F187F7331DAE198900CFAEAB /* USCNLUVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCNLUVersion.h; sourceTree = "<group>"; };
+		F187F7351DAE198900CFAEAB /* USCReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCReachability.h; sourceTree = "<group>"; };
+		F187F7361DAE198900CFAEAB /* USCReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCReachability.m; sourceTree = "<group>"; };
+		F187F7381DAE198900CFAEAB /* USCEngineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCEngineParams.h; sourceTree = "<group>"; };
+		F187F7391DAE198900CFAEAB /* USCEngineParams.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCEngineParams.mm; sourceTree = "<group>"; };
+		F187F73A1DAE198900CFAEAB /* USCRecoginizerParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecoginizerParam.h; sourceTree = "<group>"; };
+		F187F73B1DAE198900CFAEAB /* USCRecoginizerParam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecoginizerParam.mm; sourceTree = "<group>"; };
+		F187F73C1DAE198900CFAEAB /* USCVADParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVADParam.h; sourceTree = "<group>"; };
+		F187F73D1DAE198900CFAEAB /* USCVADParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCVADParam.m; sourceTree = "<group>"; };
+		F187F73E1DAE198900CFAEAB /* USCVADParamValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVADParamValue.h; sourceTree = "<group>"; };
+		F187F73F1DAE198900CFAEAB /* USCVADParamValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCVADParamValue.m; sourceTree = "<group>"; };
+		F187F7411DAE198900CFAEAB /* USCRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognition.h; sourceTree = "<group>"; };
+		F187F7421DAE198900CFAEAB /* USCRecognition.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognition.mm; sourceTree = "<group>"; };
+		F187F7441DAE198900CFAEAB /* USCRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognizer.h; sourceTree = "<group>"; };
+		F187F7451DAE198900CFAEAB /* USCRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizer.mm; sourceTree = "<group>"; };
+		F187F7461DAE198900CFAEAB /* USCVadThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVadThread.h; sourceTree = "<group>"; };
+		F187F7471DAE198900CFAEAB /* USCVadThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVadThread.mm; sourceTree = "<group>"; };
+		F187F7491DAE198900CFAEAB /* 01.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01.pcm; sourceTree = "<group>"; };
+		F187F74A1DAE198900CFAEAB /* USCRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecorder.h; sourceTree = "<group>"; };
+		F187F74B1DAE198900CFAEAB /* USCRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecorder.mm; sourceTree = "<group>"; };
+		F187F74D1DAE198900CFAEAB /* USCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCScene.h; sourceTree = "<group>"; };
+		F187F74E1DAE198900CFAEAB /* USCScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCScene.mm; sourceTree = "<group>"; };
+		F187F74F1DAE198900CFAEAB /* USCSceneManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSceneManage.h; sourceTree = "<group>"; };
+		F187F7501DAE198900CFAEAB /* USCSceneManage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSceneManage.mm; sourceTree = "<group>"; };
+		F187F7511DAE198900CFAEAB /* USCUploadSceneTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCUploadSceneTask.h; sourceTree = "<group>"; };
+		F187F7521DAE198900CFAEAB /* USCUploadSceneTask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCUploadSceneTask.mm; sourceTree = "<group>"; };
+		F187F7541DAE198900CFAEAB /* result.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = result.txt; sourceTree = "<group>"; };
+		F187F7551DAE198900CFAEAB /* USCConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCConstant.h; sourceTree = "<group>"; };
+		F187F7561DAE198900CFAEAB /* USCParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCParams.h; sourceTree = "<group>"; };
+		F187F7571DAE198900CFAEAB /* USCParams.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCParams.mm; sourceTree = "<group>"; };
+		F187F7581DAE198900CFAEAB /* USCPrivateConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPrivateConstant.h; sourceTree = "<group>"; };
+		F187F7591DAE198900CFAEAB /* USCRecognitionParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecognitionParam.h; sourceTree = "<group>"; };
+		F187F75A1DAE198900CFAEAB /* USCRecognitionParam.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognitionParam.mm; sourceTree = "<group>"; };
+		F187F75B1DAE198900CFAEAB /* USCSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSetting.h; sourceTree = "<group>"; };
+		F187F75C1DAE198900CFAEAB /* USCSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCSetting.m; sourceTree = "<group>"; };
+		F187F75D1DAE198900CFAEAB /* USCSpeechConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechConstant.h; sourceTree = "<group>"; };
+		F187F7601DAE198900CFAEAB /* libyzstts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libyzstts.a; sourceTree = "<group>"; };
+		F187F7611DAE198900CFAEAB /* tts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = tts.bundle; sourceTree = "<group>"; };
+		F187F7621DAE198900CFAEAB /* USCOfflineEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOfflineEngine.h; sourceTree = "<group>"; };
+		F187F7631DAE198900CFAEAB /* USCOfflineEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCOfflineEngine.mm; sourceTree = "<group>"; };
+		F187F7641DAE198900CFAEAB /* USCOfflineTTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOfflineTTS.h; sourceTree = "<group>"; };
+		F187F7651DAE198900CFAEAB /* USCOfflineTTS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCOfflineTTS.mm; sourceTree = "<group>"; };
+		F187F7661DAE198900CFAEAB /* USCOfflineTTSCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCOfflineTTSCommon.h; sourceTree = "<group>"; };
+		F187F7671DAE198900CFAEAB /* USCSynthesisThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSynthesisThread.h; sourceTree = "<group>"; };
+		F187F7681DAE198900CFAEAB /* USCSynthesisThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSynthesisThread.mm; sourceTree = "<group>"; };
+		F187F7691DAE198900CFAEAB /* yzsttshandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yzsttshandle.h; sourceTree = "<group>"; };
+		F187F76A1DAE198900CFAEAB /* USCPlayThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCPlayThread.h; sourceTree = "<group>"; };
+		F187F76B1DAE198900CFAEAB /* USCPlayThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCPlayThread.mm; sourceTree = "<group>"; };
+		F187F76C1DAE198900CFAEAB /* USCSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechSynthesizer.h; sourceTree = "<group>"; };
+		F187F76D1DAE198900CFAEAB /* USCSpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCSpeechSynthesizer.m; sourceTree = "<group>"; };
+		F187F76E1DAE198900CFAEAB /* USCTTSCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTTSCommon.h; sourceTree = "<group>"; };
+		F187F76F1DAE198900CFAEAB /* USCTTSEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTTSEngine.h; sourceTree = "<group>"; };
+		F187F7701DAE198900CFAEAB /* USCTTSEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCTTSEngine.mm; sourceTree = "<group>"; };
+		F187F7711DAE198900CFAEAB /* USCTtsEngineParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTtsEngineParam.h; sourceTree = "<group>"; };
+		F187F7721DAE198900CFAEAB /* USCTtsEngineParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCTtsEngineParam.m; sourceTree = "<group>"; };
+		F187F7731DAE198900CFAEAB /* USCTTSErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCTTSErrorCode.h; sourceTree = "<group>"; };
+		F187F7741DAE198900CFAEAB /* USCTTSErrorCode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCTTSErrorCode.mm; sourceTree = "<group>"; };
+		F187F7761DAE198900CFAEAB /* USCSpeechResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechResult.h; sourceTree = "<group>"; };
+		F187F7771DAE198900CFAEAB /* USCSpeechResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSpeechResult.mm; sourceTree = "<group>"; };
+		F187F7781DAE198900CFAEAB /* USCSpeechUnderstander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSpeechUnderstander.h; sourceTree = "<group>"; };
+		F187F7791DAE198900CFAEAB /* USCSpeechUnderstander.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCSpeechUnderstander.mm; sourceTree = "<group>"; };
+		F187F77B1DAE198900CFAEAB /* USCCommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCCommonTool.h; sourceTree = "<group>"; };
+		F187F77C1DAE198900CFAEAB /* USCCommonTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCCommonTool.mm; sourceTree = "<group>"; };
+		F187F77D1DAE198900CFAEAB /* USCLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCLocationTool.h; sourceTree = "<group>"; };
+		F187F77E1DAE198900CFAEAB /* USCLocationTool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCLocationTool.mm; sourceTree = "<group>"; };
+		F187F7801DAE198900CFAEAB /* ASRVadBeepWapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASRVadBeepWapper.h; sourceTree = "<group>"; };
+		F187F7811DAE198900CFAEAB /* ASRVadBeepWapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASRVadBeepWapper.mm; sourceTree = "<group>"; };
+		F187F7821DAE198900CFAEAB /* ASRVadWapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASRVadWapper.cpp; sourceTree = "<group>"; };
+		F187F7831DAE198900CFAEAB /* ASRVadWapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASRVadWapper.h; sourceTree = "<group>"; };
+		F187F7841DAE198900CFAEAB /* libasrvad2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libasrvad2.a; sourceTree = "<group>"; };
+		F187F7861DAE198900CFAEAB /* USCVoiceprintParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVoiceprintParams.h; sourceTree = "<group>"; };
+		F187F7871DAE198900CFAEAB /* USCVoiceprintParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USCVoiceprintParams.m; sourceTree = "<group>"; };
+		F187F7881DAE198900CFAEAB /* USCVoiceprintRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVoiceprintRecognizer.h; sourceTree = "<group>"; };
+		F187F7891DAE198900CFAEAB /* USCVoiceprintRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVoiceprintRecognizer.mm; sourceTree = "<group>"; };
+		F187F78A1DAE198900CFAEAB /* USCVoiceprintResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVoiceprintResult.h; sourceTree = "<group>"; };
+		F187F78B1DAE198900CFAEAB /* USCVoiceprintResult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVoiceprintResult.mm; sourceTree = "<group>"; };
 		F1A58C431DAE07B900174475 /* libUSC_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUSC_SDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A58C461DAE07B900174475 /* USC_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USC_SDK.h; sourceTree = "<group>"; };
 		F1A58C471DAE07B900174475 /* USC_SDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USC_SDK.m; sourceTree = "<group>"; };
@@ -644,8 +643,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F194401C1DB4C96200FAE1E9 /* libyzstts.a in Frameworks */,
-				F194402B1DB4C96200FAE1E9 /* libasrvad2.a in Frameworks */,
+				F187F7B81DAE198900CFAEAB /* libyzstts.a in Frameworks */,
+				F187F7C71DAE198900CFAEAB /* libasrvad2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1302,305 +1301,305 @@
 		F187F6ED1DAE198900CFAEAB /* sourcecode(occode) */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F521DB4C96200FAE1E9 /* ASR */,
-				F1943F551DB4C96200FAE1E9 /* AudioSource */,
-				F1943F581DB4C96200FAE1E9 /* Basic */,
-				F1943F621DB4C96200FAE1E9 /* Common */,
-				F1943F851DB4C96200FAE1E9 /* NLU */,
-				F1943F9B1DB4C96200FAE1E9 /* Params */,
-				F1943FA41DB4C96200FAE1E9 /* Recognition */,
-				F1943FA71DB4C96200FAE1E9 /* Recognizer */,
-				F1943FAC1DB4C96200FAE1E9 /* Record */,
-				F1943FB01DB4C96200FAE1E9 /* Scene */,
-				F1943FB71DB4C96200FAE1E9 /* Share */,
-				F1943FC21DB4C96200FAE1E9 /* SpeechSynthesize */,
-				F1943FD91DB4C96200FAE1E9 /* SpeechUnderstander */,
-				F1943FDE1DB4C96200FAE1E9 /* Tool */,
-				F1943FE31DB4C96200FAE1E9 /* VAD */,
-				F1943FE91DB4C96200FAE1E9 /* Voiceprint */,
+				F187F6EE1DAE198900CFAEAB /* ASR */,
+				F187F6F11DAE198900CFAEAB /* AudioSource */,
+				F187F6F41DAE198900CFAEAB /* Basic */,
+				F187F6FE1DAE198900CFAEAB /* Common */,
+				F187F7211DAE198900CFAEAB /* NLU */,
+				F187F7371DAE198900CFAEAB /* Params */,
+				F187F7401DAE198900CFAEAB /* Recognition */,
+				F187F7431DAE198900CFAEAB /* Recognizer */,
+				F187F7481DAE198900CFAEAB /* Record */,
+				F187F74C1DAE198900CFAEAB /* Scene */,
+				F187F7531DAE198900CFAEAB /* Share */,
+				F187F75E1DAE198900CFAEAB /* SpeechSynthesize */,
+				F187F7751DAE198900CFAEAB /* SpeechUnderstander */,
+				F187F77A1DAE198900CFAEAB /* Tool */,
+				F187F77F1DAE198900CFAEAB /* VAD */,
+				F187F7851DAE198900CFAEAB /* Voiceprint */,
 			);
 			name = "sourcecode(occode)";
 			path = "../sourcecode(occode)";
 			sourceTree = "<group>";
 		};
-		F1943F521DB4C96200FAE1E9 /* ASR */ = {
+		F187F6EE1DAE198900CFAEAB /* ASR */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F531DB4C96200FAE1E9 /* ASRClientWrapper.cpp */,
-				F1943F541DB4C96200FAE1E9 /* ASRClientWrapper.h */,
+				F187F6EF1DAE198900CFAEAB /* ASRClientWrapper.cpp */,
+				F187F6F01DAE198900CFAEAB /* ASRClientWrapper.h */,
 			);
 			path = ASR;
 			sourceTree = "<group>";
 		};
-		F1943F551DB4C96200FAE1E9 /* AudioSource */ = {
+		F187F6F11DAE198900CFAEAB /* AudioSource */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F561DB4C96200FAE1E9 /* USCIAudioSource.h */,
-				F1943F571DB4C96200FAE1E9 /* USCIAudioSource.m */,
+				F187F6F21DAE198900CFAEAB /* USCIAudioSource.h */,
+				F187F6F31DAE198900CFAEAB /* USCIAudioSource.m */,
 			);
 			path = AudioSource;
 			sourceTree = "<group>";
 		};
-		F1943F581DB4C96200FAE1E9 /* Basic */ = {
+		F187F6F41DAE198900CFAEAB /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F591DB4C96200FAE1E9 /* Dialog.xib */,
-				F1943F5A1DB4C96200FAE1E9 /* UIView+USCExtension.h */,
-				F1943F5B1DB4C96200FAE1E9 /* UIView+USCExtension.m */,
-				F1943F5C1DB4C96200FAE1E9 /* USCRecognizeDialog.h */,
-				F1943F5D1DB4C96200FAE1E9 /* USCRecognizeDialog.m */,
-				F1943F5E1DB4C96200FAE1E9 /* USCRecognizerDialog.h */,
-				F1943F5F1DB4C96200FAE1E9 /* USCRecognizerDialog.mm */,
-				F1943F601DB4C96200FAE1E9 /* USCRecognizerView.h */,
-				F1943F611DB4C96200FAE1E9 /* USCRecognizerView.mm */,
+				F187F6F51DAE198900CFAEAB /* Dialog.xib */,
+				F187F6F61DAE198900CFAEAB /* UIView+USCExtension.h */,
+				F187F6F71DAE198900CFAEAB /* UIView+USCExtension.m */,
+				F187F6F81DAE198900CFAEAB /* USCRecognizeDialog.h */,
+				F187F6F91DAE198900CFAEAB /* USCRecognizeDialog.m */,
+				F187F6FA1DAE198900CFAEAB /* USCRecognizerDialog.h */,
+				F187F6FB1DAE198900CFAEAB /* USCRecognizerDialog.mm */,
+				F187F6FC1DAE198900CFAEAB /* USCRecognizerView.h */,
+				F187F6FD1DAE198900CFAEAB /* USCRecognizerView.mm */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
 		};
-		F1943F621DB4C96200FAE1E9 /* Common */ = {
+		F187F6FE1DAE198900CFAEAB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F631DB4C96200FAE1E9 /* BeepPlayer.h */,
-				F1943F641DB4C96200FAE1E9 /* BeepPlayer.mm */,
-				F1943F651DB4C96200FAE1E9 /* Encrypter.h */,
-				F1943F661DB4C96200FAE1E9 /* NetWatcher.h */,
-				F1943F671DB4C96200FAE1E9 /* NetWatcher.mm */,
-				F1943F681DB4C96200FAE1E9 /* OpenUDID */,
-				F1943F6B1DB4C96200FAE1E9 /* RecognizationWatcher.h */,
-				F1943F6C1DB4C96200FAE1E9 /* RecognizationWatcher.mm */,
-				F1943F6D1DB4C96200FAE1E9 /* USCAddress.h */,
-				F1943F6E1DB4C96200FAE1E9 /* USCAddress.mm */,
-				F1943F6F1DB4C96200FAE1E9 /* USCAddressGetter.h */,
-				F1943F701DB4C96200FAE1E9 /* USCAddressGetter.mm */,
-				F1943F711DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.h */,
-				F1943F721DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.mm */,
-				F1943F731DB4C96200FAE1E9 /* USCAsrResultFormatChinese.h */,
-				F1943F741DB4C96200FAE1E9 /* USCAsrResultFormatChinese.mm */,
-				F1943F751DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.h */,
-				F1943F761DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.mm */,
-				F1943F771DB4C96200FAE1E9 /* USCErrorCode.h */,
-				F1943F781DB4C96200FAE1E9 /* USCErrorCode.mm */,
-				F1943F791DB4C96200FAE1E9 /* USCLog.h */,
-				F1943F7A1DB4C96200FAE1E9 /* USCLog.m */,
-				F1943F7B1DB4C96200FAE1E9 /* USCMarcos.h */,
-				F1943F7C1DB4C96200FAE1E9 /* USCPunctuationRestorer.h */,
-				F1943F7D1DB4C96200FAE1E9 /* USCPunctuationRestorer.mm */,
-				F1943F7E1DB4C96200FAE1E9 /* USCSpeechTimer.h */,
-				F1943F7F1DB4C96200FAE1E9 /* USCSpeechTimer.m */,
-				F1943F801DB4C96200FAE1E9 /* USCUtil.h */,
-				F1943F811DB4C96200FAE1E9 /* USCUtil.mm */,
-				F1943F821DB4C96200FAE1E9 /* USCVersion.h */,
-				F1943F831DB4C96200FAE1E9 /* WaveHeader.cpp */,
-				F1943F841DB4C96200FAE1E9 /* WaveHeader.h */,
+				F187F6FF1DAE198900CFAEAB /* BeepPlayer.h */,
+				F187F7001DAE198900CFAEAB /* BeepPlayer.mm */,
+				F187F7011DAE198900CFAEAB /* Encrypter.h */,
+				F187F7021DAE198900CFAEAB /* NetWatcher.h */,
+				F187F7031DAE198900CFAEAB /* NetWatcher.mm */,
+				F187F7041DAE198900CFAEAB /* OpenUDID */,
+				F187F7071DAE198900CFAEAB /* RecognizationWatcher.h */,
+				F187F7081DAE198900CFAEAB /* RecognizationWatcher.mm */,
+				F187F7091DAE198900CFAEAB /* USCAddress.h */,
+				F187F70A1DAE198900CFAEAB /* USCAddress.mm */,
+				F187F70B1DAE198900CFAEAB /* USCAddressGetter.h */,
+				F187F70C1DAE198900CFAEAB /* USCAddressGetter.mm */,
+				F187F70D1DAE198900CFAEAB /* USCAsrResultFormatCantonese.h */,
+				F187F70E1DAE198900CFAEAB /* USCAsrResultFormatCantonese.mm */,
+				F187F70F1DAE198900CFAEAB /* USCAsrResultFormatChinese.h */,
+				F187F7101DAE198900CFAEAB /* USCAsrResultFormatChinese.mm */,
+				F187F7111DAE198900CFAEAB /* USCAsrResultFormatEnglish.h */,
+				F187F7121DAE198900CFAEAB /* USCAsrResultFormatEnglish.mm */,
+				F187F7131DAE198900CFAEAB /* USCErrorCode.h */,
+				F187F7141DAE198900CFAEAB /* USCErrorCode.mm */,
+				F187F7151DAE198900CFAEAB /* USCLog.h */,
+				F187F7161DAE198900CFAEAB /* USCLog.m */,
+				F187F7171DAE198900CFAEAB /* USCMarcos.h */,
+				F187F7181DAE198900CFAEAB /* USCPunctuationRestorer.h */,
+				F187F7191DAE198900CFAEAB /* USCPunctuationRestorer.mm */,
+				F187F71A1DAE198900CFAEAB /* USCSpeechTimer.h */,
+				F187F71B1DAE198900CFAEAB /* USCSpeechTimer.m */,
+				F187F71C1DAE198900CFAEAB /* USCUtil.h */,
+				F187F71D1DAE198900CFAEAB /* USCUtil.mm */,
+				F187F71E1DAE198900CFAEAB /* USCVersion.h */,
+				F187F71F1DAE198900CFAEAB /* WaveHeader.cpp */,
+				F187F7201DAE198900CFAEAB /* WaveHeader.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		F1943F681DB4C96200FAE1E9 /* OpenUDID */ = {
+		F187F7041DAE198900CFAEAB /* OpenUDID */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F691DB4C96200FAE1E9 /* USCOpenUDID.h */,
-				F1943F6A1DB4C96200FAE1E9 /* USCOpenUDID.m */,
+				F187F7051DAE198900CFAEAB /* USCOpenUDID.h */,
+				F187F7061DAE198900CFAEAB /* USCOpenUDID.m */,
 			);
 			path = OpenUDID;
 			sourceTree = "<group>";
 		};
-		F1943F851DB4C96200FAE1E9 /* NLU */ = {
+		F187F7211DAE198900CFAEAB /* NLU */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F861DB4C96200FAE1E9 /* classes */,
-				F1943F981DB4C96200FAE1E9 /* Reachability */,
+				F187F7221DAE198900CFAEAB /* classes */,
+				F187F7341DAE198900CFAEAB /* Reachability */,
 			);
 			path = NLU;
 			sourceTree = "<group>";
 		};
-		F1943F861DB4C96200FAE1E9 /* classes */ = {
+		F187F7221DAE198900CFAEAB /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F871DB4C96200FAE1E9 /* USCNLUError.h */,
-				F1943F881DB4C96200FAE1E9 /* USCNLUError.m */,
-				F1943F891DB4C96200FAE1E9 /* USCNLULog.h */,
-				F1943F8A1DB4C96200FAE1E9 /* USCNLULog.m */,
-				F1943F8B1DB4C96200FAE1E9 /* USCNLUParam.h */,
-				F1943F8C1DB4C96200FAE1E9 /* USCNLUParam.m */,
-				F1943F8D1DB4C96200FAE1E9 /* USCNLUParsedResult.h */,
-				F1943F8E1DB4C96200FAE1E9 /* USCNLUParsedResult.m */,
-				F1943F8F1DB4C96200FAE1E9 /* USCNLUParser.h */,
-				F1943F901DB4C96200FAE1E9 /* USCNLUParser.m */,
-				F1943F911DB4C96200FAE1E9 /* USCNLURequest.h */,
-				F1943F921DB4C96200FAE1E9 /* USCNLURequest.m */,
-				F1943F931DB4C96200FAE1E9 /* USCNLUScene.h */,
-				F1943F941DB4C96200FAE1E9 /* USCNLUScene.m */,
-				F1943F951DB4C96200FAE1E9 /* USCNLUSetOptions.h */,
-				F1943F961DB4C96200FAE1E9 /* USCNLUSetOptions.m */,
-				F1943F971DB4C96200FAE1E9 /* USCNLUVersion.h */,
+				F187F7231DAE198900CFAEAB /* USCNLUError.h */,
+				F187F7241DAE198900CFAEAB /* USCNLUError.m */,
+				F187F7251DAE198900CFAEAB /* USCNLULog.h */,
+				F187F7261DAE198900CFAEAB /* USCNLULog.m */,
+				F187F7271DAE198900CFAEAB /* USCNLUParam.h */,
+				F187F7281DAE198900CFAEAB /* USCNLUParam.m */,
+				F187F7291DAE198900CFAEAB /* USCNLUParsedResult.h */,
+				F187F72A1DAE198900CFAEAB /* USCNLUParsedResult.m */,
+				F187F72B1DAE198900CFAEAB /* USCNLUParser.h */,
+				F187F72C1DAE198900CFAEAB /* USCNLUParser.m */,
+				F187F72D1DAE198900CFAEAB /* USCNLURequest.h */,
+				F187F72E1DAE198900CFAEAB /* USCNLURequest.m */,
+				F187F72F1DAE198900CFAEAB /* USCNLUScene.h */,
+				F187F7301DAE198900CFAEAB /* USCNLUScene.m */,
+				F187F7311DAE198900CFAEAB /* USCNLUSetOptions.h */,
+				F187F7321DAE198900CFAEAB /* USCNLUSetOptions.m */,
+				F187F7331DAE198900CFAEAB /* USCNLUVersion.h */,
 			);
 			path = classes;
 			sourceTree = "<group>";
 		};
-		F1943F981DB4C96200FAE1E9 /* Reachability */ = {
+		F187F7341DAE198900CFAEAB /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F991DB4C96200FAE1E9 /* USCReachability.h */,
-				F1943F9A1DB4C96200FAE1E9 /* USCReachability.m */,
+				F187F7351DAE198900CFAEAB /* USCReachability.h */,
+				F187F7361DAE198900CFAEAB /* USCReachability.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		F1943F9B1DB4C96200FAE1E9 /* Params */ = {
+		F187F7371DAE198900CFAEAB /* Params */ = {
 			isa = PBXGroup;
 			children = (
-				F1943F9C1DB4C96200FAE1E9 /* USCEngineParams.h */,
-				F1943F9D1DB4C96200FAE1E9 /* USCEngineParams.mm */,
-				F1943F9E1DB4C96200FAE1E9 /* USCRecoginizerParam.h */,
-				F1943F9F1DB4C96200FAE1E9 /* USCRecoginizerParam.mm */,
-				F1943FA01DB4C96200FAE1E9 /* USCVADParam.h */,
-				F1943FA11DB4C96200FAE1E9 /* USCVADParam.m */,
-				F1943FA21DB4C96200FAE1E9 /* USCVADParamValue.h */,
-				F1943FA31DB4C96200FAE1E9 /* USCVADParamValue.m */,
+				F187F7381DAE198900CFAEAB /* USCEngineParams.h */,
+				F187F7391DAE198900CFAEAB /* USCEngineParams.mm */,
+				F187F73A1DAE198900CFAEAB /* USCRecoginizerParam.h */,
+				F187F73B1DAE198900CFAEAB /* USCRecoginizerParam.mm */,
+				F187F73C1DAE198900CFAEAB /* USCVADParam.h */,
+				F187F73D1DAE198900CFAEAB /* USCVADParam.m */,
+				F187F73E1DAE198900CFAEAB /* USCVADParamValue.h */,
+				F187F73F1DAE198900CFAEAB /* USCVADParamValue.m */,
 			);
 			path = Params;
 			sourceTree = "<group>";
 		};
-		F1943FA41DB4C96200FAE1E9 /* Recognition */ = {
+		F187F7401DAE198900CFAEAB /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FA51DB4C96200FAE1E9 /* USCRecognition.h */,
-				F1943FA61DB4C96200FAE1E9 /* USCRecognition.mm */,
+				F187F7411DAE198900CFAEAB /* USCRecognition.h */,
+				F187F7421DAE198900CFAEAB /* USCRecognition.mm */,
 			);
 			path = Recognition;
 			sourceTree = "<group>";
 		};
-		F1943FA71DB4C96200FAE1E9 /* Recognizer */ = {
+		F187F7431DAE198900CFAEAB /* Recognizer */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FA81DB4C96200FAE1E9 /* USCRecognizer.h */,
-				F1943FA91DB4C96200FAE1E9 /* USCRecognizer.mm */,
-				F1943FAA1DB4C96200FAE1E9 /* USCVadThread.h */,
-				F1943FAB1DB4C96200FAE1E9 /* USCVadThread.mm */,
+				F187F7441DAE198900CFAEAB /* USCRecognizer.h */,
+				F187F7451DAE198900CFAEAB /* USCRecognizer.mm */,
+				F187F7461DAE198900CFAEAB /* USCVadThread.h */,
+				F187F7471DAE198900CFAEAB /* USCVadThread.mm */,
 			);
 			path = Recognizer;
 			sourceTree = "<group>";
 		};
-		F1943FAC1DB4C96200FAE1E9 /* Record */ = {
+		F187F7481DAE198900CFAEAB /* Record */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FAD1DB4C96200FAE1E9 /* 01.pcm */,
-				F1943FAE1DB4C96200FAE1E9 /* USCRecorder.h */,
-				F1943FAF1DB4C96200FAE1E9 /* USCRecorder.mm */,
+				F187F7491DAE198900CFAEAB /* 01.pcm */,
+				F187F74A1DAE198900CFAEAB /* USCRecorder.h */,
+				F187F74B1DAE198900CFAEAB /* USCRecorder.mm */,
 			);
 			path = Record;
 			sourceTree = "<group>";
 		};
-		F1943FB01DB4C96200FAE1E9 /* Scene */ = {
+		F187F74C1DAE198900CFAEAB /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FB11DB4C96200FAE1E9 /* USCScene.h */,
-				F1943FB21DB4C96200FAE1E9 /* USCScene.mm */,
-				F1943FB31DB4C96200FAE1E9 /* USCSceneManage.h */,
-				F1943FB41DB4C96200FAE1E9 /* USCSceneManage.mm */,
-				F1943FB51DB4C96200FAE1E9 /* USCUploadSceneTask.h */,
-				F1943FB61DB4C96200FAE1E9 /* USCUploadSceneTask.mm */,
+				F187F74D1DAE198900CFAEAB /* USCScene.h */,
+				F187F74E1DAE198900CFAEAB /* USCScene.mm */,
+				F187F74F1DAE198900CFAEAB /* USCSceneManage.h */,
+				F187F7501DAE198900CFAEAB /* USCSceneManage.mm */,
+				F187F7511DAE198900CFAEAB /* USCUploadSceneTask.h */,
+				F187F7521DAE198900CFAEAB /* USCUploadSceneTask.mm */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		F1943FB71DB4C96200FAE1E9 /* Share */ = {
+		F187F7531DAE198900CFAEAB /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FB81DB4C96200FAE1E9 /* result.txt */,
-				F1943FB91DB4C96200FAE1E9 /* USCConstant.h */,
-				F1943FBA1DB4C96200FAE1E9 /* USCParams.h */,
-				F1943FBB1DB4C96200FAE1E9 /* USCParams.mm */,
-				F1943FBC1DB4C96200FAE1E9 /* USCPrivateConstant.h */,
-				F1943FBD1DB4C96200FAE1E9 /* USCRecognitionParam.h */,
-				F1943FBE1DB4C96200FAE1E9 /* USCRecognitionParam.mm */,
-				F1943FBF1DB4C96200FAE1E9 /* USCSetting.h */,
-				F1943FC01DB4C96200FAE1E9 /* USCSetting.m */,
-				F1943FC11DB4C96200FAE1E9 /* USCSpeechConstant.h */,
+				F187F7541DAE198900CFAEAB /* result.txt */,
+				F187F7551DAE198900CFAEAB /* USCConstant.h */,
+				F187F7561DAE198900CFAEAB /* USCParams.h */,
+				F187F7571DAE198900CFAEAB /* USCParams.mm */,
+				F187F7581DAE198900CFAEAB /* USCPrivateConstant.h */,
+				F187F7591DAE198900CFAEAB /* USCRecognitionParam.h */,
+				F187F75A1DAE198900CFAEAB /* USCRecognitionParam.mm */,
+				F187F75B1DAE198900CFAEAB /* USCSetting.h */,
+				F187F75C1DAE198900CFAEAB /* USCSetting.m */,
+				F187F75D1DAE198900CFAEAB /* USCSpeechConstant.h */,
 			);
 			path = Share;
 			sourceTree = "<group>";
 		};
-		F1943FC21DB4C96200FAE1E9 /* SpeechSynthesize */ = {
+		F187F75E1DAE198900CFAEAB /* SpeechSynthesize */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FC31DB4C96200FAE1E9 /* offlineTTS */,
-				F1943FCE1DB4C96200FAE1E9 /* USCPlayThread.h */,
-				F1943FCF1DB4C96200FAE1E9 /* USCPlayThread.mm */,
-				F1943FD01DB4C96200FAE1E9 /* USCSpeechSynthesizer.h */,
-				F1943FD11DB4C96200FAE1E9 /* USCSpeechSynthesizer.m */,
-				F1943FD21DB4C96200FAE1E9 /* USCTTSCommon.h */,
-				F1943FD31DB4C96200FAE1E9 /* USCTTSEngine.h */,
-				F1943FD41DB4C96200FAE1E9 /* USCTTSEngine.mm */,
-				F1943FD51DB4C96200FAE1E9 /* USCTtsEngineParam.h */,
-				F1943FD61DB4C96200FAE1E9 /* USCTtsEngineParam.m */,
-				F1943FD71DB4C96200FAE1E9 /* USCTTSErrorCode.h */,
-				F1943FD81DB4C96200FAE1E9 /* USCTTSErrorCode.mm */,
+				F187F75F1DAE198900CFAEAB /* offlineTTS */,
+				F187F76A1DAE198900CFAEAB /* USCPlayThread.h */,
+				F187F76B1DAE198900CFAEAB /* USCPlayThread.mm */,
+				F187F76C1DAE198900CFAEAB /* USCSpeechSynthesizer.h */,
+				F187F76D1DAE198900CFAEAB /* USCSpeechSynthesizer.m */,
+				F187F76E1DAE198900CFAEAB /* USCTTSCommon.h */,
+				F187F76F1DAE198900CFAEAB /* USCTTSEngine.h */,
+				F187F7701DAE198900CFAEAB /* USCTTSEngine.mm */,
+				F187F7711DAE198900CFAEAB /* USCTtsEngineParam.h */,
+				F187F7721DAE198900CFAEAB /* USCTtsEngineParam.m */,
+				F187F7731DAE198900CFAEAB /* USCTTSErrorCode.h */,
+				F187F7741DAE198900CFAEAB /* USCTTSErrorCode.mm */,
 			);
 			path = SpeechSynthesize;
 			sourceTree = "<group>";
 		};
-		F1943FC31DB4C96200FAE1E9 /* offlineTTS */ = {
+		F187F75F1DAE198900CFAEAB /* offlineTTS */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FC41DB4C96200FAE1E9 /* libyzstts.a */,
-				F1943FC51DB4C96200FAE1E9 /* tts.bundle */,
-				F1943FC61DB4C96200FAE1E9 /* USCOfflineEngine.h */,
-				F1943FC71DB4C96200FAE1E9 /* USCOfflineEngine.mm */,
-				F1943FC81DB4C96200FAE1E9 /* USCOfflineTTS.h */,
-				F1943FC91DB4C96200FAE1E9 /* USCOfflineTTS.mm */,
-				F1943FCA1DB4C96200FAE1E9 /* USCOfflineTTSCommon.h */,
-				F1943FCB1DB4C96200FAE1E9 /* USCSynthesisThread.h */,
-				F1943FCC1DB4C96200FAE1E9 /* USCSynthesisThread.mm */,
-				F1943FCD1DB4C96200FAE1E9 /* yzsttshandle.h */,
+				F187F7601DAE198900CFAEAB /* libyzstts.a */,
+				F187F7611DAE198900CFAEAB /* tts.bundle */,
+				F187F7621DAE198900CFAEAB /* USCOfflineEngine.h */,
+				F187F7631DAE198900CFAEAB /* USCOfflineEngine.mm */,
+				F187F7641DAE198900CFAEAB /* USCOfflineTTS.h */,
+				F187F7651DAE198900CFAEAB /* USCOfflineTTS.mm */,
+				F187F7661DAE198900CFAEAB /* USCOfflineTTSCommon.h */,
+				F187F7671DAE198900CFAEAB /* USCSynthesisThread.h */,
+				F187F7681DAE198900CFAEAB /* USCSynthesisThread.mm */,
+				F187F7691DAE198900CFAEAB /* yzsttshandle.h */,
 			);
 			path = offlineTTS;
 			sourceTree = "<group>";
 		};
-		F1943FD91DB4C96200FAE1E9 /* SpeechUnderstander */ = {
+		F187F7751DAE198900CFAEAB /* SpeechUnderstander */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FDA1DB4C96200FAE1E9 /* USCSpeechResult.h */,
-				F1943FDB1DB4C96200FAE1E9 /* USCSpeechResult.mm */,
-				F1943FDC1DB4C96200FAE1E9 /* USCSpeechUnderstander.h */,
-				F1943FDD1DB4C96200FAE1E9 /* USCSpeechUnderstander.mm */,
+				F187F7761DAE198900CFAEAB /* USCSpeechResult.h */,
+				F187F7771DAE198900CFAEAB /* USCSpeechResult.mm */,
+				F187F7781DAE198900CFAEAB /* USCSpeechUnderstander.h */,
+				F187F7791DAE198900CFAEAB /* USCSpeechUnderstander.mm */,
 			);
 			path = SpeechUnderstander;
 			sourceTree = "<group>";
 		};
-		F1943FDE1DB4C96200FAE1E9 /* Tool */ = {
+		F187F77A1DAE198900CFAEAB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FDF1DB4C96200FAE1E9 /* USCCommonTool.h */,
-				F1943FE01DB4C96200FAE1E9 /* USCCommonTool.mm */,
-				F1943FE11DB4C96200FAE1E9 /* USCLocationTool.h */,
-				F1943FE21DB4C96200FAE1E9 /* USCLocationTool.mm */,
+				F187F77B1DAE198900CFAEAB /* USCCommonTool.h */,
+				F187F77C1DAE198900CFAEAB /* USCCommonTool.mm */,
+				F187F77D1DAE198900CFAEAB /* USCLocationTool.h */,
+				F187F77E1DAE198900CFAEAB /* USCLocationTool.mm */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		F1943FE31DB4C96200FAE1E9 /* VAD */ = {
+		F187F77F1DAE198900CFAEAB /* VAD */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FE41DB4C96200FAE1E9 /* ASRVadBeepWapper.h */,
-				F1943FE51DB4C96200FAE1E9 /* ASRVadBeepWapper.mm */,
-				F1943FE61DB4C96200FAE1E9 /* ASRVadWapper.cpp */,
-				F1943FE71DB4C96200FAE1E9 /* ASRVadWapper.h */,
-				F1943FE81DB4C96200FAE1E9 /* libasrvad2.a */,
+				F187F7801DAE198900CFAEAB /* ASRVadBeepWapper.h */,
+				F187F7811DAE198900CFAEAB /* ASRVadBeepWapper.mm */,
+				F187F7821DAE198900CFAEAB /* ASRVadWapper.cpp */,
+				F187F7831DAE198900CFAEAB /* ASRVadWapper.h */,
+				F187F7841DAE198900CFAEAB /* libasrvad2.a */,
 			);
 			path = VAD;
 			sourceTree = "<group>";
 		};
-		F1943FE91DB4C96200FAE1E9 /* Voiceprint */ = {
+		F187F7851DAE198900CFAEAB /* Voiceprint */ = {
 			isa = PBXGroup;
 			children = (
-				F1943FEA1DB4C96200FAE1E9 /* USCVoiceprintParams.h */,
-				F1943FEB1DB4C96200FAE1E9 /* USCVoiceprintParams.m */,
-				F1943FEC1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.h */,
-				F1943FED1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.mm */,
-				F1943FEE1DB4C96200FAE1E9 /* USCVoiceprintResult.h */,
-				F1943FEF1DB4C96200FAE1E9 /* USCVoiceprintResult.mm */,
+				F187F7861DAE198900CFAEAB /* USCVoiceprintParams.h */,
+				F187F7871DAE198900CFAEAB /* USCVoiceprintParams.m */,
+				F187F7881DAE198900CFAEAB /* USCVoiceprintRecognizer.h */,
+				F187F7891DAE198900CFAEAB /* USCVoiceprintRecognizer.mm */,
+				F187F78A1DAE198900CFAEAB /* USCVoiceprintResult.h */,
+				F187F78B1DAE198900CFAEAB /* USCVoiceprintResult.mm */,
 			);
 			path = Voiceprint;
 			sourceTree = "<group>";
@@ -1608,7 +1607,6 @@
 		F1A58C3A1DAE07B900174475 = {
 			isa = PBXGroup;
 			children = (
-				F1269C3F1DB61CB20038F31A /* Config.h */,
 				F187F6ED1DAE198900CFAEAB /* sourcecode(occode) */,
 				F187F5261DAE13E000CFAEAB /* clib */,
 				F1A58C451DAE07B900174475 /* USC_SDK */,
@@ -1690,38 +1688,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F194401B1DB4C96200FAE1E9 /* USCSetting.m in Sources */,
+				F187F7B71DAE198900CFAEAB /* USCSetting.m in Sources */,
 				F187F63A1DAE141100CFAEAB /* modes.c in Sources */,
 				F187F6321DAE141100CFAEAB /* cwrs.c in Sources */,
 				F187F6501DAE141100CFAEAB /* decode_pitch.c in Sources */,
-				F1943FFF1DB4C96200FAE1E9 /* USCErrorCode.mm in Sources */,
+				F187F79B1DAE198900CFAEAB /* USCErrorCode.mm in Sources */,
 				F187F6641DAE141100CFAEAB /* pitch_analysis_core_FIX.c in Sources */,
 				F187F66F1DAE141100CFAEAB /* gain_quant.c in Sources */,
 				F187F63C1DAE141100CFAEAB /* quant_bands.c in Sources */,
-				F19440101DB4C96200FAE1E9 /* USCVADParam.m in Sources */,
+				F187F7AC1DAE198900CFAEAB /* USCVADParam.m in Sources */,
 				F187F6401DAE141100CFAEAB /* ana_filt_bank_1.c in Sources */,
 				F187F6451DAE141100CFAEAB /* CNG.c in Sources */,
 				F187F6A91DAE141100CFAEAB /* opus_decoder.c in Sources */,
 				F187F6461DAE141100CFAEAB /* code_signs.c in Sources */,
 				F187F6E41DAE143B00CFAEAB /* log.cpp in Sources */,
-				F194401F1DB4C96200FAE1E9 /* USCSynthesisThread.mm in Sources */,
+				F187F7BB1DAE198900CFAEAB /* USCSynthesisThread.mm in Sources */,
 				F187F6EA1DAE143B00CFAEAB /* service.cpp in Sources */,
 				F187F64C1DAE141100CFAEAB /* decode_core.c in Sources */,
 				F187F62C1DAE141100CFAEAB /* uni_opus_decoder.cpp in Sources */,
 				F187F6951DAE141100CFAEAB /* stereo_find_predictor.c in Sources */,
-				F1943FFB1DB4C96200FAE1E9 /* USCAddressGetter.mm in Sources */,
+				F187F7971DAE198900CFAEAB /* USCAddressGetter.mm in Sources */,
 				F187F65D1DAE141100CFAEAB /* find_pitch_lags_FIX.c in Sources */,
-				F19440241DB4C96200FAE1E9 /* USCTTSErrorCode.mm in Sources */,
-				F1943FF31DB4C96200FAE1E9 /* USCRecognizeDialog.m in Sources */,
+				F187F7C01DAE198900CFAEAB /* USCTTSErrorCode.mm in Sources */,
+				F187F78F1DAE198900CFAEAB /* USCRecognizeDialog.m in Sources */,
 				F187F67D1DAE141100CFAEAB /* NLSF_encode.c in Sources */,
 				F187F6DF1DAE143B00CFAEAB /* asr_client.cpp in Sources */,
 				F187F6B41DAE141100CFAEAB /* getTime.cpp in Sources */,
 				F187F6491DAE141100CFAEAB /* control_SNR.c in Sources */,
-				F194401D1DB4C96200FAE1E9 /* USCOfflineEngine.mm in Sources */,
+				F187F7B91DAE198900CFAEAB /* USCOfflineEngine.mm in Sources */,
 				F187F6E81DAE143B00CFAEAB /* utils.cpp in Sources */,
 				F187F6521DAE141100CFAEAB /* decoder_set_fs.c in Sources */,
 				F187F6371DAE141100CFAEAB /* laplace.c in Sources */,
-				F19440131DB4C96200FAE1E9 /* USCRecognizer.mm in Sources */,
+				F187F7AF1DAE198900CFAEAB /* USCRecognizer.mm in Sources */,
 				F187F66E1DAE141100CFAEAB /* warped_autocorrelation_FIX.c in Sources */,
 				F187F68C1DAE141100CFAEAB /* resampler_private_down_FIR.c in Sources */,
 				F187F6751DAE141100CFAEAB /* lin2log.c in Sources */,
@@ -1737,19 +1735,19 @@
 				F187F6E11DAE143B00CFAEAB /* crypt.cpp in Sources */,
 				F187F6E51DAE143B00CFAEAB /* function.cpp in Sources */,
 				F187F62F1DAE141100CFAEAB /* celt_decoder.c in Sources */,
-				F19440211DB4C96200FAE1E9 /* USCSpeechSynthesizer.m in Sources */,
+				F187F7BD1DAE198900CFAEAB /* USCSpeechSynthesizer.m in Sources */,
 				F187F64D1DAE141100CFAEAB /* decode_frame.c in Sources */,
-				F1943FF41DB4C96200FAE1E9 /* USCRecognizerDialog.mm in Sources */,
-				F19440031DB4C96200FAE1E9 /* USCUtil.mm in Sources */,
+				F187F7901DAE198900CFAEAB /* USCRecognizerDialog.mm in Sources */,
+				F187F79F1DAE198900CFAEAB /* USCUtil.mm in Sources */,
 				F187F65A1DAE141100CFAEAB /* encode_frame_FIX.c in Sources */,
 				F187F6551DAE141100CFAEAB /* encode_pulses.c in Sources */,
-				F1943FF91DB4C96200FAE1E9 /* RecognizationWatcher.mm in Sources */,
-				F19440191DB4C96200FAE1E9 /* USCParams.mm in Sources */,
+				F187F7951DAE198900CFAEAB /* RecognizationWatcher.mm in Sources */,
+				F187F7B51DAE198900CFAEAB /* USCParams.mm in Sources */,
 				F187F6921DAE141100CFAEAB /* sort.c in Sources */,
 				F187F6B31DAE141100CFAEAB /* genToken.cpp in Sources */,
 				F187F65C1DAE141100CFAEAB /* find_LTP_FIX.c in Sources */,
-				F194400D1DB4C96200FAE1E9 /* USCReachability.m in Sources */,
-				F19440121DB4C96200FAE1E9 /* USCRecognition.mm in Sources */,
+				F187F7A91DAE198900CFAEAB /* USCReachability.m in Sources */,
+				F187F7AE1DAE198900CFAEAB /* USCRecognition.mm in Sources */,
 				F187F6E31DAE143B00CFAEAB /* sdk_crypt.cpp in Sources */,
 				F187F67C1DAE141100CFAEAB /* NLSF_del_dec_quant.c in Sources */,
 				F187F6391DAE141100CFAEAB /* mdct.c in Sources */,
@@ -1757,54 +1755,54 @@
 				F187F6961DAE141100CFAEAB /* stereo_LR_to_MS.c in Sources */,
 				F187F6911DAE141100CFAEAB /* sigm_Q15.c in Sources */,
 				F187F6661DAE141100CFAEAB /* process_gains_FIX.c in Sources */,
-				F19440061DB4C96200FAE1E9 /* USCNLULog.m in Sources */,
+				F187F7A21DAE198900CFAEAB /* USCNLULog.m in Sources */,
 				F187F6691DAE141100CFAEAB /* residual_energy_FIX.c in Sources */,
-				F1943FF71DB4C96200FAE1E9 /* NetWatcher.mm in Sources */,
+				F187F7931DAE198900CFAEAB /* NetWatcher.mm in Sources */,
 				F187F6B51DAE141100CFAEAB /* tokenTools.cpp in Sources */,
-				F19440271DB4C96200FAE1E9 /* USCCommonTool.mm in Sources */,
+				F187F7C31DAE198900CFAEAB /* USCCommonTool.mm in Sources */,
 				F187F6681DAE141100CFAEAB /* residual_energy16_FIX.c in Sources */,
 				F187F6871DAE141100CFAEAB /* quant_LTP_gains.c in Sources */,
 				F187F64A1DAE141100CFAEAB /* debug.c in Sources */,
-				F19440261DB4C96200FAE1E9 /* USCSpeechUnderstander.mm in Sources */,
+				F187F7C21DAE198900CFAEAB /* USCSpeechUnderstander.mm in Sources */,
 				F187F62A1DAE141100CFAEAB /* Opuswrapper.cpp in Sources */,
 				F187F6A81DAE141100CFAEAB /* opus_compare.c in Sources */,
 				F187F6891DAE141100CFAEAB /* resampler_down2.c in Sources */,
-				F19440111DB4C96200FAE1E9 /* USCVADParamValue.m in Sources */,
+				F187F7AD1DAE198900CFAEAB /* USCVADParamValue.m in Sources */,
 				F187F6B61DAE141100CFAEAB /* tokenWrap.cpp in Sources */,
 				F187F6B11DAE141100CFAEAB /* cBase64.cpp in Sources */,
-				F19440001DB4C96200FAE1E9 /* USCLog.m in Sources */,
+				F187F79C1DAE198900CFAEAB /* USCLog.m in Sources */,
 				F187F6821DAE141100CFAEAB /* NSQ.c in Sources */,
 				F187F6901DAE141100CFAEAB /* shell_coder.c in Sources */,
-				F1943FF81DB4C96200FAE1E9 /* USCOpenUDID.m in Sources */,
+				F187F7941DAE198900CFAEAB /* USCOpenUDID.m in Sources */,
 				F187F67B1DAE141100CFAEAB /* NLSF_decode.c in Sources */,
 				F187F6881DAE141100CFAEAB /* resampler.c in Sources */,
-				F194400E1DB4C96200FAE1E9 /* USCEngineParams.mm in Sources */,
+				F187F7AA1DAE198900CFAEAB /* USCEngineParams.mm in Sources */,
 				F187F66C1DAE141100CFAEAB /* solve_LS_FIX.c in Sources */,
 				F187F68D1DAE141100CFAEAB /* resampler_private_IIR_FIR.c in Sources */,
-				F19440181DB4C96200FAE1E9 /* USCUploadSceneTask.mm in Sources */,
-				F19440051DB4C96200FAE1E9 /* USCNLUError.m in Sources */,
+				F187F7B41DAE198900CFAEAB /* USCUploadSceneTask.mm in Sources */,
+				F187F7A11DAE198900CFAEAB /* USCNLUError.m in Sources */,
 				F187F64F1DAE141100CFAEAB /* decode_parameters.c in Sources */,
 				F187F6711DAE141100CFAEAB /* init_decoder.c in Sources */,
 				F187F6341DAE141100CFAEAB /* entdec.c in Sources */,
 				F187F6851DAE141100CFAEAB /* PLC.c in Sources */,
 				F187F67E1DAE141100CFAEAB /* NLSF_stabilize.c in Sources */,
-				F19440221DB4C96200FAE1E9 /* USCTTSEngine.mm in Sources */,
+				F187F7BE1DAE198900CFAEAB /* USCTTSEngine.mm in Sources */,
 				F187F6381DAE141100CFAEAB /* mathops.c in Sources */,
-				F1943FFA1DB4C96200FAE1E9 /* USCAddress.mm in Sources */,
+				F187F7961DAE198900CFAEAB /* USCAddress.mm in Sources */,
 				F187F6441DAE141100CFAEAB /* check_control_input.c in Sources */,
-				F194400A1DB4C96200FAE1E9 /* USCNLURequest.m in Sources */,
+				F187F7A61DAE198900CFAEAB /* USCNLURequest.m in Sources */,
 				F187F69F1DAE141100CFAEAB /* tables_other.c in Sources */,
 				F187F6A41DAE141100CFAEAB /* analysis.c in Sources */,
 				F187F65E1DAE141100CFAEAB /* find_pred_coefs_FIX.c in Sources */,
 				F187F6E01DAE143B00CFAEAB /* asr_service.cpp in Sources */,
 				F187F6AA1DAE141100CFAEAB /* opus_encoder.c in Sources */,
-				F194401A1DB4C96200FAE1E9 /* USCRecognitionParam.mm in Sources */,
+				F187F7B61DAE198900CFAEAB /* USCRecognitionParam.mm in Sources */,
 				F187F68F1DAE141100CFAEAB /* resampler_rom.c in Sources */,
 				F187F6941DAE141100CFAEAB /* stereo_encode_pred.c in Sources */,
 				F187F6421DAE141100CFAEAB /* bwexpander.c in Sources */,
 				F187F6531DAE141100CFAEAB /* enc_API.c in Sources */,
 				F187F62B1DAE141100CFAEAB /* cache.cpp in Sources */,
-				F1943FF21DB4C96200FAE1E9 /* UIView+USCExtension.m in Sources */,
+				F187F78E1DAE198900CFAEAB /* UIView+USCExtension.m in Sources */,
 				F187F6A71DAE141100CFAEAB /* opus.c in Sources */,
 				F187F63F1DAE141100CFAEAB /* A2NLSF.c in Sources */,
 				F187F6761DAE141100CFAEAB /* log2lin.c in Sources */,
@@ -1812,12 +1810,12 @@
 				F187F6AE1DAE141100CFAEAB /* repacketizer.c in Sources */,
 				F187F68E1DAE141100CFAEAB /* resampler_private_up2_HQ.c in Sources */,
 				F187F6801DAE141100CFAEAB /* NLSF_VQ.c in Sources */,
-				F194400C1DB4C96200FAE1E9 /* USCNLUSetOptions.m in Sources */,
-				F1943FF01DB4C96200FAE1E9 /* ASRClientWrapper.cpp in Sources */,
+				F187F7A81DAE198900CFAEAB /* USCNLUSetOptions.m in Sources */,
+				F187F78C1DAE198900CFAEAB /* ASRClientWrapper.cpp in Sources */,
 				F187F6701DAE141100CFAEAB /* HP_variable_cutoff.c in Sources */,
-				F19440081DB4C96200FAE1E9 /* USCNLUParsedResult.m in Sources */,
-				F19440201DB4C96200FAE1E9 /* USCPlayThread.mm in Sources */,
-				F19440171DB4C96200FAE1E9 /* USCSceneManage.mm in Sources */,
+				F187F7A41DAE198900CFAEAB /* USCNLUParsedResult.m in Sources */,
+				F187F7BC1DAE198900CFAEAB /* USCPlayThread.mm in Sources */,
+				F187F7B31DAE198900CFAEAB /* USCSceneManage.mm in Sources */,
 				F187F65F1DAE141100CFAEAB /* k2a_FIX.c in Sources */,
 				F187F6E91DAE143B00CFAEAB /* sdk_req.cpp in Sources */,
 				F187F69E1DAE141100CFAEAB /* tables_NLSF_CB_WB.c in Sources */,
@@ -1825,24 +1823,24 @@
 				F187F6981DAE141100CFAEAB /* stereo_quant_pred.c in Sources */,
 				F187F6511DAE141100CFAEAB /* decode_pulses.c in Sources */,
 				F187F63D1DAE141100CFAEAB /* rate.c in Sources */,
-				F194402E1DB4C96200FAE1E9 /* USCVoiceprintResult.mm in Sources */,
+				F187F7CA1DAE198900CFAEAB /* USCVoiceprintResult.mm in Sources */,
 				F187F6971DAE141100CFAEAB /* stereo_MS_to_LR.c in Sources */,
 				F187F6541DAE141100CFAEAB /* encode_indices.c in Sources */,
-				F19440041DB4C96200FAE1E9 /* WaveHeader.cpp in Sources */,
+				F187F7A01DAE198900CFAEAB /* WaveHeader.cpp in Sources */,
 				F187F6571DAE141100CFAEAB /* autocorr_FIX.c in Sources */,
-				F194402A1DB4C96200FAE1E9 /* ASRVadWapper.cpp in Sources */,
-				F19440161DB4C96200FAE1E9 /* USCScene.mm in Sources */,
+				F187F7C61DAE198900CFAEAB /* ASRVadWapper.cpp in Sources */,
+				F187F7B21DAE198900CFAEAB /* USCScene.mm in Sources */,
 				F187F6731DAE141100CFAEAB /* inner_prod_aligned.c in Sources */,
-				F194400F1DB4C96200FAE1E9 /* USCRecoginizerParam.mm in Sources */,
-				F1943FFC1DB4C96200FAE1E9 /* USCAsrResultFormatCantonese.mm in Sources */,
-				F194402D1DB4C96200FAE1E9 /* USCVoiceprintRecognizer.mm in Sources */,
+				F187F7AB1DAE198900CFAEAB /* USCRecoginizerParam.mm in Sources */,
+				F187F7981DAE198900CFAEAB /* USCAsrResultFormatCantonese.mm in Sources */,
+				F187F7C91DAE198900CFAEAB /* USCVoiceprintRecognizer.mm in Sources */,
 				F187F6E21DAE143B00CFAEAB /* md5.cpp in Sources */,
 				F187F62E1DAE141100CFAEAB /* celt.c in Sources */,
 				F187F6B01DAE141100CFAEAB /* AES.cpp in Sources */,
 				F187F62D1DAE141100CFAEAB /* bands.c in Sources */,
 				F187F6EB1DAE143B00CFAEAB /* tts_client.cpp in Sources */,
-				F1943FFE1DB4C96200FAE1E9 /* USCAsrResultFormatEnglish.mm in Sources */,
-				F19440151DB4C96200FAE1E9 /* USCRecorder.mm in Sources */,
+				F187F79A1DAE198900CFAEAB /* USCAsrResultFormatEnglish.mm in Sources */,
+				F187F7B11DAE198900CFAEAB /* USCRecorder.mm in Sources */,
 				F187F6561DAE141100CFAEAB /* apply_sine_window_FIX.c in Sources */,
 				F187F6471DAE141100CFAEAB /* control_audio_bandwidth.c in Sources */,
 				F187F6601DAE141100CFAEAB /* k2a_Q16_FIX.c in Sources */,
@@ -1851,21 +1849,21 @@
 				F187F6331DAE141100CFAEAB /* entcode.c in Sources */,
 				F187F6741DAE141100CFAEAB /* interpolate.c in Sources */,
 				F187F6301DAE141100CFAEAB /* celt_encoder.c in Sources */,
-				F1943FF11DB4C96200FAE1E9 /* USCIAudioSource.m in Sources */,
+				F187F78D1DAE198900CFAEAB /* USCIAudioSource.m in Sources */,
 				F187F6AB1DAE141100CFAEAB /* opus_multistream.c in Sources */,
 				F187F69B1DAE141100CFAEAB /* tables_gain.c in Sources */,
 				F187F63E1DAE141100CFAEAB /* vq.c in Sources */,
-				F194402C1DB4C96200FAE1E9 /* USCVoiceprintParams.m in Sources */,
-				F19440251DB4C96200FAE1E9 /* USCSpeechResult.mm in Sources */,
-				F194401E1DB4C96200FAE1E9 /* USCOfflineTTS.mm in Sources */,
-				F19440281DB4C96200FAE1E9 /* USCLocationTool.mm in Sources */,
+				F187F7C81DAE198900CFAEAB /* USCVoiceprintParams.m in Sources */,
+				F187F7C11DAE198900CFAEAB /* USCSpeechResult.mm in Sources */,
+				F187F7BA1DAE198900CFAEAB /* USCOfflineTTS.mm in Sources */,
+				F187F7C41DAE198900CFAEAB /* USCLocationTool.mm in Sources */,
 				F187F6EC1DAE143B00CFAEAB /* tts_service.cpp in Sources */,
 				F187F69D1DAE141100CFAEAB /* tables_NLSF_CB_NB_MB.c in Sources */,
-				F1943FF51DB4C96200FAE1E9 /* USCRecognizerView.mm in Sources */,
+				F187F7911DAE198900CFAEAB /* USCRecognizerView.mm in Sources */,
 				F187F65B1DAE141100CFAEAB /* find_LPC_FIX.c in Sources */,
 				F187F6B21DAE141100CFAEAB /* checkTokenValid.cpp in Sources */,
 				F187F69C1DAE141100CFAEAB /* tables_LTP.c in Sources */,
-				F19440141DB4C96200FAE1E9 /* USCVadThread.mm in Sources */,
+				F187F7B01DAE198900CFAEAB /* USCVadThread.mm in Sources */,
 				F187F64E1DAE141100CFAEAB /* decode_indices.c in Sources */,
 				F187F6A31DAE141100CFAEAB /* VQ_WMat_EC.c in Sources */,
 				F187F6791DAE141100CFAEAB /* LPC_inv_pred_gain.c in Sources */,
@@ -1882,31 +1880,31 @@
 				F187F6A61DAE141100CFAEAB /* mlp_data.c in Sources */,
 				F187F67A1DAE141100CFAEAB /* NLSF2A.c in Sources */,
 				F187F6431DAE141100CFAEAB /* bwexpander_32.c in Sources */,
-				F19440021DB4C96200FAE1E9 /* USCSpeechTimer.m in Sources */,
+				F187F79E1DAE198900CFAEAB /* USCSpeechTimer.m in Sources */,
 				F187F6931DAE141100CFAEAB /* stereo_decode_pred.c in Sources */,
 				F187F6351DAE141100CFAEAB /* entenc.c in Sources */,
 				F187F6A21DAE141100CFAEAB /* VAD.c in Sources */,
 				F1A58C481DAE07B900174475 /* USC_SDK.m in Sources */,
 				F187F6481DAE141100CFAEAB /* control_codec.c in Sources */,
 				F187F6AD1DAE141100CFAEAB /* opus_multistream_encoder.c in Sources */,
-				F194400B1DB4C96200FAE1E9 /* USCNLUScene.m in Sources */,
-				F19440291DB4C96200FAE1E9 /* ASRVadBeepWapper.mm in Sources */,
+				F187F7A71DAE198900CFAEAB /* USCNLUScene.m in Sources */,
+				F187F7C51DAE198900CFAEAB /* ASRVadBeepWapper.mm in Sources */,
 				F187F6A01DAE141100CFAEAB /* tables_pitch_lag.c in Sources */,
-				F1943FF61DB4C96200FAE1E9 /* BeepPlayer.mm in Sources */,
+				F187F7921DAE198900CFAEAB /* BeepPlayer.mm in Sources */,
 				F187F6671DAE141100CFAEAB /* regularize_correlations_FIX.c in Sources */,
 				F187F69A1DAE141100CFAEAB /* table_LSF_cos.c in Sources */,
 				F187F66A1DAE141100CFAEAB /* schur64_FIX.c in Sources */,
-				F19440091DB4C96200FAE1E9 /* USCNLUParser.m in Sources */,
+				F187F7A51DAE198900CFAEAB /* USCNLUParser.m in Sources */,
 				F187F6311DAE141100CFAEAB /* celt_lpc.c in Sources */,
-				F1943FFD1DB4C96200FAE1E9 /* USCAsrResultFormatChinese.mm in Sources */,
+				F187F7991DAE198900CFAEAB /* USCAsrResultFormatChinese.mm in Sources */,
 				F187F6A51DAE141100CFAEAB /* mlp.c in Sources */,
 				F187F6861DAE141100CFAEAB /* process_NLSFs.c in Sources */,
-				F19440011DB4C96200FAE1E9 /* USCPunctuationRestorer.mm in Sources */,
+				F187F79D1DAE198900CFAEAB /* USCPunctuationRestorer.mm in Sources */,
 				F187F6991DAE141100CFAEAB /* sum_sqr_shift.c in Sources */,
 				F187F6651DAE141100CFAEAB /* prefilter_FIX.c in Sources */,
 				F187F6E71DAE143B00CFAEAB /* JHttpClient.cpp in Sources */,
-				F19440071DB4C96200FAE1E9 /* USCNLUParam.m in Sources */,
-				F19440231DB4C96200FAE1E9 /* USCTtsEngineParam.m in Sources */,
+				F187F7A31DAE198900CFAEAB /* USCNLUParam.m in Sources */,
+				F187F7BF1DAE198900CFAEAB /* USCTtsEngineParam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1956,7 +1954,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1997,7 +1994,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

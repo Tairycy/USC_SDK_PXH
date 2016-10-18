@@ -12,8 +12,8 @@
 
 +(void)logTest{
     NSLog(@"log test");
-    NSLog(@"log test1");
-    NSLog(@"log test2");
+    NSLog(@"log test 1");
+    NSLog(@"log test 2");
 }
 
 -(void)logTestTwo{
