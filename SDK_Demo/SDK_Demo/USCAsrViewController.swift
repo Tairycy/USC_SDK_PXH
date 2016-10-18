@@ -30,7 +30,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         // Do any additional setup after loading the view.
         setUpSpeech()
         setUpUI()
-        self.setNavi()
+        setNavi()
     }
     func setUpUI(){
         self.startBtn.setTitle("开始", for: UIControlState.normal)
@@ -52,6 +52,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         self.speechUnderstander?.stop()
         self.asrResult = ""
         self.jsonResult = ""
+        self.textView.text = self.jsonResult! as String
     }
     //MARK:- SpeechUnderstander
     func setUpSpeech(){
