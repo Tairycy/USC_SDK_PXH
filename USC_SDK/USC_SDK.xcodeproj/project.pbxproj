@@ -2034,6 +2034,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					FIXED_POINT,
+					USE_KISS_FFT,
+					"EXPORT=\"\"",
+					COMMON_VAD,
+					iOS,
+					_ENCODE_ONLY_,
+					USE_ALLOCA,
+					HAVE_CONFIG_H,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)",
