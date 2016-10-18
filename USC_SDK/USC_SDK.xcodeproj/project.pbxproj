@@ -243,6 +243,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F1269C3F1DB61CB20038F31A /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F187F5281DAE141100CFAEAB /* Opuswrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Opuswrapper.cpp; sourceTree = "<group>"; };
 		F187F5291DAE141100CFAEAB /* Opuswrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opuswrapper.h; sourceTree = "<group>"; };
 		F187F52C1DAE141100CFAEAB /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
@@ -1607,6 +1608,7 @@
 		F1A58C3A1DAE07B900174475 = {
 			isa = PBXGroup;
 			children = (
+				F1269C3F1DB61CB20038F31A /* Config.h */,
 				F187F6ED1DAE198900CFAEAB /* sourcecode(occode) */,
 				F187F5261DAE13E000CFAEAB /* clib */,
 				F1A58C451DAE07B900174475 /* USC_SDK */,
