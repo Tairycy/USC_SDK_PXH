@@ -66,7 +66,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         self.speechUnderstander?.setOption(USC_NLU_ENABLE, value: "true")
         self.speechUnderstander?.setOption(USC_ASR_LOCATION_ENABLE, value: "true")
         self.speechUnderstander?.setOption(USC_ASR_SERVER_ADDR, value: "vpr.hivoice.cn:80")   //设置私有服务器识别地址
-        self.speechUnderstander?.setOption(USC_ASR_OPT_FRONT_VAD_ENABLED, value: "false")     //控制vad是否可用
+//        self.speechUnderstander?.setOption(USC_ASR_OPT_FRONT_VAD_ENABLED, value: "false")     //控制vad是否可用
         self.speechUnderstander?.setOption(USC_NLU_SCENARIO, value: "incar")
         self.speechUnderstander?.delegate = self
         self.speechUnderstander?.setAudioSource(recorder)
@@ -91,7 +91,6 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         if sender.isSelected {
             self.speechUnderstander?.stop()
         }else{
-
             reset()
             self.speechUnderstander?.start()
         }

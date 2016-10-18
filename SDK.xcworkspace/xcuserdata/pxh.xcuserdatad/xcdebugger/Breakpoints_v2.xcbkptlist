@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_Demo/SDK_Demo/USCAsrViewController.swift"
-            timestampString = "498453742.021968"
+            filePath = "sourcecode(occode)/Recognizer/USCRecognizer.mm"
+            timestampString = "498472601.449237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "startAction(_:)"
+            startingLineNumber = "871"
+            endingLineNumber = "871"
+            landmarkName = "-doEvent:withTime:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_Demo/SDK_Demo/USCAsrViewController.swift"
-            timestampString = "498453742.021968"
+            filePath = "sourcecode(occode)/Recognizer/USCRecognizer.mm"
+            timestampString = "498472601.449237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "startAction(_:)"
+            startingLineNumber = "937"
+            endingLineNumber = "937"
+            landmarkName = "-onRecordingStop:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sourcecode(occode)/Recognizer/USCVadThread.mm"
-            timestampString = "498451355.570707"
+            filePath = "sourcecode(occode)/Recognizer/USCRecognizer.mm"
+            timestampString = "498472601.449237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "-start"
+            startingLineNumber = "1055"
+            endingLineNumber = "1055"
+            landmarkName = "-onUpdateVolume:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sourcecode(occode)/Recognizer/USCRecognizer.mm"
+            timestampString = "498472601.449237"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1021"
+            endingLineNumber = "1021"
+            landmarkName = "-onRecognitionStop:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

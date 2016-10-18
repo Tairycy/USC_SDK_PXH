@@ -230,8 +230,4 @@
 
 - (void)recognizeAudioFile:(NSString *)audioFilePath;
 
--(NSString *)addActionPxb;
-
-
-
 @end

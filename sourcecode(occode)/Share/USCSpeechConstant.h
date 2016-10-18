@@ -576,7 +576,7 @@
       static    const int USC_ASR_NLU_EVENT_END = 1121;
     
     /**
-     * USC_ASR_NLU onEvent type 语义理解结束
+     * USC_ASR_NLU onEvent type 返回音量大小
      */
       static    const int USC_ASR_EVENT_VOLUMECHANGE = 1122;
 
