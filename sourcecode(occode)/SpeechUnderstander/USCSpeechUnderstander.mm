@@ -78,9 +78,6 @@
         /***********给识别对象设置识别参数 15-1-13 ***********/
 //        [_recognizer setParam:_param];
         [_recognizer setOption:USC_ASR_RECOGNIZER_PARAM value:_param];
-        
-//        [_recognizer start];   //初始化的时候不在开启引擎
-
         _nluParser = [[USCNLUParser alloc]initWithAppkey:appKey secret:secret];
         _nluParser.delegate = self;
         [_nluParser setNLUParam:_nluParam];

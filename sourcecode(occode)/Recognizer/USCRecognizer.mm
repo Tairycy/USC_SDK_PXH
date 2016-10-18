@@ -219,7 +219,6 @@
         if (_vadThread) {
             _vadThread.vadParam = _vadParam;
         }
-//        [_vadThread start:YES];
         [_vadThread start];
     });
 }
