@@ -408,7 +408,8 @@ static  const NSString *kUSCRequestAudioAddres  = @"117.121.49.3:10000";
         if (_vadThread) {
             _vadThread.vadParam = _param.vadParam;
         }
-        [_vadThread start:YES];
+//        [_vadThread start:YES];
+        [_vadThread start];
     });
 }
 

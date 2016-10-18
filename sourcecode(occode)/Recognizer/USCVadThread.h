@@ -32,7 +32,10 @@
  *
  *  @param enable 是否经过vad处理
  */
-- (void)start:(BOOL)enable;
+//- (void)start:(BOOL)enable;
+
+//是开启vad
+-(void)start;
 
 /**
  *  停止

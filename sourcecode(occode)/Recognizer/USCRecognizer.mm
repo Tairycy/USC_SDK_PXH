@@ -219,7 +219,8 @@
         if (_vadThread) {
             _vadThread.vadParam = _vadParam;
         }
-        [_vadThread start:YES];
+//        [_vadThread start:YES];
+        [_vadThread start];
     });
 }
 
@@ -286,6 +287,9 @@
             break;
         case USC_ASR_VAD_TIMEOUT_BACKSIL:
             [_vadParam setBackTimeout:[value intValue]];
+            break;
+        case USC_ASR_OPT_FRONT_VAD_ENABLED:
+            [_vadParam setVadEnable:[value boolValue]];
             break;
         case USC_ASR_SERVER_ADDR:
             [self setProperty:value forKey:100];

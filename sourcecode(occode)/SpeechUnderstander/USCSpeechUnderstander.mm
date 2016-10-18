@@ -79,7 +79,7 @@
 //        [_recognizer setParam:_param];
         [_recognizer setOption:USC_ASR_RECOGNIZER_PARAM value:_param];
         
-        [_recognizer start];
+//        [_recognizer start];   //初始化的时候不在开启引擎
 
         _nluParser = [[USCNLUParser alloc]initWithAppkey:appKey secret:secret];
         _nluParser.delegate = self;

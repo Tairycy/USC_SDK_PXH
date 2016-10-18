@@ -22,6 +22,8 @@
 
 @property (nonatomic,assign) int frontTimeout;
 @property (nonatomic,assign) int backTimeout;
+@property (nonatomic,assign) BOOL vadEnable;
+
 
 @property (nonatomic,strong) USCVADParamValueFloat *MINBACKENG,*MINBACKENGH,*PITCHTH,*LOWHIGHTH,*SINGLEMAX,*NOISE2YTH,*NOISE2YTHVOWEL,*VOICEPROBTH;
 @property (nonatomic,strong) USCVADParamValueInt *PITCHSTNUMTH,*PITCHENDNUMTH,*MAXSILLEN,*MINSIGLEN,*USEPEAK,*NOISE2YST,*PITCHLASTTH;

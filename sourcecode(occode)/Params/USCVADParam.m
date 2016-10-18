@@ -136,6 +136,7 @@ static   int DEFAULT_CACHE_PCM_TIME = 450;
     return self;
 }
 
+
 /**
  * 放弃识别结果的最小语音时间
  * @param ms
