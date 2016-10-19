@@ -243,6 +243,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F174C42D1DB70BCF00E4A8C8 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F187F5281DAE141100CFAEAB /* Opuswrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Opuswrapper.cpp; sourceTree = "<group>"; };
 		F187F5291DAE141100CFAEAB /* Opuswrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opuswrapper.h; sourceTree = "<group>"; };
 		F187F52C1DAE141100CFAEAB /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
@@ -1301,6 +1302,7 @@
 		F187F6ED1DAE198900CFAEAB /* sourcecode(occode) */ = {
 			isa = PBXGroup;
 			children = (
+				F174C42D1DB70BCF00E4A8C8 /* Config.h */,
 				F187F6EE1DAE198900CFAEAB /* ASR */,
 				F187F6F11DAE198900CFAEAB /* AudioSource */,
 				F187F6F41DAE198900CFAEAB /* Basic */,
