@@ -199,7 +199,6 @@
 		F187F7AE1DAE198900CFAEAB /* USCRecognition.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7421DAE198900CFAEAB /* USCRecognition.mm */; };
 		F187F7AF1DAE198900CFAEAB /* USCRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7451DAE198900CFAEAB /* USCRecognizer.mm */; };
 		F187F7B01DAE198900CFAEAB /* USCVadThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7471DAE198900CFAEAB /* USCVadThread.mm */; };
-		F187F7B11DAE198900CFAEAB /* USCRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F74B1DAE198900CFAEAB /* USCRecorder.mm */; };
 		F187F7B21DAE198900CFAEAB /* USCScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F74E1DAE198900CFAEAB /* USCScene.mm */; };
 		F187F7B31DAE198900CFAEAB /* USCSceneManage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7501DAE198900CFAEAB /* USCSceneManage.mm */; };
 		F187F7B41DAE198900CFAEAB /* USCUploadSceneTask.mm in Sources */ = {isa = PBXBuildFile; fileRef = F187F7521DAE198900CFAEAB /* USCUploadSceneTask.mm */; };
@@ -243,7 +242,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F174C42D1DB70BCF00E4A8C8 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F187F5281DAE141100CFAEAB /* Opuswrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Opuswrapper.cpp; sourceTree = "<group>"; };
 		F187F5291DAE141100CFAEAB /* Opuswrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opuswrapper.h; sourceTree = "<group>"; };
 		F187F52C1DAE141100CFAEAB /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
@@ -575,9 +573,6 @@
 		F187F7451DAE198900CFAEAB /* USCRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecognizer.mm; sourceTree = "<group>"; };
 		F187F7461DAE198900CFAEAB /* USCVadThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCVadThread.h; sourceTree = "<group>"; };
 		F187F7471DAE198900CFAEAB /* USCVadThread.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCVadThread.mm; sourceTree = "<group>"; };
-		F187F7491DAE198900CFAEAB /* 01.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01.pcm; sourceTree = "<group>"; };
-		F187F74A1DAE198900CFAEAB /* USCRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCRecorder.h; sourceTree = "<group>"; };
-		F187F74B1DAE198900CFAEAB /* USCRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCRecorder.mm; sourceTree = "<group>"; };
 		F187F74D1DAE198900CFAEAB /* USCScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCScene.h; sourceTree = "<group>"; };
 		F187F74E1DAE198900CFAEAB /* USCScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = USCScene.mm; sourceTree = "<group>"; };
 		F187F74F1DAE198900CFAEAB /* USCSceneManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USCSceneManage.h; sourceTree = "<group>"; };
@@ -1302,7 +1297,6 @@
 		F187F6ED1DAE198900CFAEAB /* sourcecode(occode) */ = {
 			isa = PBXGroup;
 			children = (
-				F174C42D1DB70BCF00E4A8C8 /* Config.h */,
 				F187F6EE1DAE198900CFAEAB /* ASR */,
 				F187F6F11DAE198900CFAEAB /* AudioSource */,
 				F187F6F41DAE198900CFAEAB /* Basic */,
@@ -1311,7 +1305,6 @@
 				F187F7371DAE198900CFAEAB /* Params */,
 				F187F7401DAE198900CFAEAB /* Recognition */,
 				F187F7431DAE198900CFAEAB /* Recognizer */,
-				F187F7481DAE198900CFAEAB /* Record */,
 				F187F74C1DAE198900CFAEAB /* Scene */,
 				F187F7531DAE198900CFAEAB /* Share */,
 				F187F75E1DAE198900CFAEAB /* SpeechSynthesize */,
@@ -1481,16 +1474,6 @@
 				F187F7471DAE198900CFAEAB /* USCVadThread.mm */,
 			);
 			path = Recognizer;
-			sourceTree = "<group>";
-		};
-		F187F7481DAE198900CFAEAB /* Record */ = {
-			isa = PBXGroup;
-			children = (
-				F187F7491DAE198900CFAEAB /* 01.pcm */,
-				F187F74A1DAE198900CFAEAB /* USCRecorder.h */,
-				F187F74B1DAE198900CFAEAB /* USCRecorder.mm */,
-			);
-			path = Record;
 			sourceTree = "<group>";
 		};
 		F187F74C1DAE198900CFAEAB /* Scene */ = {
@@ -1842,7 +1825,6 @@
 				F187F62D1DAE141100CFAEAB /* bands.c in Sources */,
 				F187F6EB1DAE143B00CFAEAB /* tts_client.cpp in Sources */,
 				F187F79A1DAE198900CFAEAB /* USCAsrResultFormatEnglish.mm in Sources */,
-				F187F7B11DAE198900CFAEAB /* USCRecorder.mm in Sources */,
 				F187F6561DAE141100CFAEAB /* apply_sine_window_FIX.c in Sources */,
 				F187F6471DAE141100CFAEAB /* control_audio_bandwidth.c in Sources */,
 				F187F6601DAE141100CFAEAB /* k2a_Q16_FIX.c in Sources */,
@@ -2036,16 +2018,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					FIXED_POINT,
-					USE_KISS_FFT,
-					"EXPORT=\"\"",
-					COMMON_VAD,
-					iOS,
-					_ENCODE_ONLY_,
-					USE_ALLOCA,
-					HAVE_CONFIG_H,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)",
