@@ -102,6 +102,7 @@ static   int DEFAULT_CACHE_PCM_TIME = 450;
      * 录音线程VAD是否可用
      */
     isVADEnabled = true;
+        self.vadEnable = true;
 
     _MINBACKENGH = [[USCVADParamValueFloat alloc]initWithKey:MINBACKENGH_];
     _PITCHENDNUMTH = [[USCVADParamValueInt alloc]initWithKey:PITCHENDNUMTH_];
@@ -135,6 +136,7 @@ static   int DEFAULT_CACHE_PCM_TIME = 450;
     }
     return self;
 }
+
 
 /**
  * 放弃识别结果的最小语音时间

@@ -114,7 +114,61 @@
     [USCLog log_usc:@"reocordoriginalarray count = %d",[self.audioSource numOfArray]];
     [self.recordMData writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"recordMData.pcm"] atomically:YES];
 }
-
+//是开启vad
+-(void)start{
+    self.isVADEnable = self.vadParam.vadEnable;
+    
+    if (_asrVAD) {
+        _asrVAD->reset();
+    }
+    
+    /***********create new asrvad every time***********/
+    if (_asrVAD != NULL) {
+        delete _asrVAD;
+        _asrVAD = NULL;
+    }
+    
+    _asrVAD = new ASRVadBeepWapper();
+    _asrVAD->init();
+    _asrVAD->delegate = self;
+    _asrVAD->vadParams = _vadParam;
+    _asrVAD->setVadTimeout(self.vadParam.frontTimeout, self.vadParam.backTimeout);
+    
+    
+    if (!self.audioSource) {
+        return;
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onRecordingStart)]) {
+        [self.delegate onRecordingStart];
+    }
+    
+    [self.audioSource openAudioIn];
+    
+    int i = 1;
+    
+    while (1) {
+        NSMutableData *partData = [NSMutableData data];
+        int size = [self.audioSource readData:partData size:1200];
+        i++;
+        if(size < 0){
+            // 取到负数就关闭录音
+            [self.audioSource closeAudioIn];
+            break;
+        }
+        else if(size > 0){
+            [self.recordMData appendData:partData];
+            _asrVAD->write(partData);
+            [partData setLength:0];
+        }
+        else{
+            [NSThread sleepForTimeInterval:0.05];
+        }
+    }
+    
+    [USCLog log_usc:@"reocordoriginalarray count = %d",[self.audioSource numOfArray]];
+    [self.recordMData writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"recordMData.pcm"] atomically:YES];
+}
 #pragma mark - delegate
 - (void)onVADTimeOut
 {

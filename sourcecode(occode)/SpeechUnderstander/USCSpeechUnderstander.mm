@@ -78,9 +78,6 @@
         /***********给识别对象设置识别参数 15-1-13 ***********/
 //        [_recognizer setParam:_param];
         [_recognizer setOption:USC_ASR_RECOGNIZER_PARAM value:_param];
-        
-        [_recognizer start];
-
         _nluParser = [[USCNLUParser alloc]initWithAppkey:appKey secret:secret];
         _nluParser.delegate = self;
         [_nluParser setNLUParam:_nluParam];
@@ -218,75 +215,6 @@
     }
 }
 
-
-//
-//- (void)setPlayingBeep:(BOOL)isAllowed
-//{
-//    if (_recognizer) {
-//        [_recognizer setPlayingBeep:isAllowed];
-//    }
-//}
-//
-//- (void)disableUnderstanderResult
-//{
-//    _isReturnNluResult = NO;
-//    if (_recognizer) {
-//        [_recognizer disableUnderstanderResult];
-//    }
-//}
-//
-//+ (void)showLog:(BOOL)show
-//{
-//
-//}
-//
-//- (void)textUnderstander:(NSString *)text
-//{
-//    if (_nluParser) {
-//        [_nluParser cancel];
-//        [_nluParser parse:text];
-//    }
-//}
-//
-//- (USCSceneManage *)getSceneManger
-//{
-//    return _sceneMgr;
-//}
-//
-//- (void)start:(USCScene *)scene
-//{
-//    if (!_recognizer) {
-//        return;
-//    }
-//
-//    if(scene)
-//    {
-//        [_param setStartScene:scene];
-//        [_recognizer setParam:_param];
-//    }
-//    [self start];
-//}
-//
-//
-//+ (NSString *)getVersion
-//{
-//    return sdk_version;
-//}
-//
-//- (void)setProperty:(NSString *)property forKey:(int)key
-//{
-//    switch (key) {
-//        case USC_SERVICE_ADDRESS_PORT:
-//            [_recognizer setProperty:property forKey:USC_SERVICE_ADDRESS_PORT];
-//            break;
-//        case USC_NLU_SERVICE_URL:
-//            [_nluParser setURL:property];
-//        default:
-//            break;
-//    }
-//}
-
-
 #pragma mark -  All Delegate
 #pragma mark ASR Delegate
 
@@ -315,11 +243,6 @@
         [_delegate onResult:type jsonString:jsonString];
     }
 }
-
--(NSString *)addActionPxb {
-    return @"are u ok";
-}
-
 
 #pragma  mark - Nlu Delegate
 - (void)onNLUEnd:(NSError *)error

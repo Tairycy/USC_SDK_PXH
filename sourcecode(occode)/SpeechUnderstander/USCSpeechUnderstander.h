@@ -220,9 +220,14 @@
  */
 - (int)release:(int)type dataName:(NSString *)dataName;
 
+/*!
+ *  直接识别音频文件，注意调用这个方法后，会直接开始识别，不需要在调用start方法。音频文件的格式只支持PCM或者WAV。
+ *
+ *  @brief  识别音频
+ *
+ *  @param audioFilePath 音频文件的路径
+ */
 
--(NSString *)addActionPxb;
-
-
+- (void)recognizeAudioFile:(NSString *)audioFilePath;
 
 @end

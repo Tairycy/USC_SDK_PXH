@@ -219,7 +219,7 @@
         if (_vadThread) {
             _vadThread.vadParam = _vadParam;
         }
-        [_vadThread start:YES];
+        [_vadThread start];
     });
 }
 
@@ -229,6 +229,7 @@
     dispatch_async(kBgQueue, ^{
         // 停止录音
         if (_vadThread) {
+            [_vadThread stop];
         }
 
         // 停止识别线程
@@ -286,6 +287,9 @@
             break;
         case USC_ASR_VAD_TIMEOUT_BACKSIL:
             [_vadParam setBackTimeout:[value intValue]];
+            break;
+        case USC_ASR_OPT_FRONT_VAD_ENABLED:
+            [_vadParam setVadEnable:[value boolValue]];
             break;
         case USC_ASR_SERVER_ADDR:
             [self setProperty:value forKey:100];
@@ -596,32 +600,6 @@
     _isAllowedPlayBeep = isAllowed;
 }
 
-//???:06-05
-// 设置语言对应的标点符号处理，并保持标点符号法则不变
-//- (void) setResultFormat:(NSString *)language
-//{
-//    if (_resultFormat)
-//    {
-//        _resultFormat = nil;
-//    }
-//
-//    if ([language isEqualToString:@"english"])
-//    {
-//        _resultFormat = [[USCAsrResultFormatEnglish alloc] init];
-//    }
-//    else if ([language isEqualToString:@"cantonese"])
-//    {
-//        _resultFormat = [[USCAsrResultFormatCantonese alloc] init];
-//    }
-//    else
-//    {
-//        _resultFormat = [[USCAsrResultFormatChinese alloc] init];;
-//    }
-//
-//    // 当切换语言的时候，保持之前的标点符号法则不变
-//    _resultFormat.isPunctuation = _isPunctuation;
-//}
-
 /*
  *获取session id
  */
@@ -912,7 +890,7 @@
 
 #pragma mark  Record Delegate
 //// 录音启动是否成功
-- (void)onRecordingStart:(int)errorCode
+- (void)onRecognizerRecordingStart:(int)errorCode
 {
     dispatch_sync(dispatch_get_main_queue(), ^{
         //由于启动录音需要时间，又由于是异步启动的
@@ -966,18 +944,7 @@
     //网络切换监视器开始工作
     [_netWatcher start];
 }
-//
-////设置8k和16k采样率切换
-//-(void)onSetNetType:(int)sample
-//{
-//    sampleRate = sample;
-//}
-//
-//- (void)disableUnderstanderResult
-//{
-//    _isReturnNluResult = NO;
-//}
-//
+
 - (void)setNluEnable:(id)enable
 {
     if ([(NSString *)enable isEqualToString:@"true"]) {
@@ -1003,22 +970,6 @@
     {
         [recognizationWatcher cancel];
     }
-}
-
-- (void)onUpdateVolume:(int)volume
-{
-    self.volume = volume;
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [self doEvent:USC_ASR_EVENT_VOLUMECHANGE withTime:[USCSpeechTimer currentDuration]];
-    });
-}
-
-- (void) onVADTimeout
-{
-    [USCLog log_d:@"%s",__func__];
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [self doEvent:USC_ASR_EVENT_VAD_TIMEOUT withTime:[USCSpeechTimer currentDuration]];
-    });
 }
 
 #pragma mark -
@@ -1065,6 +1016,8 @@
 
         // 网络监视器停止计时
         [_netWatcher stop];
+        
+        
         //AudioSessionSetActive(false);
     });
 }
@@ -1088,17 +1041,19 @@
     });
 }
 
-#pragma mark -
-#pragma mark vadThread delegate
-//- (void)onUpdateVolume:(int)volume
-//{
-//      NSLog(@"%s--%@",__func__,[NSThread currentThread]);
-//    self.volume = volume;
-//    dispatch_sync(dispatch_get_main_queue(), ^{
-//        [self doEvent:USC_ASR_EVENT_VOLUMECHANGE withTime:[USCSpeechTimer currentDuration]];
-//    });
-//}
-
+#pragma mark - vadThread delegate
+- (void)onRecordingStart
+{
+//    [self onRecordingStart:0];
+    [self onRecognizerRecordingStart:0];
+}
+- (void)onUpdateVolume:(int)volume
+{
+    self.volume = volume;
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [self doEvent:USC_ASR_EVENT_VOLUMECHANGE withTime:[USCSpeechTimer currentDuration]];
+    });
+}
 - (void)onVADTimeOut
 {
     dispatch_sync(dispatch_get_main_queue(), ^{
@@ -1106,10 +1061,7 @@
     });
 }
 
-- (void)onRecordingStart
-{
-    [self onRecordingStart:0];
-}
+
 
 // 把vad处理过的数据添加到共享数组,然后去取下一个数据
 - (void)onRecordingData:(NSData *)data isValid:(BOOL)isValid

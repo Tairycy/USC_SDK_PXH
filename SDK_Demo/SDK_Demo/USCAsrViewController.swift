@@ -23,15 +23,14 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
     var speechUnderstander : USCSpeechUnderstander?
     var speechSynthesizer : USCSpeechSynthesizer?
     var speechResult : USCSpeechResult?
-//    var record : USCRecorder?
-//    var player : USCPlayThread?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpSpeech()
         setUpUI()
-        self.setNavi()
+        setNavi()
     }
     func setUpUI(){
         self.startBtn.setTitle("开始", for: UIControlState.normal)
@@ -44,7 +43,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         self.jsonResult = NSMutableString.init()
     }
     func uploadAudio(_ sender : AnyObject){
-        let glassPath = Bundle.main.path(forResource: "new1", ofType: "m4a")
+        let glassPath = Bundle.main.path(forResource: "16k", ofType: "wav")
         self.speechUnderstander?.recognizeAudioFile(glassPath)
         let city = UserDefaults.standard.object(forKey: "currentcity")
         print(city)
@@ -53,6 +52,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         self.speechUnderstander?.stop()
         self.asrResult = ""
         self.jsonResult = ""
+        self.textView.text = self.jsonResult! as String
     }
     //MARK:- SpeechUnderstander
     func setUpSpeech(){
@@ -66,7 +66,8 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         self.speechUnderstander?.setOption(USC_ASR_VAD_TIMEOUT_BACKSIL, value: "1000")
         self.speechUnderstander?.setOption(USC_NLU_ENABLE, value: "true")
         self.speechUnderstander?.setOption(USC_ASR_LOCATION_ENABLE, value: "true")
-//        self.speechUnderstander?.setOption(USC_ASR_SERVER_ADDR, value: "true")   //设置服务器识别地址
+        self.speechUnderstander?.setOption(USC_ASR_SERVER_ADDR, value: "vpr.hivoice.cn:80")   //设置私有服务器识别地址
+//        self.speechUnderstander?.setOption(USC_ASR_OPT_FRONT_VAD_ENABLED, value: "false")     //控制vad是否可用
         self.speechUnderstander?.setOption(USC_NLU_SCENARIO, value: "incar")
         self.speechUnderstander?.delegate = self
         self.speechUnderstander?.setAudioSource(recorder)
@@ -91,13 +92,13 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
         if sender.isSelected {
             self.speechUnderstander?.stop()
         }else{
-
             reset()
             self.speechUnderstander?.start()
         }
     }
     @IBAction func upLoadAction(_ sender: AnyObject) {
         print("upLoadAction")
+        reset()
         uploadAudio(sender)
     }
     override func didReceiveMemoryWarning() {
@@ -137,9 +138,7 @@ class USCAsrViewController: UIViewController,USCSpeechUnderstanderDelegate,USCSp
     func onResult(_ type: Int32, jsonString: String!) {
         NSLog("type = %d json = %@",type, jsonString)
         /*注意这个方法会调用多次，注意根据type判断，得到想要的结果*/
-        if (USC_ASR_RESULT_NET_ONLY == type) {
-            self.asrResult?.append(jsonString)
-        }else if(USC_ASR_RESULT_NET == type){
+        if(USC_ASR_RESULT_NET == type){
             self.jsonResult?.append(jsonString)
         }
         self.textView.text = self.jsonResult! as String
